@@ -62,3 +62,36 @@ hr{
     background-color: #FABD39;
     border-color: #FCAE05;
 }
+
+.price-container{
+    min-width: 176px;
+}
+
+.bedroom-container{
+    min-width: 73px;
+}
+
+.dropdown-list{
+    letter-spacing: .1em;
+    width: 100%;
+    text-align: center;
+    line-height: 2em;
+}
+
+.checkbox-format{
+    letter-spacing: .1em;
+    width: 100%;
+    text-align: left;
+}
+
+.checkbox label{
+    width:100%;
+    background-size: contain;
+}
+
+.checkbox.checkbox-circle label::before {
+    border-radius: 50%;
+}
+
+/* --- Custom Checkboxes --*/
+

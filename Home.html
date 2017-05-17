@@ -14,7 +14,8 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -30,7 +31,8 @@
 
                     <!--Begin Dropdown for price input-->
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Any Price <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Any Price <span class="caret"></span></a>
                         <ul class="dropdown-menu price-container">
                             <li>
                                 <div id="price-input">
@@ -44,6 +46,9 @@
                                     </div>
                                 </div>
                             </li>
+
+                            <li role="separator" class="divider"></li>
+
 
                             <div class="dropdown-list">
                                 <li>$50,000+</li>
@@ -66,7 +71,8 @@
                     </li> <!--End Dropdown for price input-->
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Beds<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Beds<span class="caret"></span></a>
                         <ul class="dropdown-menu bedroom-container">
                             <div class="dropdown-list">
                                 <li>0+</li>
@@ -83,13 +89,14 @@
                     </li>
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home Type<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Home Type<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <div class="checkbox-format">
 
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="option1" aria-label="Houses">
+                                        <input type="checkbox" value="Houses" aria-label="Houses">
                                         Houses
                                     </label>
                                 </div>
@@ -98,7 +105,7 @@
 
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="option1" aria-label="Condos/Apartments">
+                                        <input type="checkbox" value="Condos/Apartments" aria-label="Condos/Apartments">
                                         Condos/Apartments
                                     </label>
                                 </div>
@@ -107,7 +114,7 @@
 
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="option1" aria-label="Townhomes">
+                                        <input type="checkbox" value="Townhomes" aria-label="Townhomes">
                                         Townhomes
                                     </label>
                                 </div>
@@ -116,7 +123,7 @@
 
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" value="option1" aria-label="Lots/Land">
+                                        <input type="checkbox" value="Lots/Land" aria-label="Lots/Land">
                                         Lots/Land
                                     </label>
                                 </div>
@@ -132,12 +139,15 @@
                     <button type="submit" class="btn btn-default btn-custom">Search</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Communities<span class="caret"></span></a>
+
+                    <li class="dropdown"><!--Begin Communities wrapper dropdown-->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Communities<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <!--Park City Dropdown-->
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Park City<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">Park City<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li>Park Meadows</li>
                                     <li>Old Town</li>
@@ -148,7 +158,8 @@
 
                             <!--Deer Valley Dropdown-->
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deer Valley<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">Deer Valley<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
 
                                 </ul>
@@ -163,16 +174,34 @@
     </nav><!--/.nav End of NavBar-->
 
     <!-- Grid for Listings -->
-    <div class="row">
+    <div class="row grid-list"><!-- Begin First Row-->
         <div class="container">
-
-            <!-- Begin First Row-->
             <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="listing-address">
+                    <p>4953 E Meadows Dr</p>
                 </div>
 
-                <div class="row stats">
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:<span class="row-stats-value">Test</span></p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:<span class="row-stats-value">Test</span></p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:<span class="row-stats-value">Test</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
                     <div class="col-xs-4">
                         <p>Beds:</p>
                     </div>
@@ -186,11 +215,31 @@
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
 
-                <div class="row stats">
+                <img src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End First Row-->
+
+    <div class="row grid-list"><!-- Begin Second Row-->
+        <div class="container">
+            <div class="col-lg-4 col-sm-6 ">
+
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
                     <div class="col-xs-4">
                         <p>Beds:</p>
                     </div>
@@ -204,32 +253,10 @@
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
 
-                <div class="row stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
 
-            <!-- End First Row-->
-
-            <!-- Begin Second Row-->
-            <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
-
-                <div class="row stats">
+                <div class="row-stats">
                     <div class="col-xs-4">
                         <p>Beds:</p>
                     </div>
@@ -243,11 +270,31 @@
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
 
-                <div class="row stats">
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Second Row-->
+
+    <div class="row grid-list"><!-- Begin Third Row-->
+        <div class="container">
+            <div class="col-lg-4 col-sm-6">
+
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
                     <div class="col-xs-4">
                         <p>Beds:</p>
                     </div>
@@ -261,31 +308,10 @@
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
 
-                <div class="row stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-            <!-- End Second Row-->
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
 
-            <!-- Begin Third Row-->
-            <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
-
-                <div class="row stats">
+                <div class="row-stats">
                     <div class="col-xs-4">
                         <p>Beds:</p>
                     </div>
@@ -299,11 +325,10 @@
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
 
-                <div class="row stats">
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
                     <div class="col-xs-4">
                         <p>Beds:</p>
                     </div>
@@ -315,33 +340,18 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div><!-- End Third Row-->
 
-            <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
 
-                <div class="row stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-            <!-- End Third Row-->
-
+    <div class="row grid-list">
+        <div class="container">
             <!-- Begin Fourth Row-->
             <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
 
-                <div class="row stats">
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
                     <div class="col-xs-4">
                         <p>Beds:</p>
                     </div>
@@ -355,11 +365,10 @@
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
 
-                <div class="row stats">
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
                     <div class="col-xs-4">
                         <p>Beds:</p>
                     </div>
@@ -373,11 +382,10 @@
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <div class="thumbnail">
-                    <img src="https://source.unsplash.com/44PTx-hIgwc">
-                </div>
 
-                <div class="row stats">
+                <img class="img-responsive" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
                     <div class="col-xs-4">
                         <p>Beds:</p>
                     </div>
@@ -389,14 +397,20 @@
                     </div>
                 </div>
             </div>
-            <!-- End Fourth Row-->
-        </div><!--/.container-->
-    </div><!--/.row End Grid-->
+        </div>
+    </div><!-- End Fourth Row-->
+
 
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            crossorigin="anonymous">
+
+    </script>
+    <script
+            type="text/javascript"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+
+    </script>
 </body>
 </html>

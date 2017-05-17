@@ -1,8 +1,9 @@
-body{
-    background-color: #8C8C8B;
+body {
+   /* background-color: #8C8C8B;*/
+    background-color: #F7F3EB;
 }
 
-#headerImage{
+#headerImage {
     width: 100%;
     height: 50rem;
     background-image: url(http://res.cloudinary.com/simpleview/image/upload/v1492455863/clients/parkcity/CB_Summer_Main_Street_Trolley_024e2ee4-fe7f-40ed-9a9f-98cb732ca017.jpg);
@@ -13,26 +14,36 @@ body{
     background-position-y: -100px;
 }
 
-.navbar{
+.navbar {
     margin-bottom: 75px;
     background-color: #292929;
 }
 
-.navbar-form .form-control{
-    width:40em;
+.navbar-form .form-control {
+    width: 40em;
 }
 
-.row .stats{
-    padding-left: 2em;
+.row-stats, .listing-address {
     font-weight: 500;
     font-size: large;
+    color: white;
+    position: relative;
+    text-align: center;
+    width:100%;
+    height: 3rem;
 }
 
-#min-input{
+.row-stats-value {
+    color: #FABD39;
+    margin-left: .5em;
+    font-weight: bolder;
+}
+
+#min-input {
     margin-left: .25rem;
 }
 
-#max-input{
+#max-input {
     margin-right: .2rem;
 }
 
@@ -41,16 +52,16 @@ input {
     padding: 4px 6px 2px;
 }
 
-#price-input{
+#price-input {
     margin-top: 2px;
 }
 
-hr{
+hr {
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.dropdown-list{
+.dropdown-list {
     letter-spacing: .1em;
     width: 100%;
     text-align: center;
@@ -63,35 +74,38 @@ hr{
     border-color: #FCAE05;
 }
 
-.price-container{
+.price-container {
     min-width: 176px;
 }
 
-.bedroom-container{
+.bedroom-container {
     min-width: 73px;
 }
 
-.dropdown-list{
+.dropdown-list {
     letter-spacing: .1em;
     width: 100%;
     text-align: center;
     line-height: 2em;
 }
 
-.checkbox-format{
+.checkbox-format {
     letter-spacing: .1em;
     width: 100%;
     text-align: left;
 }
 
-.checkbox label{
-    width:100%;
+.checkbox label {
+    width: 100%;
     background-size: contain;
 }
 
-.checkbox.checkbox-circle label::before {
-    border-radius: 50%;
+.form-control:focus{
+    border-color: #FABD39;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(252, 175, 32, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(252, 175, 32, .6);
 }
 
-/* --- Custom Checkboxes --*/
-
+.grid-list{
+    padding-bottom: 5em;
+}

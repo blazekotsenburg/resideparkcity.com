@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     /* background-color: #8C8C8B;*/
-    background-color: #F7F3EB;
+    /*background-color: #F7F3EB;*/
+    background-color: #F2F2F2;
     line-height: 1.5;
     font-family: Poppins, sans-serif;
 }
@@ -19,7 +21,7 @@ body {
     background-position-y: -100px;
 }
 
-.navbar {
+.navbar-custom {
     margin-bottom: 75px;
     background-color: #292929;
 }
@@ -34,21 +36,14 @@ body {
     font-weight: bolder;
 }
 
-#min-input {
-    margin-left: .25rem;
-}
-
-#max-input {
-    margin-right: .2rem;
+.row-margin-zero {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 input {
     width: 60px;
     padding: 4px 6px 2px;
-}
-
-#price-input {
-    margin-top: 2px;
 }
 
 hr {
@@ -65,8 +60,22 @@ hr {
 
 .btn-custom {
     color: #333;
-    background-color: #FABD39;
-    border-color: #FCAE05;
+    background-color: #73ED68;
+    border-color: #73ED68;
+    border-radius: 20px;
+}
+
+.btn-custom:hover {
+    color: white;
+    background-color: #57C44D;
+    border-color: #57C44D;
+    border-radius: 20px;
+}
+
+.form-control:focus {
+    border-color: #FABD39;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(252, 175, 32, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(252, 175, 32, .6);
 }
 
 .price-container {
@@ -74,7 +83,7 @@ hr {
 }
 
 .bedroom-container {
-    min-width: 73px;
+    min-width: 73.88px;
 }
 
 .dropdown-list {
@@ -95,12 +104,6 @@ hr {
     background-size: contain;
 }
 
-.form-control:focus {
-    border-color: #FABD39;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(252, 175, 32, .6);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(252, 175, 32, .6);
-}
-
 .grid-list {
     margin-bottom: 2.5em;
 }
@@ -118,6 +121,7 @@ hr {
 .photo-card {
     position: relative;
     width: 100%;
+    margin-bottom: 15px;
     text-shadow: 0 0 3px rgba(0, 0, 0, 1);
     -webkit-background-size:contain;
     background-size: contain;
@@ -200,7 +204,7 @@ p.photo-card-info-spec-row2{
 }
 
 .photo-card-price {
-    font: 500 30px Poppins, Sans-Serif;
+    font: 500 24px Poppins, Sans-Serif;
     letter-spacing: .1rem;
 }
 
@@ -212,4 +216,26 @@ p.photo-card-info-spec-row2{
 
 .photo-card-dom {
     text-transform: uppercase;
+}
+
+.label-for-sale {
+    background-color: #21E310;
+}
+
+.label-pending {
+    background-color: #FFC43B;
+}
+
+#featured-listings {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 15px;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 4px #6E6E6E;
+    left: 0;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    width: 100%;
+    position: relative;
 }

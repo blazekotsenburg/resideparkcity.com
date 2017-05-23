@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>Park City Homes</title>
+
+    <title>Park City Listing</title>
+
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="HomeStyle.css">
+    <link rel="stylesheet" type="text/css" href="ListingStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet">
+
 </head>
 <body>
 
-    <div id="headerImage"></div>
+    <div id="listing-header-image"></div>
 
     <nav class="navbar navbar-inverse navbar-custom">
         <div class="container-fluid">
@@ -162,11 +166,90 @@
         </div><!-- /.container-fluid -->
     </nav><!--/.nav End of NavBar-->
 
+    <div class="container">
+        <div class="col-xs-12">
+            <h1 id="community-header">Park Meadows</h1>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="community-image-container">
+        <img class="community-image img-drop-shadow" src="https://source.unsplash.com/m9aokwbp29c">
+
+        <p id="community-description">
+            Park Meadows was the first subdivision created outside Old Town back in the 1970’s and continues
+            to be one of the area’s most desirable neighborhoods due to the proximity to the schools complex,
+            the Park Meadows Country Club and all the hiking/snowshoeing/cross country skiing opportunities in
+            the vast open space of Round Valley. At its center is the (Municipal Athletic Recreation Center
+            (M.A.R.C)), which offers a pool, tennis courts and popular fitness facilities. This mostly single family
+            neighborhood offers everything from older properties needing TLC to multi-million dollar lodges along
+            the higher elevations with commanding views of the ski resorts.
+        </p>
+    </div>
+
+
     <!-- Grid for Listings -->
     <div class="row grid-list"><!-- Begin First Row-->
         <div class="container">
 
-            <h1 id="featured-listings">Featured Listings</h1>
+            <h2 id="community-listings-header">Listings in <span id="area-name">Park Meadows</span></h2>
+
+            <nav class="navbar navbar-inverse navbar-custom">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#filter-search-navbar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="filter-search-navbar">
+                        <ul class="nav navbar-nav">
+
+
+                            <!--Begin Dropdown for price input-->
+                            <li class="dropdown">
+
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">Any Price <span class="caret"></span></a>
+                                <ul class="dropdown-menu price-container">
+
+                                </ul>
+                            </li> <!--End Dropdown for price input-->
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">Beds<span class="caret"></span></a>
+                                <ul class="dropdown-menu bedroom-container">
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                   aria-expanded="false">Home Type<span class="caret"></span></a>
+                                <ul class="dropdown-menu chackbox-format">
+
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <form class="navbar-form navbar-left">
+
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav><!--/.nav End of NavBar-->
 
             <div class="col-lg-4 col-sm-6">
 
@@ -458,7 +541,6 @@
         </div>
     </div><!-- End Fourth Row-->
 
-
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -470,5 +552,6 @@
             src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 
     </script>
+
 </body>
 </html>

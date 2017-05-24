@@ -58,3 +58,17 @@ h2 span {
     font-size: 36px;
 }
 
+#filter-btns{
+    padding-left: 15px;
+}
+
+.btn-dropdown-filter{
+    color: white;
+    background-color: #292929;
+}
+
+.btn-drop-shadow {
+    -webkit-filter: drop-shadow(1px 1px 4px #8A8A8A); /* Safari */
+    filter: drop-shadow(1px 1px 4px #8A8A8A);
+}
+

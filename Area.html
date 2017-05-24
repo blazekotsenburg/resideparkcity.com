@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Park City Listing</title>
+    <title>Areas</title>
 
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link rel="stylesheet" type="text/css" href="HomeStyle.css">
-    <link rel="stylesheet" type="text/css" href="ListingStyle.css">
+    <link rel="stylesheet" type="text/css" href="AreaStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet">
 
 </head>
@@ -188,70 +188,42 @@
         </p>
     </div>
 
+    <div class="row grid-list">
+        <div class="container">
+            <h2 id="community-listings-header">Listings in <span id="area-name">Park Meadows</span></h2>
+
+            <div id="filter-btns">
+                <!-- Single button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-dropdown-filter btn-drop-shadow " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filter <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Square Ft</a></li>
+                        <li><a href="#">Beds</a></li>
+                    </ul>
+                </div>
+
+                <!-- Single button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle btn-dropdown-filter btn-drop-shadow " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ascending <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Ascending</a></li>
+                        <li><a href="#">Descending</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Grid for Listings -->
     <div class="row grid-list"><!-- Begin First Row-->
         <div class="container">
 
-            <h2 id="community-listings-header">Listings in <span id="area-name">Park Meadows</span></h2>
-
-            <nav class="navbar navbar-inverse navbar-custom">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                data-target="#filter-search-navbar" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="filter-search-navbar">
-                        <ul class="nav navbar-nav">
-
-
-                            <!--Begin Dropdown for price input-->
-                            <li class="dropdown">
-
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                   aria-expanded="false">Any Price <span class="caret"></span></a>
-                                <ul class="dropdown-menu price-container">
-
-                                </ul>
-                            </li> <!--End Dropdown for price input-->
-
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                   aria-expanded="false">Beds<span class="caret"></span></a>
-                                <ul class="dropdown-menu bedroom-container">
-
-                                </ul>
-                            </li>
-
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                   aria-expanded="false">Home Type<span class="caret"></span></a>
-                                <ul class="dropdown-menu chackbox-format">
-
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <form class="navbar-form navbar-left">
-
-                        </form>
-                        <ul class="nav navbar-nav navbar-right">
-
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav><!--/.nav End of NavBar-->
-
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
                 <div class="photo-card">
 
@@ -294,7 +266,7 @@
 
             </div>
 
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
                 <div class="photo-card">
                     <p class="status-label">
                         <span class="label label-pending">Pending</span>
@@ -333,7 +305,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
                 <div class="photo-card">
                     <p class="status-label">
                         <span class="label label-for-sale">For Sale</span>
@@ -376,7 +348,7 @@
 
     <div class="row grid-list"><!-- Begin Second Row-->
         <div class="container">
-            <div class="col-lg-4 col-sm-6 ">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 ">
 
                 <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
@@ -393,7 +365,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
                 <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
@@ -410,7 +382,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
                 <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
@@ -431,7 +403,7 @@
 
     <div class="row grid-list"><!-- Begin Third Row-->
         <div class="container">
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
                 <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
@@ -448,7 +420,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
                 <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
@@ -465,7 +437,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
                 <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
@@ -488,7 +460,7 @@
     <div class="row grid-list">
         <div class="container">
             <!-- Begin Fourth Row-->
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
                 <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
@@ -505,7 +477,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
                 <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
@@ -522,7 +494,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
                 <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 

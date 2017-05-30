@@ -25,7 +25,11 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.community-image-container{
+p {
+    margin-bottom: 20px;
+}
+
+.community-image-container {
     margin: 0 auto;
     max-width: 670px;
 }
@@ -38,24 +42,38 @@ hr {
     padding-bottom: 2.5em;
 }
 
-#community-description{
-    color: black;
-    text-align: center;
-    position: relative;
-    font-size: 16px;
-    padding-bottom: 3em;
-}
-
-#community-listings-header {
-    font-size: 25px;
-    padding-left: 15px;
-    padding-bottom: 15px;
+#listing-info-container {
+    margin: 0 auto;
+    max-width: 670px;
+    font-family: Poppins, sans-serif;
     color: #292929;
 }
 
-h2 span {
+#price {
+    color: inherit;
+    font-size: 24px;
     font-weight: 500;
+}
+
+#listing-info-header {
+    margin: 0;
+    max-width: 500px;
+    font-size: 30px;
+    padding-left: 15px;
+}
+
+#listing-info-chart p {
+    max-width: inherit;
+    text-align: center;
+    color: inherit;
+    font-weight: inherit;
+    font-size: 20px;
+}
+
+#related-listings-header {
     font-size: 36px;
+    padding-left: 15px;
+    margin-bottom: 20px;
 }
 
 #filter-btns{
@@ -72,4 +90,3 @@ h2 span {
     -webkit-filter: drop-shadow(1px 1px 4px #8A8A8A); /* Safari */
     filter: drop-shadow(1px 1px 4px #8A8A8A);
 }
-

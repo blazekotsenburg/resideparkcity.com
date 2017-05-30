@@ -77,8 +77,10 @@ p {
 }
 
 #filter-btns{
-    padding-left: 15px;
+    padding-right: 15px;
     margin-bottom: 60px;
+    display: inline-block;
+    float: right;
 }
 
 .btn-dropdown-filter{

@@ -30,8 +30,10 @@ p {
 }
 
 .community-image-container {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    margin-left:25%;
     max-width: 670px;
+    float: left;
 }
 
 .community-image {
@@ -127,4 +129,11 @@ textarea.form-control.req-panel-spacing {
     background-color: #57C44D;
     border-color: #57C44D;
     border-radius: 20px;
+}
+
+section.panel {
+    float:left;
+    max-width: 335px;
+    margin-top: 69px;
+    margin-left: 15px;
 }

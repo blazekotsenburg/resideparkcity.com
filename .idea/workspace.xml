@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fd20e589-0004-44bb-8ea3-a9270f6b0ef7" name="Default" comment="Need to customize checkboxes on the Hometype dropdown menu and format the spacing on the Listing grid. Home.html seems to have an excessive amount of warnings but it does not effect the loaded page.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Area.html" afterPath="$PROJECT_DIR$/Area.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AreaStyle.css" afterPath="$PROJECT_DIR$/AreaStyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HomeStyle.css" afterPath="$PROJECT_DIR$/HomeStyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Listing.html" afterPath="$PROJECT_DIR$/Listing.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ListingStyle.css" afterPath="$PROJECT_DIR$/ListingStyle.css" />
@@ -35,8 +33,8 @@
       <file leaf-file-name="HomeStyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HomeStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-886">
-              <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="439">
+              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="72" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -65,8 +63,8 @@
       <file leaf-file-name="Listing.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Listing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="256" column="45" lean-forward="false" selection-start-line="256" selection-start-column="45" selection-end-line="256" selection-end-column="45" />
+            <state relative-caret-position="659">
+              <caret line="278" column="120" lean-forward="false" selection-start-line="278" selection-start-column="120" selection-end-line="278" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -75,8 +73,8 @@
       <file leaf-file-name="ListingStyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ListingStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="83" selection-end-column="1" />
+            <state relative-caret-position="172">
+              <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -145,6 +143,7 @@
       <find>@media</find>
       <find>label-success</find>
       <find>.</find>
+      <find>btn-drop-shadow</find>
     </findStrings>
     <replaceStrings>
       <replace>.listResults</replace>
@@ -153,6 +152,7 @@
       <replace>0.1</replace>
       <replace>0.15</replace>
       <replace>label-for-sale</replace>
+      <replace>drop-shadow</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -165,10 +165,10 @@
         <option value="$PROJECT_DIR$/bootstrap.css" />
         <option value="$PROJECT_DIR$/Communities.html" />
         <option value="$PROJECT_DIR$/Home.html" />
-        <option value="$PROJECT_DIR$/ListingStyle.css" />
         <option value="$PROJECT_DIR$/AreaStyle.css" />
-        <option value="$PROJECT_DIR$/HomeStyle.css" />
         <option value="$PROJECT_DIR$/Area.html" />
+        <option value="$PROJECT_DIR$/HomeStyle.css" />
+        <option value="$PROJECT_DIR$/ListingStyle.css" />
         <option value="$PROJECT_DIR$/Listing.html" />
       </list>
     </option>
@@ -340,7 +340,7 @@
       <workItem from="1494457724661" duration="29000" />
       <workItem from="1494528296521" duration="36928000" />
       <workItem from="1495044646210" duration="48555000" />
-      <workItem from="1495653642415" duration="11185000" />
+      <workItem from="1495653642415" duration="15103000" />
     </task>
     <task id="LOCAL-00001" summary="Added .css file for the home page. Has not yet been implemented.">
       <created>1494271904836</created>
@@ -360,7 +360,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99994000" />
+    <option name="totallyTimeSpent" value="103912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="224" y="22" width="1400" height="988" extended-state="0" />
@@ -611,22 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HomeStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-886">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ListingStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="83" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AreaStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -643,10 +627,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HomeStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="72" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ListingStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="90" column="1" lean-forward="true" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Listing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="256" column="45" lean-forward="false" selection-start-line="256" selection-start-column="45" selection-end-line="256" selection-end-column="45" />
+        <state relative-caret-position="659">
+          <caret line="278" column="120" lean-forward="false" selection-start-line="278" selection-start-column="120" selection-end-line="278" selection-end-column="120" />
           <folding />
         </state>
       </provider>

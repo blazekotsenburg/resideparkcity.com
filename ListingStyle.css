@@ -7,6 +7,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position-y: -200px;
+    background-color: #8c8c8c;
 }
 
 h1 {
@@ -30,18 +31,17 @@ p {
 }
 
 .community-image-container {
-    /*margin: 0 auto;*/
-    margin-left:25%;
+    /*margin-right: 15px;
+    margin-left: 15px;*/
+    margin: 0 auto;
     max-width: 670px;
-    float: left;
 }
 
 .community-image {
     background-size: contain;
     background-position: center;
     width:100%;
-    padding-top: 5em;
-    padding-bottom: 2.5em;
+    margin-bottom: 20px;
 }
 
 #listing-info-container {
@@ -70,6 +70,7 @@ p {
     color: inherit;
     font-weight: inherit;
     font-size: 20px;
+    width: 100%;
 }
 
 #related-listings-header {
@@ -83,6 +84,7 @@ p {
     margin-bottom: 60px;
     display: inline-block;
     float: right;
+    background-position-y: 50%;
 }
 
 .btn-dropdown-filter{
@@ -106,8 +108,13 @@ h3.panel-heading {
     border-color: #292929;
 }
 
-.custom-panel-background {
+#request-panel {
     background-color: transparent;
+    width: 335px;
+    height: 410px;
+    float: left;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 div.form-group.req-panel-spacing,
@@ -131,9 +138,45 @@ textarea.form-control.req-panel-spacing {
     border-radius: 20px;
 }
 
-section.panel {
-    float:left;
-    max-width: 335px;
-    margin-top: 69px;
+#wrapper {
+    max-width: 1500px;
+    position: relative;
+    margin: 100px auto;
+    display: flex;
+}
+
+#google-map {
+    width: 335px;
+    height: 410px;
+    float: right;
+    background-color: orange;
+    margin-right: 15px;
     margin-left: 15px;
+}
+
+@media only screen and (max-width: 1024px){
+
+    #wrapper{
+        margin: 25px auto;
+        flex-direction: column;
+    }
+
+    #request-panel {
+        order: 3;
+        width: 670px;
+        float: none;
+        margin: 0 auto;
+    }
+
+    #google-map {
+        order: 2;
+        width: 670px;
+        float: none;
+        margin: 25px auto;
+    }
+
+    .community-image-container {
+        order: 1;
+        float: none;
+    }
 }

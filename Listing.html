@@ -265,7 +265,18 @@
     </div>
 
     <div id="google-map">
-        <p>Google Map</p>
+
+        <script>
+            function myMap() {
+                var mapProp= {
+                    center:new google.maps.LatLng(40.6461,-111.4980),
+                    zoom:14
+                };
+                var map=new google.maps.Map(document.getElementById("google-map"),mapProp);
+            }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgH_dYa-nHJ2y4Z4Ez7utaD65JUKTrKa8&callback=myMap"></script>
     </div>
 </div>
 
@@ -314,7 +325,8 @@
 <div class="row grid-list"><!-- Begin First Row-->
     <div class="container">
 
-
+<!--Consider fixing the row so that only a single row wraps all of the images.  The cause for the grid inconsistency in
+different screen sizes could be from making so many individual rows.-->
         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
             <div class="photo-card">

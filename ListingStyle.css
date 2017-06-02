@@ -79,12 +79,10 @@ p {
     margin-bottom: 20px;
 }
 
-#filter-btns{
+#filter-btns {
+    padding-top: 15px ;
     padding-right: 15px;
-    margin-bottom: 60px;
-    display: inline-block;
     float: right;
-    background-position-y: 50%;
 }
 
 .btn-dropdown-filter{
@@ -149,13 +147,13 @@ textarea.form-control.req-panel-spacing {
     width: 335px;
     height: 504px;
     float: right;
-    background-color: #8c8c8c;
+    background-color: #8C8C8C;
     margin-right: 15px;
     margin-left: 15px;
 }
 
 /*For Tablets*/
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1207px){
 
     h1 {
         font-size: 56px;

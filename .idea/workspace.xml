@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fd20e589-0004-44bb-8ea3-a9270f6b0ef7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Listing.html" afterPath="$PROJECT_DIR$/Listing.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ListingStyle.css" afterPath="$PROJECT_DIR$/ListingStyle.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,7 +31,7 @@
       <file leaf-file-name="HomeStyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HomeStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1905">
+            <state relative-caret-position="-953">
               <caret line="127" column="26" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
               <folding />
             </state>
@@ -72,8 +71,8 @@
       <file leaf-file-name="ListingStyle.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ListingStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+            <state relative-caret-position="826">
+              <caret line="197" column="21" lean-forward="false" selection-start-line="197" selection-start-column="21" selection-end-line="197" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -345,7 +344,7 @@
       <workItem from="1495653642415" duration="17268000" />
       <workItem from="1496278215698" duration="3555000" />
       <workItem from="1496337980125" duration="9275000" />
-      <workItem from="1496442080121" duration="2628000" />
+      <workItem from="1496442080121" duration="3555000" />
     </task>
     <task id="LOCAL-00001" summary="Added .css file for the home page. Has not yet been implemented.">
       <created>1494271904836</created>
@@ -365,7 +364,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121569000" />
+    <option name="totallyTimeSpent" value="122496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="92" y="22" width="1400" height="988" extended-state="0" />
@@ -732,14 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HomeStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="127" column="26" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Area.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3360">
@@ -772,10 +763,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/HomeStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-953">
+          <caret line="127" column="26" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ListingStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
+        <state relative-caret-position="826">
+          <caret line="197" column="21" lean-forward="false" selection-start-line="197" selection-start-column="21" selection-end-line="197" selection-end-column="21" />
           <folding />
         </state>
       </provider>

@@ -189,6 +189,10 @@ textarea.form-control.req-panel-spacing {
         order: 1;
         float: none;
     }
+
+    .navbar-form .form-control {
+        width: 100%;
+    }
 }
 
 /*For mobile*/
@@ -228,6 +232,10 @@ textarea.form-control.req-panel-spacing {
         order: 1;
         float: none;
     }
+
+    .navbar-form .form-control {
+        width: 100%;
+    }
 }
 
 /*For smaller mobile*/
@@ -266,5 +274,9 @@ textarea.form-control.req-panel-spacing {
     .community-image-container {
         order: 1;
         float: none;
+    }
+
+    .navbar-form .form-control {
+        width: 100%;
     }
 }

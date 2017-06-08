@@ -176,6 +176,10 @@ float: left;
     #community-description {
         padding: 0;
     }
+
+    .navbar-form .form-control {
+        width: 100%;
+    }
 }
 
 /*For mobile*/
@@ -219,6 +223,10 @@ float: left;
     #community-description {
         padding: 0;
     }
+
+    .navbar-form .form-control {
+        width: 100%;
+    }
 }
 
 /*For smaller mobile*/
@@ -261,6 +269,10 @@ float: left;
 
     #community-description {
         padding: 0;
+    }
+
+    .navbar-form .form-control {
+        width: 100%;
     }
 }
 

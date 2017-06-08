@@ -33,8 +33,6 @@ p {
 }
 
 .community-image-container {
-    /*margin-right: 15px;
-    margin-left: 15px;*/
     margin: 0 auto;
     max-width: 670px;
 }
@@ -153,6 +151,10 @@ textarea.form-control.req-panel-spacing {
     background-color: #8C8C8C;
     margin-right: 15px;
     margin-left: 15px;
+}
+
+.fa-envelope-o {
+    float: left;
 }
 
 /*For Tablets*/

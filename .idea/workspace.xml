@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd20e589-0004-44bb-8ea3-a9270f6b0ef7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/todos.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AreaStyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Communities.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CommunitiesStyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HomeStyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ListingStyle.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/lib/bootstrap.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Area.html" afterPath="$PROJECT_DIR$/Area.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Home.html" afterPath="$PROJECT_DIR$/Home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Listing.html" afterPath="$PROJECT_DIR$/Listing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/AreaStyle.css" afterPath="$PROJECT_DIR$/assets/css/AreaStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/ListingStyle.css" afterPath="$PROJECT_DIR$/assets/css/ListingStyle.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,7 +25,7 @@
       <file leaf-file-name="Home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
+            <state relative-caret-position="750">
               <caret line="50" column="38" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="50" selection-end-column="38" />
               <folding />
             </state>
@@ -40,7 +35,7 @@
       <file leaf-file-name="HomeStyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/HomeStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
+            <state relative-caret-position="3368">
               <caret line="270" column="0" lean-forward="true" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
               <folding />
             </state>
@@ -62,60 +57,38 @@
       <file leaf-file-name="Area.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Area.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="55" column="38" lean-forward="false" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+            <state relative-caret-position="495">
+              <caret line="215" column="78" lean-forward="false" selection-start-line="215" selection-start-column="78" selection-end-line="215" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Listing.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Listing.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="55" column="38" lean-forward="false" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ToDoList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ToDoList.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="126" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="126" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todos.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/todos.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#48#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todos.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/todos.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="70" column="22" lean-forward="true" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AreaStyle.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AreaStyle.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/AreaStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="772">
+              <caret line="268" column="5" lean-forward="false" selection-start-line="268" selection-start-column="5" selection-end-line="268" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Listing.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Listing.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6688">
+              <caret line="636" column="36" lean-forward="false" selection-start-line="636" selection-start-column="36" selection-end-line="636" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListingStyle.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/ListingStyle.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="817">
+              <caret line="269" column="1" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="269" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -192,8 +165,10 @@
         <option value="$PROJECT_DIR$/assets/js/navbar.js" />
         <option value="$PROJECT_DIR$/assets/css/HomeStyle.css" />
         <option value="$PROJECT_DIR$/Home.html" />
-        <option value="$PROJECT_DIR$/Area.html" />
         <option value="$PROJECT_DIR$/Listing.html" />
+        <option value="$PROJECT_DIR$/assets/css/ListingStyle.css" />
+        <option value="$PROJECT_DIR$/Area.html" />
+        <option value="$PROJECT_DIR$/assets/css/AreaStyle.css" />
       </list>
     </option>
   </component>
@@ -264,7 +239,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,7 +381,7 @@
       <workItem from="1496337980125" duration="9275000" />
       <workItem from="1496442080121" duration="7009000" />
       <workItem from="1496680451507" duration="20760000" />
-      <workItem from="1496939741276" duration="3026000" />
+      <workItem from="1496939741276" duration="5014000" />
     </task>
     <task id="LOCAL-00001" summary="Added .css file for the home page. Has not yet been implemented.">
       <created>1494271904836</created>
@@ -426,7 +401,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149736000" />
+    <option name="totallyTimeSpent" value="151724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="25" y="62" width="1400" height="988" extended-state="0" />
@@ -470,7 +445,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Areas.html" />
     <entry file="file://$PROJECT_DIR$/AreasStyle.css" />
     <entry file="file://$PROJECT_DIR$/Communities.html" />
     <entry file="file://$PROJECT_DIR$/lib/bootstrap.css" />
@@ -591,14 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/AreaStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ToDoList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -635,34 +601,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/HomeStyle.css">
+    <entry file="file://$PROJECT_DIR$/Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="270" column="0" lean-forward="true" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+        <state relative-caret-position="750">
+          <caret line="50" column="38" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="50" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Home.html">
+    <entry file="file://$PROJECT_DIR$/assets/css/HomeStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="50" column="38" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="50" selection-end-column="38" />
+        <state relative-caret-position="3368">
+          <caret line="270" column="0" lean-forward="true" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Area.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="55" column="38" lean-forward="false" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        <state relative-caret-position="495">
+          <caret line="215" column="78" lean-forward="false" selection-start-line="215" selection-start-column="78" selection-end-line="215" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Listing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="55" column="38" lean-forward="false" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        <state relative-caret-position="6688">
+          <caret line="636" column="36" lean-forward="false" selection-start-line="636" selection-start-column="36" selection-end-line="636" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/ListingStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="269" column="1" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="269" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/AreaStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="268" column="5" lean-forward="false" selection-start-line="268" selection-start-column="5" selection-end-line="268" selection-end-column="5" />
           <folding />
         </state>
       </provider>

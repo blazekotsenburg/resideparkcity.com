@@ -46,12 +46,8 @@ hr {
 }
 
 #community-listings-header {
-    font-size: 25px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 15px;
-    padding-bottom: 15px;
-    color: #292929;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 h2 span {
@@ -60,9 +56,8 @@ h2 span {
 }
 
 #filter-btns{
+    padding-top: 15px;
     padding-right: 15px;
-    margin-bottom: 60px;
-    display: inline-block;
     float: right;
 }
 

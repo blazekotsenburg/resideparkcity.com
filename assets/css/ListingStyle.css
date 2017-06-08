@@ -24,6 +24,8 @@ hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 p {
@@ -75,7 +77,6 @@ p {
 
 #related-listings-header {
     font-size: 36px;
-    padding-left: 15px;
     margin-bottom: 20px;
 }
 
@@ -107,7 +108,7 @@ h3.panel-heading {
 }
 
 #request-panel {
-    background-color: transparent;
+    background-color: #E0E0E0;
     width: 335px;
     height: 504px;
     float: left;
@@ -120,6 +121,7 @@ textarea.form-control.req-panel-spacing {
     margin-bottom: 15px;
 }
 
+/*Redundant code, this class is already in existance in HomeStyle.css called btn-custom*/
 .custom-submit-btn {
     color: #333;
     background-color: #73ED68;
@@ -129,6 +131,7 @@ textarea.form-control.req-panel-spacing {
     display: block;
 }
 
+/*Redundant code, this class is already in existance in HomeStyle.css called btn-custom*/
 .custom-submit-btn:hover {
     color: white;
     background-color: #57C44D;

@@ -5,628 +5,642 @@
 
     <title>Listing</title>
 
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="HomeStyle.css">
-    <link rel="stylesheet" type="text/css" href="ListingStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/HomeStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/ListingStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+            src="assets/lib/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
 </head>
 <body>
 
-<div id="listing-header-image"></div>
+    <div id="listing-header-image"></div>
 
-<nav class="navbar navbar-inverse navbar-custom">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Park City Homes</a>
-        </div>
+    <nav class="navbar navbar-inverse navbar-custom">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Park City Homes</a>
+            </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
 
-                <!--Begin Dropdown for price input-->
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Any Price <span class="caret"></span></a>
-                    <ul class="dropdown-menu price-container">
+                    <!--Begin Dropdown for price input-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Any Price <span class="caret"></span></a>
+                        <ul class="dropdown-menu price-container">
 
-                        <li>
-                            <div class="row row-margin-zero">
-                                <div class="col-xs-6">
-                                    <input type="text" placeholder="Min.">
+                            <li>
+                                <div class="row row-margin-zero">
+                                    <div class="col-xs-6">
+                                        <input id="min-input" type="text" placeholder="Min.">
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input id="max-input" type="text" placeholder="Max.">
+                                    </div>
                                 </div>
-                                <div class="col-xs-6">
-                                    <input type="text" placeholder="Max.">
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li role="separator" class="divider"></li>
+                            <li role="separator" class="divider"></li>
 
 
-                        <li class="dropdown-list">$50,000+</li>
-                        <li class="dropdown-list">$100,000+</li>
-                        <li class="dropdown-list">$150,000+</li>
-                        <li class="dropdown-list">$200,000+</li>
-                        <li class="dropdown-list">$250,000+</li>
-                        <li class="dropdown-list">$300,000+</li>
-                        <li class="dropdown-list">$400,000+</li>
-                        <li class="dropdown-list">$500,000+</li>
+                            <li>
+                                <ul id="price-col" class="price-col-left">
+                                    <li><span>$</span>50,000<span>+</span></li>
+                                    <li><span>$</span>100,000<span>+</span></li>
+                                    <li><span>$</span>150,000<span>+</span></li>
+                                    <li><span>$</span>200,000<span>+</span></li>
+                                    <li><span>$</span>250,000<span>+</span></li>
+                                    <li><span>$</span>300,000<span>+</span></li>
+                                    <li><span>$</span>400,000<span>+</span></li>
+                                    <li><span>$</span>500,000<span>+</span></li>
+                                </ul>
+                            </li>
 
-                    </ul>
-                </li> <!--End Dropdown for price input-->
+                        </ul>
+                    </li> <!--End Dropdown for price input-->
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Beds<span class="caret"></span></a>
-                    <ul class="dropdown-menu bedroom-container">
-                        <li class="dropdown-list">0+</li>
-                        <li class="dropdown-list">1+</li>
-                        <li class="dropdown-list">2+</li>
-                        <li class="dropdown-list">3+</li>
-                        <li class="dropdown-list">4+</li>
-                        <li class="dropdown-list">5+</li>
-                        <li class="dropdown-list">6+</li>
-                        <li class="dropdown-list">7+</li>
-                        <li class="dropdown-list">8+</li>
-                    </ul>
-                </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Beds<span class="caret"></span></a>
+                        <ul class="dropdown-menu bedroom-container">
+                            <li class="dropdown-list">0+</li>
+                            <li class="dropdown-list">1+</li>
+                            <li class="dropdown-list">2+</li>
+                            <li class="dropdown-list">3+</li>
+                            <li class="dropdown-list">4+</li>
+                            <li class="dropdown-list">5+</li>
+                            <li class="dropdown-list">6+</li>
+                            <li class="dropdown-list">7+</li>
+                            <li class="dropdown-list">8+</li>
+                        </ul>
+                    </li>
 
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Home Type<span class="caret"></span></a>
-                    <ul class="dropdown-menu chackbox-format">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Home Type<span class="caret"></span></a>
+                        <ul class="dropdown-menu chackbox-format">
 
-                        <li class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Houses" aria-label="Houses">
-                                Houses
-                            </label>
-                        </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="Houses" aria-label="Houses">
+                                    Houses
+                                </label>
+                            </li>
 
-                        <li role="separator" class="divider"></li>
+                            <li role="separator" class="divider"></li>
 
-                        <li class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Condos/Apartments" aria-label="Condos/Apartments">
-                                Condos/Apartments
-                            </label>
-                        </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="Condos/Apartments" aria-label="Condos/Apartments">
+                                    Condos/Apartments
+                                </label>
+                            </li>
 
-                        <li role="separator" class="divider"></li>
+                            <li role="separator" class="divider"></li>
 
-                        <li class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Townhomes" aria-label="Townhomes">
-                                Townhomes
-                            </label>
-                        </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="Townhomes" aria-label="Townhomes">
+                                    Townhomes
+                                </label>
+                            </li>
 
-                        <li role="separator" class="divider"></li>
+                            <li role="separator" class="divider"></li>
 
-                        <li class="checkbox">
-                            <label>
-                                <input type="checkbox" value="Lots/Land" aria-label="Lots/Land">
-                                Lots/Land
-                            </label>
-                        </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="Lots/Land" aria-label="Lots/Land">
+                                    Lots/Land
+                                </label>
+                            </li>
 
-                    </ul>
-                </li>
-            </ul>
+                        </ul>
+                    </li>
+                </ul>
 
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search Address, Zip, etc">
-                </div>
-                <button type="submit" class="btn btn-default btn-custom">Search</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search Address, Zip, etc">
+                    </div>
+                    <button type="submit" class="btn btn-default btn-custom">Search</button>
+                </form>
 
-                <li class="dropdown"><!--Begin Communities wrapper dropdown-->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Communities<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <!--Park City Dropdown-->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">Park City<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li>Park Meadows</li>
-                                <li>Old Town</li>
-                                <li>Thaynes Canyon</li>
+                <ul class="nav navbar-nav navbar-right">
 
-                            </ul>
-                        </li>
+                    <li class="dropdown"><!--Begin Communities wrapper dropdown-->
 
-                        <!--Deer Valley Dropdown-->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">Deer Valley<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Communities<span class="caret"></span></a>
 
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav><!--/.nav End of NavBar-->
+                        <ul class="dropdown-menu">
+                            <!--Park City Dropdown-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">Park City<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>Park Meadows</li>
+                                    <li>Old Town</li>
+                                    <li>Thaynes Canyon</li>
+                                </ul>
+                            </li>
 
-<div class="container">
-    <div class="col-xs-12">
-        <h1 id="community-header">4953 E Meadows Dr</h1>
-    </div>
-</div>
+                            <!--Deer Valley Dropdown-->
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">Deer Valley<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
 
-<hr>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav><!--/.nav End of NavBar-->
 
-<div id="wrapper">
-
-    <section id="request-panel" class="panel panel-default custom-panel-background">
-        <div class="panel-heading custom-panel-heading">
-            <h3 class="panel-heading">Request Information</h3>
-        </div>
-        <div class="panel-body">
-
-            <form class="form-inline">
-
-                <div class="form-group req-panel-spacing">
-                    <label for="req-panel-first-name">First Name</label>
-                    <input type="text" class="form-control" id="req-panel-first-name" placeholder="Johnny">
-                </div>
-
-                <div class="form-group req-panel-spacing">
-                    <label for="req-panel-last-name">Last Name</label>
-                    <input type="text" class="form-control" id="req-panel-last-name" placeholder="Appleseed">
-                </div>
-
-                <div class="form-group req-panel-spacing">
-                    <label for="req-panel-last-name">Email</label>
-                    <input type="text" class="form-control" id="req-panel-email" placeholder="john@example.com">
-                </div>
-
-            </form>
-
-            <textarea class="form-control req-panel-spacing" rows="5"
-                      placeholder="Leave a question or comment here..."></textarea>
-
-            <button type="button" class="btn btn-default custom-submit-btn">Submit</button>
-
-        </div>
-    </section>
-
-    <div class="community-image-container">
-        <img class="community-image img-drop-shadow" src="https://source.unsplash.com/bN_TkedaBuQ">
-
-        <div class="row">
-
-            <div id="listing-info-chart">
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p>$925,500</p>
-                </div>
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p>4 Bedrooms</p>
-                </div>
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p>2 Bathrooms</p>
-                </div>
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p>MLS #: 1089762</p>
-                </div>
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p>6,000 Sqft</p>
-                </div>
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p>DOM: 27</p>
-                </div>
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p>Single Family</p>
-                </div>
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p>For Sale</p>
-                </div>
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p>Silver Springs</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="google-map">
-
-        <script>
-            function myMap() {
-                var mapProp= {
-                    center:new google.maps.LatLng(40.6461,-111.4980),
-                    zoom:14
-                };
-                var map=new google.maps.Map(document.getElementById("google-map"),mapProp);
-            }
-        </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgH_dYa-nHJ2y4Z4Ez7utaD65JUKTrKa8&callback=myMap"></script>
-    </div>
-</div>
-
-<div class="row grid-list">
     <div class="container">
+        <div class="col-xs-12">
+            <h1 id="community-header">4953 E Meadows Dr</h1>
+        </div>
+    </div>
 
-        <div class="col-xs-6">
+    <hr>
 
-            <h2 id="related-listings-header">Related Listings</h2>
+    <div id="wrapper">
+
+        <section id="request-panel" class="panel panel-default custom-panel-background">
+            <div class="panel-heading custom-panel-heading">
+                <h3 class="panel-heading"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>Have A Question?</h3>
+            </div>
+            <div class="panel-body">
+
+                <form class="form-inline">
+
+                    <div class="form-group req-panel-spacing">
+                        <label for="req-panel-first-name">First Name</label>
+                        <input type="text" class="form-control" id="req-panel-first-name" placeholder="Johnny">
+                    </div>
+
+                    <div class="form-group req-panel-spacing">
+                        <label for="req-panel-last-name">Last Name</label>
+                        <input type="text" class="form-control" id="req-panel-last-name" placeholder="Appleseed">
+                    </div>
+
+                    <div class="form-group req-panel-spacing">
+                        <label for="req-panel-last-name">Email</label>
+                        <input type="text" class="form-control" id="req-panel-email" placeholder="john@example.com">
+                    </div>
+
+                </form>
+
+                <textarea class="form-control req-panel-spacing" rows="5"
+                          placeholder="Leave a question or comment here..."></textarea>
+
+                <button type="button" class="btn btn-default custom-submit-btn">Submit</button>
+
+            </div>
+        </section>
+
+        <div class="community-image-container">
+            <img class="community-image img-drop-shadow" src="https://source.unsplash.com/bN_TkedaBuQ">
+
+            <div class="row">
+
+                <div id="listing-info-chart">
+
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>$925,500</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>4 Bedrooms</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>2 Bathrooms</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>MLS #: 1089762</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>6,000 Sqft</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>DOM: 27</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>Single Family</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>For Sale</p>
+                    </div>
+
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>Silver Springs</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
-        <div class="col-xs-6">
+        <div id="google-map">
 
-            <div id="filter-btns">
-                <!-- Filter button -->
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle btn-dropdown-filter drop-shadow "
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Filter <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Price</a></li>
-                        <li><a href="#">Square Ft</a></li>
-                        <li><a href="#">Beds</a></li>
-                    </ul>
-                </div>
+            <script>
+                function myMap() {
+                    var mapProp= {
+                        center:new google.maps.LatLng(40.6461,-111.4980),
+                        zoom:14
+                    };
+                    var map=new google.maps.Map(document.getElementById("google-map"),mapProp);
+                }
+            </script>
 
-                <!-- Ascending/Descending button -->
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle btn-dropdown-filter drop-shadow "
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Ascending <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Ascending</a></li>
-                        <li><a href="#">Descending</a></li>
-                    </ul>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgH_dYa-nHJ2y4Z4Ez7utaD65JUKTrKa8&callback=myMap"></script>
+        </div>
+    </div>
+
+    <div class="row grid-list">
+        <div class="container">
+
+            <div class="col-xs-6">
+
+                <h2 id="related-listings-header">Related Listings</h2>
+
+            </div>
+
+            <div class="col-xs-6">
+
+                <div id="filter-btns">
+                    <!-- Filter button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-dropdown-filter drop-shadow "
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Filter <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Price</a></li>
+                            <li><a href="#">Square Ft</a></li>
+                            <li><a href="#">Beds</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Ascending/Descending button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle btn-dropdown-filter drop-shadow "
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ascending <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Ascending</a></li>
+                            <li><a href="#">Descending</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Grid for Listings -->
-<div class="row grid-list"><!-- Begin First Row-->
-    <div class="container">
+    <!-- Grid for Listings -->
+    <div class="row grid-list"><!-- Begin First Row-->
+        <div class="container">
 
-<!--Consider fixing the row so that only a single row wraps all of the images.  The cause for the grid inconsistency in
-different screen sizes could be from making so many individual rows.-->
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+    <!--Consider fixing the row so that only a single row wraps all of the images.  The cause for the grid inconsistency in
+    different screen sizes could be from making so many individual rows.-->
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
-            <div class="photo-card">
+                <div class="photo-card">
 
-                <p class="status-label">
-                    <span class="label label-for-sale">For Sale</span>
-                </p>
+                    <p class="status-label">
+                        <span class="label label-for-sale">For Sale</span>
+                    </p>
 
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/CpC7lBcxzjM">
+                    <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/CpC7lBcxzjM">
 
-                <p class="photo-card-info-spec-row1">
+                    <p class="photo-card-info-spec-row1">
 
-                        <span class="photo-card-price">
-                            $19,750,000
-                        </span>
+                            <span class="photo-card-price">
+                                $19,750,000
+                            </span>
 
-                    <span class="photo-card-info">
-                            5 bd
-                            <span class="photo-card-punct">|</span>
-                            3 ba
-                            <span class="photo-card-punct">|</span>
-                            7,200 sqft
-                        </span>
-                </p>
+                        <span class="photo-card-info">
+                                5 bd
+                                <span class="photo-card-punct">|</span>
+                                3 ba
+                                <span class="photo-card-punct">|</span>
+                                7,200 sqft
+                            </span>
+                    </p>
 
-                <p class="photo-card-info-spec-row2">
+                    <p class="photo-card-info-spec-row2">
 
-                        <span class="photo-card-dom">
-                            <span class="dom">dom:</span>
-                            45
-                        </span>
+                            <span class="photo-card-dom">
+                                <span class="dom">dom:</span>
+                                45
+                            </span>
 
-                    <span class="photo-card-punct">|</span>
+                        <span class="photo-card-punct">|</span>
 
-                    <span class="photo-card-address">
-                            4701 Winchester Court, Park City, UT
-                        </span>
-                </p>
+                        <span class="photo-card-address">
+                                4701 Winchester Court, Park City, UT
+                            </span>
+                    </p>
+
+                </div>
 
             </div>
 
-        </div>
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+                <div class="photo-card">
+                    <p class="status-label">
+                        <span class="label label-pending">Pending</span>
+                    </p>
 
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-            <div class="photo-card">
-                <p class="status-label">
-                    <span class="label label-pending">Pending</span>
-                </p>
+                    <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/bmALnwwLumQ">
 
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/bmALnwwLumQ">
+                    <p class="photo-card-info-spec-row1">
 
-                <p class="photo-card-info-spec-row1">
+                            <span class="photo-card-price">
+                                $1,250,000
+                            </span>
 
-                        <span class="photo-card-price">
-                            $1,250,000
-                        </span>
+                        <span class="photo-card-info">
+                                3 bd
+                                <span class="photo-card-punct">|</span>
+                                3 ba
+                                <span class="photo-card-punct">|</span>
+                                1,700 sqft
+                            </span>
+                    </p>
 
-                    <span class="photo-card-info">
-                            3 bd
-                            <span class="photo-card-punct">|</span>
-                            3 ba
-                            <span class="photo-card-punct">|</span>
-                            1,700 sqft
-                        </span>
-                </p>
+                    <p class="photo-card-info-spec-row2">
 
-                <p class="photo-card-info-spec-row2">
+                            <span class="photo-card-dom">
+                                <span class="dom">dom:</span>
+                                21
+                            </span>
 
-                        <span class="photo-card-dom">
-                            <span class="dom">dom:</span>
-                            21
-                        </span>
+                        <span class="photo-card-punct">|</span>
 
-                    <span class="photo-card-punct">|</span>
-
-                    <span class="photo-card-address">
-                            4953 E Meadows Dr, Park City, UT
-                        </span>
-                </p>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-            <div class="photo-card">
-                <p class="status-label">
-                    <span class="label label-for-sale">For Sale</span>
-                </p>
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/1ddol8rgUH8">
-
-                <p class="photo-card-info-spec-row1">
-
-                        <span class="photo-card-price">
-                            $850,000
-                        </span>
-
-                    <span class="photo-card-info">
-                            5 bd
-                            <span class="photo-card-punct">|</span>
-                            2 ba
-                            <span class="photo-card-punct">|</span>
-                            2,500 sqft
-                        </span>
-                </p>
-
-                <p class="photo-card-info-spec-row2">
-
-                        <span class="photo-card-dom">
-                            <span class="dom">dom:</span>
-                            10
-                        </span>
-
-                    <span class="photo-card-punct">|</span>
-
-                    <span class="photo-card-address">
-                            1835 S 1800 E, Salt Lake City, UT
-                        </span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div><!-- End First Row-->
-
-<div class="row grid-list"><!-- Begin Second Row-->
-    <div class="container">
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 ">
-
-            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-            <div class="row-stats">
-                <div class="col-xs-4">
-                    <p>Beds:</p>
+                        <span class="photo-card-address">
+                                4953 E Meadows Dr, Park City, UT
+                            </span>
+                    </p>
                 </div>
-                <div class="col-xs-4">
-                    <p>Baths:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>SqFt:</p>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+                <div class="photo-card">
+                    <p class="status-label">
+                        <span class="label label-for-sale">For Sale</span>
+                    </p>
+
+                    <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/1ddol8rgUH8">
+
+                    <p class="photo-card-info-spec-row1">
+
+                            <span class="photo-card-price">
+                                $850,000
+                            </span>
+
+                        <span class="photo-card-info">
+                                5 bd
+                                <span class="photo-card-punct">|</span>
+                                2 ba
+                                <span class="photo-card-punct">|</span>
+                                2,500 sqft
+                            </span>
+                    </p>
+
+                    <p class="photo-card-info-spec-row2">
+
+                            <span class="photo-card-dom">
+                                <span class="dom">dom:</span>
+                                10
+                            </span>
+
+                        <span class="photo-card-punct">|</span>
+
+                        <span class="photo-card-address">
+                                1835 S 1800 E, Salt Lake City, UT
+                            </span>
+                    </p>
                 </div>
             </div>
         </div>
+    </div><!-- End First Row-->
 
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+    <div class="row grid-list"><!-- Begin Second Row-->
+        <div class="container">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 ">
 
-            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
-            <div class="row-stats">
-                <div class="col-xs-4">
-                    <p>Beds:</p>
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
                 </div>
-                <div class="col-xs-4">
-                    <p>Baths:</p>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+
+                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
                 </div>
-                <div class="col-xs-4">
-                    <p>SqFt:</p>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+
+                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div><!-- End Second Row-->
 
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+    <div class="row grid-list"><!-- Begin Third Row-->
+        <div class="container">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
-            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
 
-            <div class="row-stats">
-                <div class="col-xs-4">
-                    <p>Beds:</p>
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
                 </div>
-                <div class="col-xs-4">
-                    <p>Baths:</p>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+
+                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
                 </div>
-                <div class="col-xs-4">
-                    <p>SqFt:</p>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+
+                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div><!-- End Second Row-->
+    </div><!-- End Third Row-->
 
-<div class="row grid-list"><!-- Begin Third Row-->
-    <div class="container">
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
-            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+    <div class="row grid-list">
+        <div class="container">
+            <!-- Begin Fourth Row-->
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
 
-            <div class="row-stats">
-                <div class="col-xs-4">
-                    <p>Beds:</p>
+                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
                 </div>
-                <div class="col-xs-4">
-                    <p>Baths:</p>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+
+                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
                 </div>
-                <div class="col-xs-4">
-                    <p>SqFt:</p>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+
+                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+
+                <div class="row-stats">
+                    <div class="col-xs-4">
+                        <p>Beds:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>Baths:</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <p>SqFt:</p>
+                    </div>
                 </div>
             </div>
         </div>
+    </div><!-- End Fourth Row-->
 
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
+    <footer id="footer"></footer>
 
-            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
 
-            <div class="row-stats">
-                <div class="col-xs-4">
-                    <p>Beds:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>Baths:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>SqFt:</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-
-            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-            <div class="row-stats">
-                <div class="col-xs-4">
-                    <p>Beds:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>Baths:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>SqFt:</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div><!-- End Third Row-->
-
-
-<div class="row grid-list">
-    <div class="container">
-        <!-- Begin Fourth Row-->
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-
-            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-            <div class="row-stats">
-                <div class="col-xs-4">
-                    <p>Beds:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>Baths:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>SqFt:</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-
-            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-            <div class="row-stats">
-                <div class="col-xs-4">
-                    <p>Beds:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>Baths:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>SqFt:</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6">
-
-            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-            <div class="row-stats">
-                <div class="col-xs-4">
-                    <p>Beds:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>Baths:</p>
-                </div>
-                <div class="col-xs-4">
-                    <p>SqFt:</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div><!-- End Fourth Row-->
-
-<script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-
-</script>
-<script
-        type="text/javascript"
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-
-</script>
+    </script>
+    <script
+            type="text/javascript"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="assets/js/navbar.js"></script>
 </body>
 </html>

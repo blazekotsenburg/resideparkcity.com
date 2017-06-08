@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Park City Homes</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="HomeStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/HomeStyle.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500" rel="stylesheet">
+    <script
+            src="assets/lib/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
 </head>
 <body>
 
@@ -35,29 +40,31 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">Any Price <span class="caret"></span></a>
                         <ul class="dropdown-menu price-container">
-
                             <li>
                                 <div class="row row-margin-zero">
                                     <div class="col-xs-6">
-                                        <input type="text" placeholder="Min.">
+                                        <input id="min-input" type="text" placeholder="Min.">
                                     </div>
                                     <div class="col-xs-6">
-                                        <input type="text" placeholder="Max.">
+                                        <input id="max-input" type="text" placeholder="Max.">
                                     </div>
                                 </div>
                             </li>
 
                             <li role="separator" class="divider"></li>
 
-
-                            <li class="dropdown-list">$50,000+</li>
-                            <li class="dropdown-list">$100,000+</li>
-                            <li class="dropdown-list">$150,000+</li>
-                            <li class="dropdown-list">$200,000+</li>
-                            <li class="dropdown-list">$250,000+</li>
-                            <li class="dropdown-list">$300,000+</li>
-                            <li class="dropdown-list">$400,000+</li>
-                            <li class="dropdown-list">$500,000+</li>
+                            <li>
+                                <ul id="price-col" class="price-col-left">
+                                    <li><span>$</span>50,000<span>+</span></li>
+                                    <li><span>$</span>100,000<span>+</span></li>
+                                    <li><span>$</span>150,000<span>+</span></li>
+                                    <li><span>$</span>200,000<span>+</span></li>
+                                    <li><span>$</span>250,000<span>+</span></li>
+                                    <li><span>$</span>300,000<span>+</span></li>
+                                    <li><span>$</span>400,000<span>+</span></li>
+                                    <li><span>$</span>500,000<span>+</span></li>
+                                </ul>
+                            </li>
 
                         </ul>
                     </li> <!--End Dropdown for price input-->
@@ -161,6 +168,8 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav><!--/.nav End of NavBar-->
+
+    <h1 id="welcome-header">Park City, UT</h1>
 
     <!-- Grid for Listings -->
     <div class="row grid-list"><!-- Begin First Row-->
@@ -470,5 +479,7 @@
             src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 
     </script>
+    <script type="text/javascript" src="assets/js/navbar.js"></script>
+
 </body>
 </html>

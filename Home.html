@@ -35,10 +35,34 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
 
+                    <li class="dropdown"><a href="">Any Price<span class="caret"></span></a>
+                        <div class="dropdown-content">
+
+                            <div class="row row-margin-zero">
+                                <div class="col-xs-6">
+                                    <input id="min-input" type="text" placeholder="Min.">
+                                </div>
+                                <div class="col-xs-6">
+                                    <input id="max-input" type="text" placeholder="Max.">
+                                </div>
+                            </div>
+                            <ul id="price-options">
+                                <li><span>$</span>50,000<span>+</span></li>
+                                <li><span>$</span>100,000<span>+</span></li>
+                                <li><span>$</span>150,000<span>+</span></li>
+                                <li><span>$</span>200,000<span>+</span></li>
+                                <li><span>$</span>250,000<span>+</span></li>
+                                <li><span>$</span>300,000<span>+</span></li>
+                                <li><span>$</span>400,000<span>+</span></li>
+                                <li><span>$</span>500,000<span>+</span></li>
+                            </ul>
+                        </div>
+                    </li>
+
                     <!--Begin Dropdown for price input-->
-                    <li class="dropdown">
+                    <!--<li id="price-dropdown" class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Any Price <span class="caret"></span></a>
+                           aria-expanded="false">Any Price<span class="caret"></span></a>
                         <ul class="dropdown-menu price-container">
                             <li>
                                 <div class="row row-margin-zero">
@@ -49,11 +73,11 @@
                                         <input id="max-input" type="text" placeholder="Max.">
                                     </div>
                                 </div>
-                            </li>
+                            </li>-->
 
-                            <li role="separator" class="divider"></li>
+                            <!--<li role="separator" class="divider"></li>-->
 
-                            <li>
+                            <!--<li id="price-options">
                                 <ul id="price-col" class="price-col-left">
                                     <li><span>$</span>50,000<span>+</span></li>
                                     <li><span>$</span>100,000<span>+</span></li>
@@ -64,8 +88,6 @@
                                     <li><span>$</span>400,000<span>+</span></li>
                                     <li><span>$</span>500,000<span>+</span></li>
                                 </ul>
-                            </li>
-
                         </ul>
                     </li> <!--End Dropdown for price input-->
 

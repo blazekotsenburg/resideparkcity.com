@@ -39,6 +39,9 @@ body {
 .row-margin-zero {
     margin-right: 0;
     margin-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 36px;;
 }
 
 input {
@@ -80,6 +83,7 @@ hr {
 
 .price-container {
     width: 200px;
+    padding-bottom: 0;
 }
 
 .bedroom-container {
@@ -263,26 +267,74 @@ p.photo-card-info-spec-row2{
     border: 3px solid #292929;
 }
 
+/***************** Custom dropdown start *****************/
 ul {
     list-style: none;
     padding:0;
 }
 
-.price-col-left li {
+li {
+    float: left;
+}
+
+.dropdown li {
     width: 100%;
-    line-height: 2.5;
-    padding-left: 15px;
+}
+
+.dropbtn {
+    display: inline-block;
+    color: #292929;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #F1F1F1;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 186px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 3;
+}
+
+.dropdown:hover {
+    background-color: #080808;
+}
+
+.dropdown-content li {
+    color: #292929;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
     text-align: left;
 }
 
-.price-col-right li {
-    width: 100%;
-    line-height: 2.5;
-    padding-right: 15px;
-    text-align: right;
+.dropdown-content li:hover {
+    background-color: #F1F1F1;
 }
 
-#price-col li:hover,
-.bedroom-container li:hover {
-    background-color: #C9C9C9;
+.dropdown:hover .dropdown-content {
+    display: block
+}
+
+/*********************************************************/
+
+#price-options {
+    border-top: solid 1px #C9C9C9;
+    margin-top: 5px;
+}
+
+.shift-col-right li{
+    width: 100%;
+    padding-right: 15px;
+    text-align: right;
 }

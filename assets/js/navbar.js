@@ -7,8 +7,7 @@
  * dropdown column.
  */
 $("#max-input").on("click", function () {
-    $("#price-col").removeClass("price-col-left");
-    $("#price-col").addClass("price-col-right");
+    $("#price-options").addClass("shift-col-right");
 });
 
 /**
@@ -16,6 +15,11 @@ $("#max-input").on("click", function () {
  * dropdown column.
  */
 $("#min-input").on("click", function () {
-    $("#price-col").removeClass("price-col-right");
-    $("#price-col").addClass("price-col-left");
+    $("#price-options").removeClass("shift-col-right");
+});
+
+$(".dropdown").on("mouse", function () {
+    $(this).css({
+       backgroundColor: "#080808"
+    });
 });

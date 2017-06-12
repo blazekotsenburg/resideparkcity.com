@@ -252,7 +252,6 @@ p.photo-card-info-spec-row2{
 #min-input,
 #max-input {
     margin: 0;
-    width: 100%;
     outline: none;
     background-color: #F7F7F7;
 }
@@ -290,7 +289,7 @@ li {
     text-decoration: none;
 }
 
-.dropdown:hover .dropbtn {
+li a:hover, .dropdown:hover .dropbtn {
     background-color: #F1F1F1;
 }
 
@@ -302,7 +301,7 @@ li.dropdown {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 200px;
+    min-width: 186px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 3;
 }
@@ -327,6 +326,8 @@ li.dropdown {
     display: block
 }
 
+/*********************************************************/
+
 #price-options {
     border-top: solid 1px #C9C9C9;
     margin-top: 5px;
@@ -337,5 +338,3 @@ li.dropdown {
     padding-right: 15px;
     text-align: right;
 }
-
-/*********************************************************/

@@ -34,22 +34,24 @@ $("#max-input").on("click", function () {
             i += 100000;
         });
     }
+
     else {
-        var j = 25000;
 
         if ($.isNumeric($("#min-input").val())) {
-            $(".price").each(function () {
-                var valToInt = parseInt($("#min-input").val(), 10);
-                $(this).text("$" + (valToInt + j));
-                j += 25000;
-            })
+
+
+            if ($("#min-input").val().length >= 7){
+
+                getMaxPriceOptions(250000, 1);
+            }
+
+            else {
+
+                getMaxPriceOptions(25000, 1);
+            }
         }
 
         else {
-            /*
-            * Allow for people to input letters (500k)..
-            * check for commas.
-            * */
 
             updateMaxPrices($("#min-input").val());
         }
@@ -68,6 +70,7 @@ function updateMaxPrices(minPriceInput) {
     var quarterK = 25000;
     var quarterM = 250000;
 
+    // If a user inputs a metric multiplier, eg 40k, handle price options accordingly
     if (metricPattern.test(minPriceInput)) {
 
         var valAtMin = $("#min-input").val();
@@ -84,7 +87,7 @@ function updateMaxPrices(minPriceInput) {
         }
     }
 
-    // check that this is both necesary and working.
+    // If a user inputs integer with comma, eg 1,000,000 , handle price options accordingly
     else if (intWithCommaPattern.test(minPriceInput)) {
 
         if ($("#min-input").val().replace(/,/g, '').length >= 7) {
@@ -109,6 +112,7 @@ function updateMaxPrices(minPriceInput) {
             });
         }
     }
+     // Should check here for invalid inputs, such as words and special characters.
 }
 
 /**

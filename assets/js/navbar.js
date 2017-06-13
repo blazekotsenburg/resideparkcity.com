@@ -56,49 +56,73 @@ $("#max-input").on("click", function () {
     }
 });
 
+/**
+ * This method is used to determine what prices will be displayed on the price list after the
+ * max-input has been put into focus.  It allows for a user to use commas in their input as well
+ * as multipliers such as 40k = 40,000 and 10m= 10,000,000.
+ *
+ * @param minPriceInput
+ */
 function updateMaxPrices(minPriceInput) {
+
     var quarterK = 25000;
     var quarterM = 250000;
 
-    //need to check for M or K and then increment properly
-    //noticed incrementing was not working correctly
     if (metricPattern.test(minPriceInput)) {
 
         var valAtMin = $("#min-input").val();
 
-        if(valAtMin.charAt(valAtMin.length - 1) ==="k" ||
-            valAtMin.charAt(valAtMin.length - 1) ==="K") {
+        if (valAtMin.charAt(valAtMin.length - 1) === "k" ||
+            valAtMin.charAt(valAtMin.length - 1) === "K") {
 
-            // Consider extracting as a helper method
-            $(".price").each(function () {
-                var valToInt = parseInt($("#min-input").val(), 10) * 1000;
-                $(this).text("$" + (valToInt + quarterK));
-                quarterK += quarterK;
-            });
+            getMaxPriceOptions(quarterK, 1000);
         }
 
         else {
-            // need to check on how many numbers exist in the input before knowing
-            // how much each price needs to be multiplied by in line 84.
-            $(".price").each(function () {
-                var valToInt = parseInt($("#min-input").val(), 10) * 1000000;
-                $(this).text("$" + (valToInt + quarterM));
-                quarterM += quarterM;
-            });
 
+            getMaxPriceOptions(quarterM, 1000000);
         }
-
     }
 
     // check that this is both necesary and working.
     else if (intWithCommaPattern.test(minPriceInput)) {
-        $(".price").each(function () {
-            var valToInt = parseInt($("#min-input").val(), 10);
-            $(this).text("$" + (valToInt + quarterM));
-            quarterM += quarterM;
-        });
-    }
 
+        if ($("#min-input").val().replace(/,/g, '').length >= 7) {
+
+            $(".price").each(function () {
+                var valToInt = parseInt($("#min-input").val().replace(/,/g, ''), 10);
+                $(this).text("$" + (valToInt + quarterM));
+                quarterM += quarterM;
+            });
+        }
+
+        else {
+
+            $(".price").each(function () {
+                var valToInt = parseInt($("#min-input").val().replace(/,/g, ''), 10);
+                $(this).text("$" + (valToInt + quarterK));
+                quarterK += quarterK;
+            });
+        }
+    }
+}
+
+/**
+ * Helper method for updateMaxPrices method.  This method modifies the price options based
+ * on whatever the min-input value was before max-input is focused.
+ *
+ * @param incrementBy - The integer value of how much each price option is increased by.
+ * @param multiplier - Multiply min-input val by some power of 10.
+ */
+function getMaxPriceOptions(incrementBy ,multiplier) {
+
+    var increasedBy = incrementBy;
+
+    $(".price").each(function () {
+        var valToInt = parseInt($("#min-input").val(), 10) * multiplier;
+        $(this).text("$" + (valToInt + increasedBy)); //Consider method that returns string value with commas
+        increasedBy += incrementBy;
+    });
 }
 
 /**

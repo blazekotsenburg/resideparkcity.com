@@ -16,7 +16,7 @@ var minPrices = [
 ];
 
 var metricPattern = /^\d*[mMkK]$/; // Pattern allows for m and k multipliers (eg 40k -> 40,000)
-var intWithCommaPattern = /^\d{1,3}(,\d{3})*?$/; //Pattern allows commas (eg 700,000 mathces)
+var intWithCommaPattern = /^\d{1,3}(,\d{3})*?$/; //Pattern allows commas (eg 700,000 matches)
 
 /**
  * This event listener makes sure that the price column is shifted to the right whenever the
@@ -30,31 +30,27 @@ $("#max-input").on("click", function () {
     if (!$("#min-input").val()) {
         var i = 100000;
         $(".price").each(function () {
-            $(this).text("$" + i);
+            $(this).text("$" + numberWithCommas(i));
             i += 100000;
         });
     }
 
-    else {
+    else if ($.isNumeric($("#min-input").val())) {
 
-        if ($.isNumeric($("#min-input").val())) {
+        if ($("#min-input").val().length >= 7){
 
-
-            if ($("#min-input").val().length >= 7){
-
-                getMaxPriceOptions(250000, 1);
-            }
-
-            else {
-
-                getMaxPriceOptions(25000, 1);
-            }
+            getMaxPriceOptions(250000, 1);
         }
 
         else {
 
-            updateMaxPrices($("#min-input").val());
+            getMaxPriceOptions(25000, 1);
         }
+    }
+
+    else {
+
+        updateMaxPrices($("#min-input").val());
     }
 });
 
@@ -63,7 +59,7 @@ $("#max-input").on("click", function () {
  * max-input has been put into focus.  It allows for a user to use commas in their input as well
  * as multipliers such as 40k = 40,000 and 10m= 10,000,000.
  *
- * @param minPriceInput
+ * @param minPriceInput - The value that is held in min-input
  */
 function updateMaxPrices(minPriceInput) {
 
@@ -96,7 +92,7 @@ function updateMaxPrices(minPriceInput) {
 
             $(".price").each(function () {
                 var valToInt = parseInt($("#min-input").val().replace(/,/g, ''), 10);
-                $(this).text("$" + (valToInt + tempM));
+                $(this).text("$" + (numberWithCommas(valToInt + tempM)));
                 tempM += quarterM;
             });
         }
@@ -107,7 +103,9 @@ function updateMaxPrices(minPriceInput) {
 
             $(".price").each(function () {
                 var valToInt = parseInt($("#min-input").val().replace(/,/g, ''), 10);
-                $(this).text("$" + (valToInt + tempK));
+                //$(this).text("$" + (valToInt + tempK));
+                $(this).text("$" + (numberWithCommas(valToInt + tempK)));
+
                 tempK += quarterK;
             });
         }
@@ -128,9 +126,20 @@ function getMaxPriceOptions(incrementBy ,multiplier) {
 
     $(".price").each(function () {
         var valToInt = parseInt($("#min-input").val(), 10) * multiplier;
-        $(this).text("$" + (valToInt + increasedBy)); //Consider method that returns string value with commas
+        $(this).text("$" + (numberWithCommas(valToInt + increasedBy)));
         increasedBy += incrementBy;
     });
+}
+
+/**
+ * Gives any given number the proper formatting with commas.
+ *
+ * @param numberToConvert
+ * @returns {string}
+ */
+function numberWithCommas(numberToConvert) {
+
+    return numberToConvert.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 /**
@@ -142,13 +151,7 @@ $("#min-input").on("click", function () {
 
     var i = 0;
     $(".price").each(function () {
-        $(this).text("$" + minPrices[i] + "+");
+        $(this).text("$" + numberWithCommas(minPrices[i]) + "+");
         i++;
-    });
-});
-
-$(".dropdown").on("mouse", function () {
-    $(this).css({
-       backgroundColor: "#080808"
     });
 });

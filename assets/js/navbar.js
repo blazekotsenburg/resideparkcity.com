@@ -89,19 +89,23 @@ function updateMaxPrices(minPriceInput) {
 
         if ($("#min-input").val().replace(/,/g, '').length >= 7) {
 
+            var tempM = quarterM;
+
             $(".price").each(function () {
                 var valToInt = parseInt($("#min-input").val().replace(/,/g, ''), 10);
-                $(this).text("$" + (valToInt + quarterM));
-                quarterM += quarterM;
+                $(this).text("$" + (valToInt + tempM));
+                tempM += quarterM;
             });
         }
 
         else {
 
+            var tempK = quarterK;
+
             $(".price").each(function () {
                 var valToInt = parseInt($("#min-input").val().replace(/,/g, ''), 10);
-                $(this).text("$" + (valToInt + quarterK));
-                quarterK += quarterK;
+                $(this).text("$" + (valToInt + tempK));
+                tempK += quarterK;
             });
         }
     }

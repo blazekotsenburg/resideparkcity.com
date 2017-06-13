@@ -338,3 +338,11 @@ li.dropdown {
     padding-right: 15px;
     text-align: right;
 }
+
+.bedroom-dropdown {
+    min-width: 73.88px;
+}
+
+#bed-options li{
+    text-align: center;
+}

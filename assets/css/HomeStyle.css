@@ -255,11 +255,12 @@ p.photo-card-info-spec-row2{
     margin: 0;
     outline: none;
     background-color: #F7F7F7;
+    letter-spacing: -.5px;
 }
 
 #min-input:hover,
 #max-input:hover {
-    border: 3px solid #292929;
+    border: 3px solid #ccc;
 }
 
 #min-input:focus,
@@ -268,6 +269,10 @@ p.photo-card-info-spec-row2{
     border: 3px solid #292929;
 }
 
+.input-toggle {
+    background-color: white;
+    border: 3px solid #292929;
+}
 /***************** Custom dropdown start *****************/
 ul {
     list-style: none;
@@ -307,6 +312,10 @@ li.dropdown {
     z-index: 3;
 }
 
+.dropdown-menu.dropdown-content {
+    padding: 0;
+}
+
 .dropdown:hover {
     background-color: #080808;
 }
@@ -323,9 +332,14 @@ li.dropdown {
     background-color: #F1F1F1;
 }
 
+.selected-item {
+    background-color: #c9c9c9;
+}
+
+/*
 .dropdown:hover .dropdown-content {
     display: block
-}
+}*/
 
 /*********************************************************/
 

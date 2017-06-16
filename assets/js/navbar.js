@@ -15,7 +15,7 @@ var minPrices = [
     500000
 ];
 
-var metricPattern = /^\d*[mMkK]$/; // Pattern allows for m and k multipliers (eg 40k -> 40,000)
+var metricPattern = /^\d{1,3}[mMkK]$/; // Pattern allows for m and k multipliers (eg 40k -> 40,000)
 var intWithCommaPattern = /^\d{1,3}(,\d{3})*?$/; //Pattern allows commas (eg 700,000 matches)
 
 /**
@@ -23,16 +23,13 @@ var intWithCommaPattern = /^\d{1,3}(,\d{3})*?$/; //Pattern allows commas (eg 700
  * max input has been put in focus. The prices will be adjusted depending on whether the min
  * input has a value or not.
  */
-$("#max-input").on("click", function () {
+$("#max-input").on("focus", function () { //need to extract this method out so that it can be used for more than on click/focus. (priceoptions li listener)
     $("#price-options").addClass("shift-col-right");
+    $("#min-input").removeClass("input-toggle");
 
 
     if (!$("#min-input").val()) {
-        var i = 100000;
-        $(".price").each(function () {
-            $(this).text("$" + numberWithCommas(i));
-            i += 100000;
-        });
+        defaultMaxPriceOptions();
     }
 
     else if ($.isNumeric($("#min-input").val())) {
@@ -51,6 +48,51 @@ $("#max-input").on("click", function () {
     else {
 
         updateMaxPrices($("#min-input").val());
+    }
+});
+
+/**
+ * When min input in Price dropdown is selected, shift all price options to the left of the
+ * dropdown column.
+ */
+$("#min-input").on("focus", function () {
+
+    $("#price-options").removeClass("shift-col-right");
+    $("#max-input").removeClass("input-toggle");
+    fillMinPriceCol();
+});
+
+
+/**
+ * Listener that prevents dropdowns from closing after a sub-item in the dropdown list has been
+ * clicked.
+ */
+$(".dropdown-content li").on("click", function (e) {
+    e.stopPropagation();
+});
+
+//This listener needs a lot of work. Doesn't toggle properly. It includes any mouse clicks outside of the
+//dropdown button.
+$("#price-dropdown-button").on("click", function () {
+    $("#min-input").addClass("input-toggle");
+    $("#max-input").removeClass("input-toggle");
+    fillMinPriceCol();
+    $("#price-options").removeClass("shift-col-right");
+});
+
+// For now, this listener puts the values up into the inputs.  However, the input and col.
+// must be focused and shifted accordingly if min-input is selecetd.
+$("#price-options li").on("click", function () {
+    var listItemVal = $(this).text();
+    if ($("#price-options").hasClass("shift-col-right")) {
+        $("#max-input").val(listItemVal.replace(/[$]+/, '')); //Places just the numbers and commas into the input with regexp
+    }
+    else {
+        $("#min-input").val(listItemVal.replace(/[$+]+/g, ''));
+        //call function so that the max input gets focused and price list is adjusted correctly on shift-col-right.
+        $("#min-input").removeClass("input-toggle");
+        $("#price-options").addClass("shift-col-right");
+        $("#max-input").addClass("input-toggle");
     }
 });
 
@@ -103,7 +145,6 @@ function updateMaxPrices(minPriceInput) {
 
             $(".price").each(function () {
                 var valToInt = parseInt($("#min-input").val().replace(/,/g, ''), 10);
-                //$(this).text("$" + (valToInt + tempK));
                 $(this).text("$" + (numberWithCommas(valToInt + tempK)));
 
                 tempK += quarterK;
@@ -111,6 +152,12 @@ function updateMaxPrices(minPriceInput) {
         }
     }
      // Should check here for invalid inputs, such as words and special characters.
+
+    else {
+        
+        $("#min-input").val("");
+        defaultMaxPriceOptions();
+    }
 }
 
 /**
@@ -132,6 +179,17 @@ function getMaxPriceOptions(incrementBy ,multiplier) {
 }
 
 /**
+ * Method used any time that the prices need to be shifted back to the left column and displayed correctly.
+ */
+function fillMinPriceCol() {
+    var i = 0;
+    $(".price").each(function () {
+        $(this).text("$" + numberWithCommas(minPrices[i]) + "+");
+        i++;
+    });
+}
+
+/**
  * Gives any given number the proper formatting with commas.
  *
  * @param numberToConvert
@@ -143,15 +201,24 @@ function numberWithCommas(numberToConvert) {
 }
 
 /**
- * When min input in Price dropdown is selected, shift all price options to the left of the
- * dropdown column.
+ * Function is called when the min-input doesn't contain a valid value or if no value has been input at all.
  */
-$("#min-input").on("click", function () {
-    $("#price-options").removeClass("shift-col-right");
-
-    var i = 0;
+function defaultMaxPriceOptions() {
+    var i = 100000;
     $(".price").each(function () {
-        $(this).text("$" + numberWithCommas(minPrices[i]) + "+");
-        i++;
+        $(this).text("$" + numberWithCommas(i));
+        i += 100000;
     });
-});
+}
+
+/*
+$('#min-input').on('keypress', function (event) {
+
+    //var key = event.charCode || event.which;
+
+    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+    if (!(intWithCommaPattern.test(key) || metricPattern.test(key))) {
+        event.preventDefault();
+        return false;
+    }
+});*/

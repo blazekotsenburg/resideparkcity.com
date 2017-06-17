@@ -89,10 +89,10 @@ $("#price-options li").on("click", function () {
     }
     else {
         $("#min-input").val(listItemVal.replace(/[$+]+/g, ''));
-        //call function so that the max input gets focused and price list is adjusted correctly on shift-col-right.
         $("#min-input").removeClass("input-toggle");
         $("#price-options").addClass("shift-col-right");
         $("#max-input").addClass("input-toggle");
+        updateMaxPrices($("#min-input").val());
     }
 });
 
@@ -151,10 +151,10 @@ function updateMaxPrices(minPriceInput) {
             });
         }
     }
-     // Should check here for invalid inputs, such as words and special characters.
-
+    
+     // Check here for invalid inputs, such as words and special characters.
     else {
-        
+
         $("#min-input").val("");
         defaultMaxPriceOptions();
     }

@@ -59,8 +59,17 @@ $("#min-input").on("focus", function () {
 
     $("#price-options").removeClass("shift-col-right");
     $("#max-input").removeClass("input-toggle");
-    fillMinPriceCol();
+    defaultMinPriceOptions();
 });
+
+/*$("#min-input").on("keyup", function () {
+    if(!$("#min-input").val()){
+        $("#price-dropdown-button").text("Any Price");
+    }
+    else {
+        $("#price-dropdown-button").text($("#min-input").val());
+    }
+});*/
 
 
 /**
@@ -76,12 +85,13 @@ $(".dropdown-content li").on("click", function (e) {
 $("#price-dropdown-button").on("click", function () {
     $("#min-input").addClass("input-toggle");
     $("#max-input").removeClass("input-toggle");
-    fillMinPriceCol();
+    defaultMinPriceOptions();
     $("#price-options").removeClass("shift-col-right");
 });
 
-// For now, this listener puts the values up into the inputs.  However, the input and col.
-// must be focused and shifted accordingly if min-input is selecetd.
+/**
+ * Listens for a price option to be clicked on and handles the event accordingly.
+ */
 $("#price-options li").on("click", function () {
     var listItemVal = $(this).text();
     if ($("#price-options").hasClass("shift-col-right")) {
@@ -151,7 +161,7 @@ function updateMaxPrices(minPriceInput) {
             });
         }
     }
-    
+
      // Check here for invalid inputs, such as words and special characters.
     else {
 
@@ -181,7 +191,7 @@ function getMaxPriceOptions(incrementBy ,multiplier) {
 /**
  * Method used any time that the prices need to be shifted back to the left column and displayed correctly.
  */
-function fillMinPriceCol() {
+function defaultMinPriceOptions() {
     var i = 0;
     $(".price").each(function () {
         $(this).text("$" + numberWithCommas(minPrices[i]) + "+");
@@ -210,15 +220,3 @@ function defaultMaxPriceOptions() {
         i += 100000;
     });
 }
-
-/*
-$('#min-input').on('keypress', function (event) {
-
-    //var key = event.charCode || event.which;
-
-    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-    if (!(intWithCommaPattern.test(key) || metricPattern.test(key))) {
-        event.preventDefault();
-        return false;
-    }
-});*/

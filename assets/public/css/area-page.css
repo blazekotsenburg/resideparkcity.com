@@ -1,0 +1,17 @@
+#community-description{
+    color: black;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    padding-bottom: 3em;
+}
+
+#community-listings-header {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 span {
+    font-weight: 500;
+    font-size: 36px;
+}

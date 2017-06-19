@@ -1,0 +1,37 @@
+p {
+    margin-bottom: 20px;
+}
+
+#listing-info-container {
+    margin: 0 auto;
+    max-width: 670px;
+    font-family: Poppins, sans-serif;
+    color: #292929;
+}
+
+#price {
+    color: inherit;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#listing-info-header {
+    margin: 0;
+    max-width: 500px;
+    font-size: 30px;
+    padding-left: 15px;
+}
+
+#listing-info-chart p {
+    max-width: inherit;
+    text-align: center;
+    color: inherit;
+    font-weight: inherit;
+    font-size: 20px;
+    width: 100%;
+}
+
+#related-listings-header {
+    font-size: 36px;
+    margin-bottom: 20px;
+}

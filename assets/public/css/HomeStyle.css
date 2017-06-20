@@ -361,3 +361,27 @@ li.dropdown {
 #bed-options li{
     text-align: center;
 }
+
+/*Testing out footers and changing colors of navbar items on hovers*/
+.footer {
+    position: relative;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 100px;
+    line-height: 100px; /* Vertically center the text there */
+    background-color: #292929;
+}
+
+.footer-col{
+    text-align: center;
+}
+
+.footer-col:hover {
+    background-color: #57C44D;
+}
+
+.dropdown:hover {
+    background-color: #57C44D;
+}

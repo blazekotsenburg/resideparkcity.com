@@ -1,9 +1,7 @@
 <%include partials/openheader.ejs%>
-<link rel="stylesheet" href="/assets/public/css/listing-area-common.css">
+<link rel="stylesheet" type="text/css" href="/assets/public/css/listing-area-common.css">
 <link rel="stylesheet" type="text/css" href="/assets/public/css/area-page.css">
 <%include partials/closeheader.ejs%>
-
-<div id="listing-header-image"></div>
 
 <%include partials/navbarTemplate.ejs%>
 
@@ -47,8 +45,7 @@
 
             </form>
 
-            <textarea class="form-control req-panel-spacing" rows="5"
-                      placeholder="Leave a question or comment here..."></textarea>
+            <textarea class="form-control req-panel-spacing" rows="5" placeholder="Leave a question or comment here..."></textarea>
 
             <button type="button" class="btn btn-default custom-submit-btn">Submit</button>
 
@@ -58,7 +55,7 @@
     <div class="community-image-container">
         <img class="community-image img-drop-shadow" src="https://source.unsplash.com/m9aokwbp29c">
 
-        <p id="community-description">
+        <p id="community-description"> <!--make the description a variable held in a js file.  store descriptions in array or dictionary-->
             Park Meadows was the first subdivision created outside Old Town back in the 1970’s and continues
             to be one of the area’s most desirable neighborhoods due to the proximity to the schools complex,
             the Park Meadows Country Club and all the hiking/snowshoeing/cross country skiing opportunities in
@@ -85,6 +82,8 @@
     </div>
 
 </div>
+
+<%include partials/filter-suggest.ejs%>
 
 <%include partials/listingGridTemplate.ejs%>
 

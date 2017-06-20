@@ -1,0 +1,134 @@
+<%include partials/openheader.ejs%>
+<link rel="stylesheet" type="text/css" href="/assets/public/css/listing-area-common.css">
+<link rel="stylesheet" type="text/css" href="/assets/public/css/listing-page.css">
+<%include partials/closeheader.ejs%>
+
+<div id="listing-header-image"></div><!--Might want to include this in closeheader.ejs-->
+
+<%include partials/navbarTemplate.ejs%>
+
+<div class="container">
+    <div class="col-xs-12">
+        <h1 id="community-header">4953 E Meadows Dr</h1>
+    </div>
+</div>
+
+<hr>
+
+<div id="wrapper">
+
+    <section id="request-panel" class="panel panel-default custom-panel-background">
+        <div class="panel-heading custom-panel-heading">
+            <h3 class="panel-heading"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>Have A Question?</h3>
+        </div>
+        <div class="panel-body">
+
+            <form class="form-inline">
+
+                <div class="form-group req-panel-spacing">
+                    <label for="req-panel-first-name">First Name</label>
+                    <input type="text" class="form-control" id="req-panel-first-name" placeholder="Johnny">
+                </div>
+
+                <div class="form-group req-panel-spacing">
+                    <label for="req-panel-last-name">Last Name</label>
+                    <input type="text" class="form-control" id="req-panel-last-name" placeholder="Appleseed">
+                </div>
+
+                <div class="form-group req-panel-spacing">
+                    <label for="req-panel-phone">Phone</label>
+                    <input type="text" class="form-control" id="req-panel-phone" placeholder="(555) 555-5555">
+                </div>
+
+                <div class="form-group req-panel-spacing">
+                    <label for="req-panel-last-name">Email</label>
+                    <input type="email" class="form-control" id="req-panel-email" placeholder="john@example.com">
+                </div>
+
+            </form>
+
+            <textarea class="form-control req-panel-spacing" rows="5"
+                      placeholder="Leave a question or comment here..."></textarea>
+
+            <button type="button" class="btn btn-default custom-submit-btn">Submit</button>
+
+        </div>
+    </section>
+
+    <div class="community-image-container">
+        <img class="community-image img-drop-shadow" src="https://source.unsplash.com/bN_TkedaBuQ">
+
+        <div class="row">
+
+            <div id="listing-info-chart">
+
+                <div class="col-xs-4">
+                    <hr>
+                    <p>$925,500</p>
+                </div>
+
+                <div class="col-xs-4">
+                    <hr>
+                    <p>4 Bedrooms</p>
+                </div>
+
+                <div class="col-xs-4">
+                    <hr>
+                    <p>2 Bathrooms</p>
+                </div>
+
+                <div class="col-xs-4">
+                    <hr>
+                    <p>MLS #: 1089762</p>
+                </div>
+
+                <div class="col-xs-4">
+                    <hr>
+                    <p>6,000 Sqft</p>
+                </div>
+
+                <div class="col-xs-4">
+                    <hr>
+                    <p>DOM: 27</p>
+                </div>
+
+                <div class="col-xs-4">
+                    <hr>
+                    <p>Single Family</p>
+                </div>
+
+                <div class="col-xs-4">
+                    <hr>
+                    <p>For Sale</p>
+                </div>
+
+                <div class="col-xs-4">
+                    <hr>
+                    <p>Silver Springs</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="google-map">
+        <!--Extract script into js file-->
+        <script>
+            function myMap() {
+                var mapProp= {
+                    center:new google.maps.LatLng(40.6461,-111.4980),
+                    zoom:14
+                };
+                var map=new google.maps.Map(document.getElementById("google-map"),mapProp);
+            }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgH_dYa-nHJ2y4Z4Ez7utaD65JUKTrKa8&callback=myMap"></script>
+    </div>
+</div>
+
+<%include partials/filter-suggest.ejs%>
+
+<%include partials/listingGridTemplate.ejs%>
+
+<%include partials/footer.ejs%>

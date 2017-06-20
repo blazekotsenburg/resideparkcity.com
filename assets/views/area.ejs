@@ -1,0 +1,91 @@
+<%include partials/openheader.ejs%>
+<link rel="stylesheet" href="/assets/public/css/listing-area-common.css">
+<link rel="stylesheet" type="text/css" href="/assets/public/css/area-page.css">
+<%include partials/closeheader.ejs%>
+
+<div id="listing-header-image"></div>
+
+<%include partials/navbarTemplate.ejs%>
+
+<div class="container">
+    <div class="col-xs-12">
+        <h1 id="community-header">Park Meadows</h1>
+    </div>
+</div>
+
+<hr>
+
+<div id="wrapper">
+
+    <section id="request-panel" class="panel panel-default custom-panel-background">
+        <div class="panel-heading custom-panel-heading">
+            <h3 class="panel-heading"> <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>Have A Question?</h3>
+        </div>
+        <div class="panel-body">
+
+            <form class="form-inline">
+
+                <div class="form-group req-panel-spacing">
+                    <label for="req-panel-first-name">First Name</label>
+                    <input type="text" class="form-control" id="req-panel-first-name" placeholder="Johnny">
+                </div>
+
+                <div class="form-group req-panel-spacing">
+                    <label for="req-panel-last-name">Last Name</label>
+                    <input type="text" class="form-control" id="req-panel-last-name" placeholder="Appleseed">
+                </div>
+
+                <div class="form-group req-panel-spacing">
+                    <label for="req-panel-phone">Phone</label>
+                    <input type="text" class="form-control" id="req-panel-phone" placeholder="(555) 555-5555">
+                </div>
+
+                <div class="form-group req-panel-spacing">
+                    <label for="req-panel-last-name">Email</label>
+                    <input type="text" class="form-control" id="req-panel-email" placeholder="john@example.com">
+                </div>
+
+            </form>
+
+            <textarea class="form-control req-panel-spacing" rows="5"
+                      placeholder="Leave a question or comment here..."></textarea>
+
+            <button type="button" class="btn btn-default custom-submit-btn">Submit</button>
+
+        </div>
+    </section>
+
+    <div class="community-image-container">
+        <img class="community-image img-drop-shadow" src="https://source.unsplash.com/m9aokwbp29c">
+
+        <p id="community-description">
+            Park Meadows was the first subdivision created outside Old Town back in the 1970’s and continues
+            to be one of the area’s most desirable neighborhoods due to the proximity to the schools complex,
+            the Park Meadows Country Club and all the hiking/snowshoeing/cross country skiing opportunities in
+            the vast open space of Round Valley. At its center is the (Municipal Athletic Recreation Center
+            (M.A.R.C)), which offers a pool, tennis courts and popular fitness facilities. This mostly single family
+            neighborhood offers everything from older properties needing TLC to multi-million dollar lodges along
+            the higher elevations with commanding views of the ski resorts.
+        </p>
+    </div>
+
+    <div id="google-map">
+
+        <script>
+            function myMap() {
+                var mapProp= {
+                    center:new google.maps.LatLng(40.6461,-111.4980),
+                    zoom:14
+                };
+                var map=new google.maps.Map(document.getElementById("google-map"),mapProp);
+            }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgH_dYa-nHJ2y4Z4Ez7utaD65JUKTrKa8&callback=myMap"></script>
+    </div>
+
+</div>
+
+<%include partials/listingGridTemplate.ejs%>
+
+<%include partials/footer.ejs%>

@@ -28,6 +28,9 @@ body {
     border-color: transparent;
 }
 
+.navbar-form .form-control {
+    width: 40em;
+}
 /***************** Custom dropdown start *****************/
 ul {
     list-style: none;
@@ -36,6 +39,19 @@ ul {
 
 li {
     float: left;
+}
+
+input {
+    width: 100%;
+    padding: 4px 6px 2px;
+}
+
+.row-margin-zero {
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 36px;;
 }
 
 .dropdown li {
@@ -109,7 +125,6 @@ input {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
 }
 
 .dropdown-content li:hover {

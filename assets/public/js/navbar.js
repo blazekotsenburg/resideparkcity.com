@@ -94,6 +94,7 @@ $("#price-dropdown-button").on("click", function () {
  */
 $("#price-options li").on("click", function () {
     var listItemVal = $(this).text();
+
     if ($("#price-options").hasClass("shift-col-right")) {
         $("#max-input").val(listItemVal.replace(/[$]+/, '')); //Places just the numbers and commas into the input with regexp
     }

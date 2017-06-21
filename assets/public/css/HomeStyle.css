@@ -67,6 +67,7 @@ hr {
     background-color: #73ED68;
     border-color: #73ED68;
     border-radius: 20px;
+    outline: none;
 }
 
 .btn-custom:hover {
@@ -74,6 +75,7 @@ hr {
     background-color: #57C44D;
     border-color: #57C44D;
     border-radius: 20px;
+    transition: 0.3s;
 }
 
 .form-control:focus {
@@ -380,8 +382,10 @@ li.dropdown {
 
 .footer-col:hover {
     background-color: #57C44D;
+    transition: 0.3s;
 }
 
 .dropdown:hover {
     background-color: #57C44D;
+    transition: 0.3s;
 }

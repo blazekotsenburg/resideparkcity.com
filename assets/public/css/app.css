@@ -116,8 +116,11 @@ input {
     padding: 0;
 }
 
-.dropdown:hover {
-    background-color: #080808;
+.dropdown:hover,
+.nav li:hover,
+.footer-col:hover{
+    background-color: #73ED68;
+    transition: 0.3s;
 }
 
 .dropdown-content li {
@@ -312,16 +315,12 @@ p.photo-card-info-spec-row2{
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 100px;
+    height: auto;
     line-height: 100px; /* Vertically center the text there */
     background-color: #292929;
 }
 
 .footer-col{
     text-align: center;
-}
-
-.footer-col:hover {
-    background-color: #57C44D;
 }
 /***************************End Footer*******************************/

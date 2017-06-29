@@ -18,6 +18,23 @@ var minPrices = [
 var metricPattern = /^\d{1,3}[mMkK]$/; // Pattern allows for m and k multipliers (eg 40k -> 40,000)
 var intWithCommaPattern = /^\d{1,3}(,\d{3})*?$/; //Pattern allows commas (eg 700,000 matches)
 
+// $(document).ready(function() {
+//
+//     $(window).scroll(function () {
+//         //if you hard code, then use console
+//         //.log to determine when you want the
+//         //nav bar to stick.
+//         console.log($(window).scrollTop())
+//         if ($(window).scrollTop() > 280) {
+//             $('#nav_bar').addClass('navbar-fixed');
+//         }
+//         if ($(window).scrollTop() < 281) {
+//             $('#nav_bar').removeClass('navbar-fixed');
+//         }
+//     });
+// });
+
+
 /**
  * This event listener makes sure that the price column is shifted to the right whenever the
  * max input has been put in focus. The prices will be adjusted depending on whether the min

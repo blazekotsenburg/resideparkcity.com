@@ -277,6 +277,20 @@ p.photo-card-info-spec-row1{
     text-overflow: ellipsis;
 }
 
+p.no-image-header{
+    position: absolute;
+    top: 25%;
+    /*color: lightsteelblue;*/
+    color: #DEF7FF;
+    padding-left: 5%;
+    opacity: 0.65;
+    font-weight: bold;
+    font-size: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .photo-card-price {
     font: 500 24px Poppins, Sans-Serif;
     letter-spacing: .1rem;

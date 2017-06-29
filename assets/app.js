@@ -14,7 +14,7 @@ var data = {
     action           : 'propertySearch',                      //agentSearch, officeSearch, propertySearch, pickListSearch
     return           : 'json', 							     //xml, json
     search_offset    : '0',
-    search_limit     : '1',						         //MAX BATCH IS 100, OVER THAT DEFAULTS TO 15
+    search_limit     : '100',						         //MAX BATCH IS 100, OVER THAT DEFAULTS TO 15
     search_mls_id    : ['1'],                                 //Array of valid MLS id's, Park City MLS = 1 and WFRMLS = 2
     debug            : '0'
 };
@@ -26,15 +26,15 @@ app.get("/", function (req, res) {
 
     request.post({url: url, formData: data}, function(err, httpResponse, body) {
         if (!err && httpResponse.statusCode == 200) {
-            var parsedData = JSON.parse(body);
-            console.log(parsedData);
+            var mlsData = JSON.parse(body);
+            res.render('home', {mlsData: mlsData['data']});
         }
         else {
             return console.error('upload failed:', err); //possibly send to error page with error message and status code??
         }
     });
 
-    res.render("home");
+    //res.render("home");
 
 });
 

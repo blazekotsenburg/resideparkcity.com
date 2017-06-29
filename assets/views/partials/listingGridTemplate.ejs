@@ -1,297 +1,61 @@
-    <!-- Need to simplify the listing grid so that each image can be recreated when needed instead
-    of having a definite amount of rows and images-->
-    <!-- Grid for Listings -->
-    <div class="row grid-list"><!-- Begin First Row-->
-        <div class="container">
+<div class="row grid-list"><!-- Begin First Row-->
+    <div class="container">
 
-            <h1 id="featured-listings">Featured Listings</h1> <!--Need to get rid of this-->
+        <h1 id="featured-listings">Featured Listings</h1> <!--Need to get rid of this-->
 
-            <div class="col-lg-4 col-sm-6">
-
-                <div class="photo-card">
+        <% mlsData.forEach(function(listing) { %>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div id= "<%= listing['mls_num']%>" class="photo-card">
 
                     <p class="status-label">
-                        <span class="label label-for-sale">For Sale</span>
+                                <span class="label label-for-sale">
+                                    <%= listing['status'] %>
+                                </span>
                     </p>
 
-                    <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/CpC7lBcxzjM">
+                    <% var listingImage = listing['photos'].split(",");%>
+                    <% if (!listingImage[0]) { %>
+                        <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/118HMzX-i_8">
+                        <p class="no-image-header">No Images</p>
+
+                    <% } else { %>
+                        <img class="img-responsive img-drop-shadow" src="http://www.realcove.net/<%= listingImage[0]%>">
+                    <% } %>
 
                     <p class="photo-card-info-spec-row1">
 
-                            <span class="photo-card-price">
-                                $19,750,000
-                            </span>
+                                    <span class="photo-card-price">
+                                        <%= listing['price'] %>
+                                    </span>
 
                         <span class="photo-card-info">
-                                5 bd
-                                <span class="photo-card-punct">|</span>
-                                3 ba
-                                <span class="photo-card-punct">|</span>
-                                7,200 sqft
-                            </span>
+                                        <%= listing['beds'] %> bd
+                                        <span class="photo-card-punct">|</span>
+                                        <%= listing['baths']%> ba
+                                        <span class="photo-card-punct">|</span>
+                                        <%= listing['square_feet']%> sqft
+                                    </span>
                     </p>
 
                     <p class="photo-card-info-spec-row2">
 
-                            <span class="photo-card-dom">
-                                <span class="dom">dom:</span>
-                                45
-                            </span>
+                                    <span class="photo-card-dom">
+                                        <span class="dom">dom:</span>
+                                        <%= listing['days_on_market']%>
+                                    </span>
 
                         <span class="photo-card-punct">|</span>
 
                         <span class="photo-card-address">
-                                4701 Winchester Court, Park City, UT
-                            </span>
-                    </p>
 
-                </div>
+                            <%= listing['address']%>,
+                            <%= listing['city']%>,
+                            <%= listing['state']%>
 
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="photo-card">
-                    <p class="status-label">
-                        <span class="label label-pending">Pending</span>
-                    </p>
-
-                    <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/bmALnwwLumQ">
-
-                    <p class="photo-card-info-spec-row1">
-
-                            <span class="photo-card-price">
-                                $1,250,000
-                            </span>
-
-                        <span class="photo-card-info">
-                                3 bd
-                                <span class="photo-card-punct">|</span>
-                                3 ba
-                                <span class="photo-card-punct">|</span>
-                                1,700 sqft
-                            </span>
-                    </p>
-
-                    <p class="photo-card-info-spec-row2">
-
-                            <span class="photo-card-dom">
-                                <span class="dom">dom:</span>
-                                21
-                            </span>
-
-                        <span class="photo-card-punct">|</span>
-
-                        <span class="photo-card-address">
-                                4953 E Meadows Dr, Park City, UT
-                            </span>
+                        </span>
                     </p>
                 </div>
             </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="photo-card">
-                    <p class="status-label">
-                        <span class="label label-for-sale">For Sale</span>
-                    </p>
-
-                    <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/1ddol8rgUH8">
-
-                    <p class="photo-card-info-spec-row1">
-
-                            <span class="photo-card-price">
-                                $850,000
-                            </span>
-
-                        <span class="photo-card-info">
-                                5 bd
-                                <span class="photo-card-punct">|</span>
-                                2 ba
-                                <span class="photo-card-punct">|</span>
-                                2,500 sqft
-                            </span>
-                    </p>
-
-                    <p class="photo-card-info-spec-row2">
-
-                            <span class="photo-card-dom">
-                                <span class="dom">dom:</span>
-                                10
-                            </span>
-
-                        <span class="photo-card-punct">|</span>
-
-                        <span class="photo-card-address">
-                                1835 S 1800 E, Salt Lake City, UT
-                            </span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div><!-- End First Row-->
-
-    <div class="row grid-list"><!-- Begin Second Row-->
-        <div class="container">
-            <div class="col-lg-4 col-sm-6 ">
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-                <div class="row-stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-                <div class="row-stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-                <div class="row-stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- End Second Row-->
-
-    <div class="row grid-list"><!-- Begin Third Row-->
-        <div class="container">
-            <div class="col-lg-4 col-sm-6">
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-                <div class="row-stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-                <div class="row-stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-                <div class="row-stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- End Third Row-->
-
-
-    <div class="row grid-list">
-        <div class="container">
-            <!-- Begin Fourth Row-->
-            <div class="col-lg-4 col-sm-6">
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-                <div class="row-stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-                <div class="row-stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-
-                <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/44PTx-hIgwc">
-
-                <div class="row-stats">
-                    <div class="col-xs-4">
-                        <p>Beds:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>Baths:</p>
-                    </div>
-                    <div class="col-xs-4">
-                        <p>SqFt:</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><!-- End Fourth Row-->
+        <% }) %>
+    </div> <!--End of Container-->
+</div><!-- End Fourth Row-->

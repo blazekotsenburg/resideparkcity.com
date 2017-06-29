@@ -16,8 +16,43 @@
                     <% var listingImage = listing['photos'].split(",");%>
                     <% if (!listingImage[0]) { %>
                         <div class="thumbnail">
-                            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/118HMzX-i_8">
-                            <p class="no-image-header">No Images</p>
+
+                            <img class="img-responsive" src="https://source.unsplash.com/J4aLKW3T0FE">
+
+                            <p class="no-image-header">No Images :(</p> <!--Place frowny face icon in here-->
+                            <!--Later do a check to see if it is land or not, then include acreage-->
+                            <section class="photo-card-info-spec-row1">
+                                <span class="photo-card-price">
+                                $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                            </span>
+                                <span class="photo-card-info">
+
+                                 <%= listing['beds'] %> bd
+                                        <span class="photo-card-punct">|</span>
+                                    <%= listing['baths']%> ba
+                                        <span class="photo-card-punct">|</span>
+                                    <%= listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> sqft
+                            </span>
+                            </section>
+
+                            <section class="photo-card-info-spec-row2">
+
+                                <span class="photo-card-dom">
+
+                                    <span class="dom">dom:</span>
+
+                                    <%= listing['days_on_market']%>
+                                </span>
+
+                                <span class="photo-card-punct">|</span>
+
+                                <span class="photo-card-address">
+
+                                    <%= listing['address']%>,
+                                    <%= listing['city']%>,
+                                    <%= listing['state']%>
+                                </span>
+                            </section>
                         </div>
                     <% } else { %>
                         <div class="thumbnail photo-card">

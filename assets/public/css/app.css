@@ -198,30 +198,73 @@ Edit check box dropdown here.
 }
 
 /***************************Photo Card for Grid List*******************************/
+/*.photo-card {*/
+    /*position: relative;*/
+    /*width: 100%;*/
+    /*margin-bottom: 15px;*/
+    /*text-shadow: 0 0 3px rgba(0, 0, 0, 1);*/
+    /*-webkit-background-size:contain;*/
+    /*background-size: contain;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.photo-card:after {*/
+    /*content:'';*/
+    /*z-index: 1;*/
+    /*position:absolute;*/
+    /*left:0; top:0;*/
+    /*width:100%; height:100%;*/
+    /*background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%); !* FF3.6+ *!*/
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.15)), color-stop(100%,rgba(0,0,0,0))); !* Chrome,Safari4+ *!*/
+    /*background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); !* Chrome10+,Safari5.1+ *!*/
+    /*background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); !* Opera 11.10+ *!*/
+    /*background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); !* IE10+ *!*/
+    /*background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); !* W3C *!*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); !* IE6-9 *!*/
+/*}*/
+/*****Edit photos****/
 .photo-card {
-    position: relative;
-    width: 100%;
-    margin-bottom: 15px;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 1);
-    -webkit-background-size:contain;
-    background-size: contain;
-    display: inline-block;
+    background-color: #292929;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.photo-card:after {
-    content:'';
-    z-index: 1;
-    position:absolute;
-    left:0; top:0;
-    width:100%; height:100%;
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.15)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+.photo-card:hover {
+    background-color: #21E310;
+    transition: 0.3s;
+    cursor: pointer;
 }
+
+.photo-card-price {
+    font: 400 24px Poppins, Sans-Serif;
+    letter-spacing: .05rem;
+    color: white;
+}
+
+.photo-card-info,
+.photo-card-punct {
+    font: 400 15px Poppins, Sans-Serif;
+    letter-spacing: -0.5px;
+}
+
+.photo-card-info-spec-row1 {
+    color: #F2F2F2;
+    line-height: 1.45;
+    white-space: inherit;
+    overflow: inherit;
+    text-overflow: inherit;
+}
+
+.photo-card-info-spec-row2 {
+    color: #BFBFBF;
+    font: 500 15px Poppins, Sans-Serif;
+    letter-spacing: -0.5px;
+    white-space: inherit;
+    overflow: inherit;
+    text-overflow: inherit;
+}
+/*****Edit photos****/
 
 /*Consider revising the following classes and selectors*/
 p {
@@ -291,16 +334,9 @@ p.no-image-header{
     text-overflow: ellipsis;
 }
 
-.photo-card-price {
-    font: 500 24px Poppins, Sans-Serif;
-    letter-spacing: .1rem;
-}
 
-.photo-card-info,
-.photo-card-punct {
-    font: 400 15px Poppins, Sans-Serif;
-    letter-spacing: -0.5px;
-}
+
+
 
 p.photo-card-info-spec-row2{
     position: absolute;

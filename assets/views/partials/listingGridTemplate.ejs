@@ -5,27 +5,63 @@
 
         <% mlsData.forEach(function(listing) { %>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <div id= "<%= listing['mls_num']%>" class="photo-card">
+                <div id= "<%= listing['mls_num']%>"> <!--class="photo-card"-->
 
-                    <p class="status-label">
+                    <!--<p class="status-label">
                                 <span class="label label-for-sale">
                                     <%= listing['status'] %>
                                 </span>
-                    </p>
+                    </p>-->
 
                     <% var listingImage = listing['photos'].split(",");%>
                     <% if (!listingImage[0]) { %>
-                        <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/118HMzX-i_8">
-                        <p class="no-image-header">No Images</p>
-
+                        <div class="thumbnail">
+                            <img class="img-responsive img-drop-shadow" src="https://source.unsplash.com/118HMzX-i_8">
+                            <p class="no-image-header">No Images</p>
+                        </div>
                     <% } else { %>
-                        <img class="img-responsive img-drop-shadow" src="http://www.realcove.net/<%= listingImage[0]%>">
+                        <div class="thumbnail photo-card">
+                            <img class="img-responsive img-drop-shadow" src="http://www.realcove.net/<%= listingImage[0]%>">
+
+                            <section class="photo-card-info-spec-row1">
+                                <span class="photo-card-price">
+                                $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                            </span>
+                                <span class="photo-card-info">
+
+                                 <%= listing['beds'] %> bd
+                                        <span class="photo-card-punct">|</span>
+                                    <%= listing['baths']%> ba
+                                        <span class="photo-card-punct">|</span>
+                                    <%= listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> sqft
+                            </span>
+                            </section>
+
+                            <section class="photo-card-info-spec-row2">
+
+                                <span class="photo-card-dom">
+
+                                    <span class="dom">dom:</span>
+
+                                    <%= listing['days_on_market']%>
+                                </span>
+
+                                <span class="photo-card-punct">|</span>
+
+                                <span class="photo-card-address">
+
+                                    <%= listing['address']%>,
+                                    <%= listing['city']%>,
+                                    <%= listing['state']%>
+                                </span>
+                            </section>
+                        </div>
                     <% } %>
 
-                    <p class="photo-card-info-spec-row1">
+                    <!--<p class="photo-card-info-spec-row1">
 
                                     <span class="photo-card-price">
-                                        <%= listing['price'] %>
+                                        $<%= listing['price'] %>
                                     </span>
 
                         <span class="photo-card-info">
@@ -53,7 +89,7 @@
                             <%= listing['state']%>
 
                         </span>
-                    </p>
+                    </p>-->
                 </div>
             </div>
         <% }) %>

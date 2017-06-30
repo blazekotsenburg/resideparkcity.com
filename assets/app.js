@@ -176,6 +176,22 @@ app.get("/home", function (req, res) {
     res.redirect("/");
 });
 
+app.get("/listing", function (req, res) {
+
+    //This will need to receive data from another page and use it to form a new listing grid
+    // and still be able to pull the correct requested listing from RealCove.
+    request.post({url: url, formData: defaultData}, function(err, httpResponse, body) {
+        if (!err && httpResponse.statusCode == 200) {
+            var mlsData = JSON.parse(body);
+            //console.log(mlsData);
+            res.render('listing', {mlsData: mlsData['data']});
+        }
+        else {
+            return console.error('upload failed:', err); //possibly send to error page with error message and status code??
+        }
+    });
+});
+
 //Trying to pull all of the data once this port has been requested
 app.listen(8000, "localhost", function () {
     console.log("Server is running...");

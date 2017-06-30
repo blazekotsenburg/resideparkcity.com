@@ -276,9 +276,7 @@ p.no-image-header{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-/*****Edit photos****/
 
-/*Consider revising the following classes and selectors*/
 p {
     margin: 0;
     z-index: 2;
@@ -287,10 +285,10 @@ p {
 
 p.status-label {
     position: absolute;
-    top: 0.2em;
-    left: 0.5em;
-    -webkit-filter: drop-shadow(1px 1px 4px black); /* Safari */
-    filter: drop-shadow(1px 1px 4px black);
+    top: 25px;
+    left: 25px;
+    -webkit-filter: drop-shadow(1px 1px 4px #616161); /* Safari */
+    filter: drop-shadow(1px 1px 4px #616161);
 }
 
 .label-for-sale {
@@ -298,61 +296,63 @@ p.status-label {
 }
 
 .label-pending {
-    background-color: #FFC43B;
+    background-color: #FFA200;
 }
 
 .label { /*override label*/
     display: inline;
     padding: .025em .5em;
     font-size: 75%;
-    font-weight: bold;
-    line-height: 1;
+
     color: #fff;
     text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
 }
+
+.photo-card-dom {
+    text-transform: uppercase;
+}
+/*****Edit photos****/
+
+/*Consider revising the following classes and selectors*/
+
+
+
 
 /*img.img-drop-shadow {*/
     /*-webkit-filter: drop-shadow(1px 1px 4px #8A8A8A); !* Safari *!*/
     /*filter: drop-shadow(1px 1px 4px #8A8A8A);*/
 /*}*/
 
-p.photo-card-info-spec-row1{
-    position: absolute;
-    top: 75%;
-    width: 100%;
-    left: 0;
-    padding-left: .2rem;
-    font-weight: bold;
-    font-size: larger;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+/*p.photo-card-info-spec-row1{*/
+    /*position: absolute;*/
+    /*top: 75%;*/
+    /*width: 100%;*/
+    /*left: 0;*/
+    /*padding-left: .2rem;*/
+    /*font-weight: bold;*/
+    /*font-size: larger;*/
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+/*}*/
 
 
 
 
 
-p.photo-card-info-spec-row2{
-    position: absolute;
-    top: 90%;
-    width: 100%;
-    left: 0;
-    padding-left: .2rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font: 500 15px Poppins, Sans-Serif;
-    letter-spacing: -0.5px;
-    color: #E8E8E8;
-}
-
-.photo-card-dom {
-    text-transform: uppercase;
-}
+/*p.photo-card-info-spec-row2{*/
+    /*position: absolute;*/
+    /*top: 90%;*/
+    /*width: 100%;*/
+    /*left: 0;*/
+    /*padding-left: .2rem;*/
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*font: 500 15px Poppins, Sans-Serif;*/
+    /*letter-spacing: -0.5px;*/
+    /*color: #E8E8E8;*/
+/*}*/
 /***************************End Photo Card for Grid List*******************************/
 
 /***************************Footer*******************************/

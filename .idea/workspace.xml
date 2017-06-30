@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd20e589-0004-44bb-8ea3-a9270f6b0ef7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/public/lib/font-awesome.min.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/public/css/app.css" afterPath="$PROJECT_DIR$/assets/public/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/partials/closeheader.ejs" afterPath="$PROJECT_DIR$/assets/views/partials/closeheader.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs" afterPath="$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs" afterPath="$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +21,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1545">
-              <caret line="165" column="14" lean-forward="false" selection-start-line="165" selection-start-column="14" selection-end-line="165" selection-end-column="14" />
+            <state relative-caret-position="1217">
+              <caret line="158" column="30" lean-forward="true" selection-start-line="158" selection-start-column="30" selection-end-line="158" selection-end-column="30" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -34,20 +30,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listingGridTemplate.ejs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="listingGridTemplate.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="705">
+              <caret line="112" column="64" lean-forward="false" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/public/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="641">
               <caret line="298" column="29" lean-forward="false" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="29" />
               <folding />
             </state>
@@ -155,11 +151,11 @@
         <option value="$PROJECT_DIR$/assets/views/partials/methods.ejs" />
         <option value="$PROJECT_DIR$/assets/views/partials/openheader.ejs" />
         <option value="$PROJECT_DIR$/assets/public/js/navbar.js" />
-        <option value="$PROJECT_DIR$/assets/app.js" />
         <option value="$PROJECT_DIR$/assets/views/partials/closeheader.ejs" />
         <option value="$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs" />
-        <option value="$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs" />
         <option value="$PROJECT_DIR$/assets/public/css/app.css" />
+        <option value="$PROJECT_DIR$/assets/app.js" />
+        <option value="$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs" />
       </list>
     </option>
   </component>
@@ -521,7 +517,7 @@
       <workItem from="1498625255609" duration="673000" />
       <workItem from="1498665878717" duration="21028000" />
       <workItem from="1498757576924" duration="10723000" />
-      <workItem from="1498785184148" duration="5034000" />
+      <workItem from="1498785184148" duration="6477000" />
     </task>
     <task id="LOCAL-00001" summary="Added .css file for the home page. Has not yet been implemented.">
       <created>1494271904836</created>
@@ -541,11 +537,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315539000" />
+    <option name="totallyTimeSpent" value="316982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="22" width="1605" height="1028" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24305555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -835,10 +830,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="298" column="29" lean-forward="false" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="165" column="14" lean-forward="false" selection-start-line="165" selection-start-column="14" selection-end-line="165" selection-end-column="14" />
+        <state relative-caret-position="1217">
+          <caret line="158" column="30" lean-forward="true" selection-start-line="158" selection-start-column="30" selection-end-line="158" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -847,16 +850,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="298" column="29" lean-forward="false" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="29" />
+        <state relative-caret-position="705">
+          <caret line="112" column="64" lean-forward="false" selection-start-line="112" selection-start-column="64" selection-end-line="112" selection-end-column="64" />
           <folding />
         </state>
       </provider>

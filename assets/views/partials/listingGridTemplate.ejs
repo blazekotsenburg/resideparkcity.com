@@ -7,14 +7,9 @@
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div id= "<%= listing['mls_num']%>">
 
-                    <!--<p class="status-label">
-                                <span class="label label-for-sale">
-                                    <%= listing['status'] %>
-                                </span>
-                    </p>-->
-
                     <% var listingImage = listing['photos'].split(",");%>
                     <% if (!listingImage[0]) { %>
+
                         <div class="thumbnail photo-card">
 
                             <p class="status-label">
@@ -55,7 +50,6 @@
                                             <span class="photo-card-punct">|</span>
                                         <%= listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> sqft
                                     <% } %>
-
                             </span>
                             </section>
 
@@ -78,7 +72,9 @@
                                 </span>
                             </section>
                         </div>
+
                     <% } else { %>
+
                         <div class="thumbnail photo-card">
 
                             <p class="status-label">
@@ -100,31 +96,26 @@
                             <section class="photo-card-info-spec-row1">
                                 <span class="photo-card-price">
                                 $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
-                            </span>
-                                <span class="photo-card-info">
+                                </span>
+                                    <span class="photo-card-info">
 
-                                    <% if (listing['property_type'].match('Land')) { %>
+                                        <% if (listing['property_type'].match('Land')) { %>
 
 
-                                    <%= listing['property_type']%>
-                                    <span class="photo-card-punct">|</span>
-                                    <%= listing['acres']%> acres
-
-                                    <% } else {%>
-
-                                    <%= listing['beds'] %> bd
-                                            <span class="photo-card-punct">|</span>
-                                    <%= listing['baths']%> ba
-                                            <span class="photo-card-punct">|</span>
-                                    <%= listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> sqft
-                                    <% } %>
-
-                                 <!--<%= listing['beds'] %> bd
+                                        <%= listing['property_type']%>
                                         <span class="photo-card-punct">|</span>
-                                    <%= listing['baths']%> ba
-                                        <span class="photo-card-punct">|</span>
-                                    <%= listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> sqft-->
-                            </span>
+                                        <%= listing['acres']%> acres
+
+                                        <% } else {%>
+
+                                            <%= listing['beds'] %> bd
+                                            <span class="photo-card-punct">|</span>
+                                            <%= listing['baths']%> ba
+                                            <span class="photo-card-punct">|</span>
+                                            <%= listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> sqft
+                                        <% } %>
+
+                                </span>
                             </section>
 
                             <section class="photo-card-info-spec-row2">

@@ -1,0 +1,14 @@
+<% if (listing['property_type'].match('Land')) { %>
+
+    <%= listing['property_type'] %>
+    <span class="photo-card-punct">|</span>
+    <%= listing['acres']%> acres
+
+<% } else {%>
+
+    <%= listing['beds'] %> bd
+    <span class="photo-card-punct">|</span>
+    <%= listing['baths']%> ba
+    <span class="photo-card-punct">|</span>
+    <%= listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> sqft
+<% } %>

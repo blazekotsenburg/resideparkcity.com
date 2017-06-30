@@ -1,0 +1,13 @@
+<p class="status-label">
+    <% if (listing['status'].match('Active')) { %>
+
+        <span class="label label-for-sale">
+            <%= listing['status'] %>
+        </span>
+    <% } else { %>
+
+    <span class="label label-pending">
+        <%= listing['status'] %>
+    </span>
+    <% } %>
+</p>

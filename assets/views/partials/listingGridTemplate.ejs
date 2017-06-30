@@ -12,19 +12,7 @@
 
                         <div class="thumbnail photo-card">
 
-                            <p class="status-label">
-                                <%if (listing['status'].match('Active')) { %>
-
-                                    <span class="label label-for-sale">
-                                        <%= listing['status'] %>
-                                    </span>
-                                <% } else {%>
-
-                                    <span class="label label-pending">
-                                        <%= listing['status'] %>
-                                    </span>
-                                <% } %>
-                            </p>
+                            <%include listingGridStatus.ejs%>
 
                             <img class="img-responsive" src="https://source.unsplash.com/wtrAchtpc-w">
 
@@ -32,25 +20,12 @@
 
                             <section class="photo-card-info-spec-row1">
                                 <span class="photo-card-price">
-                                $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
-                            </span>
+                                    $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                                </span>
+
                                 <span class="photo-card-info">
-
-                                    <% if (listing['property_type'].match('Land')) { %>
-
-                                        <%= listing['property_type'] %>
-                                        <span class="photo-card-punct">|</span>
-                                        <%= listing['acres']%> acres
-
-                                    <% } else {%>
-
-                                        <%= listing['beds'] %> bd
-                                            <span class="photo-card-punct">|</span>
-                                        <%= listing['baths']%> ba
-                                            <span class="photo-card-punct">|</span>
-                                        <%= listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> sqft
-                                    <% } %>
-                            </span>
+                                    <%include listingGridPropCheck.ejs%>
+                                </span>
                             </section>
 
                             <section class="photo-card-info-spec-row2">
@@ -77,44 +52,17 @@
 
                         <div class="thumbnail photo-card">
 
-                            <p class="status-label">
-                                <%if (listing['status'].match('Active')) { %>
-
-                                    <span class="label label-for-sale">
-                                        <%= listing['status'] %>
-                                    </span>
-                                <% } else {%>
-
-                                    <span class="label label-pending">
-                                        <%= listing['status'] %>
-                                    </span>
-                                <% } %>
-                            </p>
+                            <%include listingGridStatus.ejs%>
 
                             <img class="img-responsive img-drop-shadow" src="http://www.realcove.net/<%= listingImage[0]%>">
 
                             <section class="photo-card-info-spec-row1">
                                 <span class="photo-card-price">
-                                $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                                    $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
                                 </span>
-                                    <span class="photo-card-info">
 
-                                        <% if (listing['property_type'].match('Land')) { %>
-
-
-                                        <%= listing['property_type']%>
-                                        <span class="photo-card-punct">|</span>
-                                        <%= listing['acres']%> acres
-
-                                        <% } else {%>
-
-                                            <%= listing['beds'] %> bd
-                                            <span class="photo-card-punct">|</span>
-                                            <%= listing['baths']%> ba
-                                            <span class="photo-card-punct">|</span>
-                                            <%= listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> sqft
-                                        <% } %>
-
+                                <span class="photo-card-info">
+                                    <%include listingGridPropCheck.ejs%>
                                 </span>
                             </section>
 

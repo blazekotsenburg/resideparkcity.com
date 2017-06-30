@@ -1,3 +1,137 @@
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> REALCOVE API <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// ########################################################################################################################################
+// ###	REQUIRED SEARCH PARAMETERS
+// partner_key: Provided by RealCove.  This Unique ID will grant you access to the API.
+//     values:	( authentication string )
+// action:	Determines which api method you will be accessing
+// values: (string)
+// options: agentSearch, officeSearch, propertySearch, pickListSearch
+//
+// ########################################################################################################################################
+// ###	PICK LIST PARAMETERS
+// search_list:	Return List of all distinct values for the specified data type
+// values:	(string)
+// options: status, listing_type, property_type, city, state, county, zip, area_name, subdivision
+// search_mls_id: References internal MLS ID used in property search, left blank will query all available mls's.
+// values: (array)
+// options: ( 1 =>	Park City MLS
+// 2 => WFRMLS
+// )
+//
+// ########################################################################################################################################
+// ###	AGENT SEARCH OPTIONAL PARAMETERS
+// qry:	Open ended query, capable of searching against agent_id,office_id,first_name,last_name,agent_email
+// values:	(character strings and integers)
+// search_mls_id: References internal MLS ID used in property search, left blank will query all available mls's.
+// values: (array)
+// options: ( 1 =>	Park City MLS
+// 2 => WFRMLS
+// )
+// search_agent_id: References Agent ID assigned to each agent by the associated MLS.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (array)
+// search_brokerage_id: References Brokerage ID assigned to each broker by the associated MLS.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (array)
+// search_sort: Sorts result set, comma delimmeted strings are accepted.
+//     values: (agent_id,office_id,first_name,last_name,agent_email)
+// search_limit: Limit number of records to be returned, default = 15, max = 150
+// values: (integers)
+// search_offset: Offset returned results, used for pagination.
+//                                                      values: (integers)
+//
+// ########################################################################################################################################
+// ###	OFFICE SEARCH OPTIONAL PARAMETERS
+// qry:	Open ended query, capable of searching against office_id,office_name,office_phone,office_address,office_city
+// values:	(character strings and integers)
+// search_mls_id: References internal MLS ID used in property search, left blank will query all available mls's.
+// values: (array)
+// options: ( 1 =>	Park City MLS
+// 2 => WFRMLS
+// )
+// search_brokerage_id: References Brokerage ID assigned to each broker by the associated MLS.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (array)
+// search_brokerage_name: References Brokerage Name.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (string)
+// search_brokerage_address: Brokerage address wildcard search.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (string)
+// search_brokerage_city: Brokerage city wildcard search.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (string)
+// search_brokerage_state: Brokerage state wildcard search.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (string)
+// search_brokerage_zip: Brokerage zip wildcard search.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (string)
+// search_sort: Sorts result set, comma delimmeted strings are accepted.
+//     values: (office_id,office_name,office_phone,office_address,office_city)
+// search_limit: Limit number of records to be returned, default = 15, max = 150
+// values: (integers)
+// search_offset: Offset returned results, used for pagination.
+//                                                      values: (integers)
+//
+// ########################################################################################################################################
+// ###	PROPERTY SEARCH OPTIONAL PARAMETERS
+// qry:	Open ended query, capable of searching against mls_num, property_type, address, city, county, state, zip, area_name, subdivision, description, publicremarks
+// values:	(character strings and integers)
+// search_address: Returns listings with similar address criteria
+// values: (string)
+// search_house_number: Returns listings with specific house number
+// values: (integers)
+// search_modified_date: Returns all listings modified after this date
+// values: (datetime)
+// search_list_date: Returns all listings listed after this date
+// values: (datetime)
+// search_price_min: Minimum price criteria used in property search
+// values: (integers)
+// search_price_max: Maximum price criteria used in property search
+// values: (integers)
+// search_sq_ft: Minimum square footage criteria used in property search
+// values: (integers)
+// search_acres: Minimum acreage criteria used in property search
+// values: (integers)
+// search_beds: Minimum number of bedrooms criteria used in property search
+// values: (integers)
+// search_baths: Minimum number of baths criteria used in property search
+// values: (integers)
+// search_property_type: Property type as in Single Family Home, Condo, or Land.
+//     values: (array)
+// search_area_name: Search within specific areas.  Recommend to build a pick list to choose from if this search critieria will be used.
+//     values: (array)
+// search_subdivision: Search within specific subdivisions.  Recommend to build a pick list to choose from if this search critieria will be used.
+//     values: (array)
+// search_status: Listing status.  To protect agents we currently only return Active and Pending Listings
+// values: (array)
+// search_mls_num: References MLS# assigned to each property by the associated MLS.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (array)
+// search_agent_id: References Agent ID assigned to each agent by the associated MLS.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (array)
+// search_brokerage_id: References Brokerage ID assigned to each broker by the associated MLS.  Duplicates may occur accross MLS systems, use MLS ID in your searches to get accurate results.
+//     values: (array)
+// search_mls_id: References internal MLS ID used in property search, left blank will query all available mls's.
+// values: (array)
+// options: ( 1 =>	Park City MLS
+// 2 => WFRMLS
+// )
+// search_geocode: Search by GEO Coded values
+// values: (string)
+// options: (area, radius)
+// search_geo_topleft: Top Left GEO Point used when search_geocode = area
+// values: array(lat,long)
+// example: array(40.6684780,-111.5636690)
+// search_geo_bottomright: Bottom Right GEO Point used when search_geocode = area
+// values: array(lat,long)
+// example: array(40.6684780,-111.5636690)
+// search_geo_center: Center GEO Point used when search_geocode = area
+// values: array(lat,long)
+// example: array(40.6684780,-111.5636690)
+// search_geo_radius
+// values: (float)
+// search_sort: Sorts result set, comma delimmeted strings are accepted.
+//     values: (price, square_feet, acres, beds, baths, mls_id, agent_code, office_code)
+// search_limit: Limit number of records to be returned, default = 15, max = 15
+// values: (integers)
+// search_offset: Offset returned results, used for pagination.
+//                                                      values: (integers)
+//
+// ########################################################################################################################################
+
 
 var express          = require("express"),
     //httpBuildQuery   = require('http-build-query'),
@@ -29,6 +163,7 @@ app.get("/", function (req, res) {
     request.post({url: url, formData: defaultData}, function(err, httpResponse, body) {
         if (!err && httpResponse.statusCode == 200) {
             var mlsData = JSON.parse(body);
+            //console.log(mlsData);
             res.render('home', {mlsData: mlsData['data']});
         }
         else {

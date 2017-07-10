@@ -1,12 +1,12 @@
 <div class="row grid-list"><!-- Begin First Row-->
     <div class="container">
 
-        <h1 id="featured-listings">Featured Listings</h1> <!--Need to get rid of this-->
+        <h1 id="featured-listings">Featured Listings</h1>
 
         <% mlsData.forEach(function(listing) { %>
             <div class="col-lg-4 col-md-4 col-sm-6">
 
-                <div id= "<%= listing['mls_num']%>">
+                <div id= "<%= listing['list_id']%>">
 
                     <% var listingImage = listing['photos'].split(",");%>
                     <% if (!listingImage[0]) { %>
@@ -15,84 +15,84 @@
 
                             <%include listingGridStatus.ejs%>
 
-                            <a href="/listing">
+                            <a href="/listing?id=<%=listing['list_id']%>&address=<%=listing['address']%>&area=<%=listing['area_name']%>&lat=<%=listing['latitude']%>&long=<%=listing['longitude']%>">
+
                                 <img class="img-responsive" src="https://source.unsplash.com/wtrAchtpc-w">
+
+                                    <p class="no-image-header">No Images <i class="fa fa-frown-o" aria-hidden="true"></i></p>
+
+                                    <section class="photo-card-info-spec-row1">
+                                        <span class="photo-card-price">
+                                            $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                                        </span>
+                                        <span class="photo-card-info">
+                                            <%include listingGridPropCheck.ejs%>
+                                        </span>
+                                    </section>
+
+                                    <section class="photo-card-info-spec-row2">
+
+                                        <span class="photo-card-dom">
+
+                                            <span class="dom">dom:</span>
+
+                                            <%= listing['days_on_market']%>
+                                        </span>
+
+                                        <span class="photo-card-punct">|</span>
+
+                                        <span class="photo-card-address">
+
+                                            <%= listing['address']%>,
+                                            <%= listing['city']%>,
+                                            <%= listing['state']%>
+                                        </span>
+                                    </section>
                             </a>
-
-                            <p class="no-image-header">No Images <i class="fa fa-frown-o" aria-hidden="true"></i></p>
-
-                            <section class="photo-card-info-spec-row1">
-                                <span class="photo-card-price">
-                                    $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
-                                </span>
-
-                                <span class="photo-card-info">
-                                    <%include listingGridPropCheck.ejs%>
-                                </span>
-                            </section>
-
-                            <section class="photo-card-info-spec-row2">
-
-                                <span class="photo-card-dom">
-
-                                    <span class="dom">dom:</span>
-
-                                    <%= listing['days_on_market']%>
-                                </span>
-
-                                <span class="photo-card-punct">|</span>
-
-                                <span class="photo-card-address">
-
-                                    <%= listing['address']%>,
-                                    <%= listing['city']%>,
-                                    <%= listing['state']%>
-                                </span>
-                            </section>
                         </div>
-
                     <% } else { %>
 
                         <div class="thumbnail photo-card">
 
                             <%include listingGridStatus.ejs%>
 
-                            <a href="/listing">
-                                <img class="img-responsive img-drop-shadow" src="http://www.realcove.net/<%= listingImage[0]%>">
-                            </a>
+                            <a href="/listing?id=<%=listing['list_id']%>&address=<%=listing['address']%>&area=<%=listing['area_name']%>&lat=<%=listing['latitude']%>&long=<%=listing['longitude']%>">
 
-                            <section class="photo-card-info-spec-row1">
-                                <span class="photo-card-price">
-                                    $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
-                                </span>
 
-                                <span class="photo-card-info">
-                                    <%include listingGridPropCheck.ejs%>
-                                </span>
-                            </section>
+                            <img class="img-responsive img-drop-shadow" src="http://www.realcove.net/<%= listingImage[0]%>">
 
-                            <section class="photo-card-info-spec-row2">
+                                <section class="photo-card-info-spec-row1">
+                                    <span class="photo-card-price">
+                                        $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                                    </span>
+
+                                    <span class="photo-card-info">
+                                        <%include listingGridPropCheck.ejs%>
+                                    </span>
+                                </section>
+
+                                <section class="photo-card-info-spec-row2">
 
                                 <span class="photo-card-dom">
 
                                     <span class="dom">dom:</span>
 
-                                    <%= listing['days_on_market']%>
-                                </span>
+                                        <%= listing['days_on_market']%>
+                                    </span>
 
-                                <span class="photo-card-punct">|</span>
+                                    <span class="photo-card-punct">|</span>
 
-                                <span class="photo-card-address">
-
-                                    <%= listing['address']%>,
-                                    <%= listing['city']%>,
-                                    <%= listing['state']%>
-                                </span>
-                            </section>
+                                    <span class="photo-card-address">
+                                        <%= listing['address']%>,
+                                        <%= listing['city']%>,
+                                        <%= listing['state']%>
+                                    </span>
+                                </section>
+                            </a>
                         </div>
                     <% } %>
                 </div>
             </div>
-        <% }) %>
-    </div> <!--End of Container-->
-</div><!-- End Fourth Row-->
+        <% }); %>
+    </div>
+</div>

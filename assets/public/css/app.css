@@ -227,8 +227,7 @@ Edit check box dropdown here.
 a,
 a > p,
 a > span {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none !important;
 }
 
 .photo-card {
@@ -307,11 +306,14 @@ p.status-label {
     background-color: #FFA200;
 }
 
+/*.label-new {*/
+    /*background-color: #FF3636;*/
+/*}*/
+
 .label { /*override label*/
     display: inline;
     padding: .025em .5em;
     font-size: 75%;
-
     color: #fff;
     text-align: center;
 }

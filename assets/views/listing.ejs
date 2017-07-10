@@ -7,7 +7,7 @@
 
 <div class="container">
     <div class="col-xs-12">
-        <h1 id="community-header">4953 E Meadows Dr</h1>
+        <h1 id="community-header"><%=listData['address']%></h1>
     </div>
 </div>
 
@@ -113,7 +113,7 @@
         <script>
             function myMap() {
                 var mapProp= {
-                    center:new google.maps.LatLng(40.6461,-111.4980),
+                    center:new google.maps.LatLng(parseFloat(listData['latitude']),parseFloat(listData['longitude'])),
                     zoom:14
                 };
                 var map=new google.maps.Map(document.getElementById("google-map"),mapProp);

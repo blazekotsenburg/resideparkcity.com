@@ -192,7 +192,7 @@ app.get("/listing", function (req, res) {
         search_offset      : '0',
         search_limit       : '15',
         search_mls_id      : ['1'],
-        //search_area_name : req.query.area,
+        search_area_name   : req.query.area,
         debug              : '0'
     };
 

@@ -256,18 +256,18 @@ a > span {
 .photo-card-info-spec-row1 {
     color: #292929;
     line-height: 1.45;
-    white-space: inherit;
-    overflow: inherit;
-    text-overflow: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .photo-card-info-spec-row2 {
     color: #636363;
     font: 500 15px Poppins, Sans-Serif;
     letter-spacing: -0.5px;
-    white-space: inherit;
-    overflow: inherit;
-    text-overflow: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 p.no-image-header{

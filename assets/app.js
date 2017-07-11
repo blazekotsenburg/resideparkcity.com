@@ -148,7 +148,7 @@ var defaultData = {
     action           : 'propertySearch',                      //agentSearch, officeSearch, propertySearch, pickListSearch
     return           : 'json', 							     //xml, json
     search_offset    : '0',
-    search_limit     : '15',						         //MAX BATCH IS 100, OVER THAT DEFAULTS TO 15
+    search_limit     : '100',						         //MAX BATCH IS 100, OVER THAT DEFAULTS TO 15
     search_mls_id    : ['1'],                                 //Array of valid MLS id's, Park City MLS = 1 and WFRMLS = 2
     search_price_min : '800000',
     search_price_max : '1500000',
@@ -177,20 +177,12 @@ app.get("/home", function (req, res) {
 
 app.get("/listing", function (req, res) {
 
-    var listData = {
-        list_id         : req.query.id,
-        address         : req.query.address,
-        longitude       : req.query.long,
-        latitude        : req.query.lat,
-        area            : req.query.area
-    };
-
     var data = {
         partner_key        : '7e52cad4e91ee36e308d35f93a9db02b',
         action             : 'propertySearch',
         return             : 'json',
         search_offset      : '0',
-        search_limit       : '15',
+        search_limit       : '100',
         search_mls_id      : ['1'],
         search_area_name   : req.query.area,
         debug              : '0'
@@ -198,8 +190,35 @@ app.get("/listing", function (req, res) {
 
     request.post({url: url, formData: data}, function(err, httpResponse, body) {
         if (!err && httpResponse.statusCode == 200) {
-            var mlsData = JSON.parse(body);
+            var mlsData  = JSON.parse(body),
+                listData = {};
 
+
+            mlsData['data'].forEach(function (listing){
+
+                if (listing['list_id'].match(req.query.id)) {
+
+                    listData = {
+                        list_id         : req.query.id,
+                        address         : req.query.address,
+                        longitude       : parseFloat(req.query.long),
+                        latitude        : parseFloat(req.query.lat),
+                        area            : req.query.area,
+                        price           : listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                        square_feet     : listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                        photos          : listing['photos'].split(","),
+                        mls_num         : listing['mls_num'],
+                        days_on_market  : listing['days_on_market'],
+                        beds            : listing['beds'],
+                        baths           : listing['baths'],
+                        status          : listing['status'],
+                        subdivision     : listing['subdivision'],
+                        property_type   : listing['property_type']
+                    };
+                }
+            });
+
+            console.log(mlsData);
             res.render('listing', {mlsData: mlsData['data'], listData: listData});
         }
         else {

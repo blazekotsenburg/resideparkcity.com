@@ -35,3 +35,32 @@ p {
     font-size: 36px;
     margin-bottom: 20px;
 }
+
+.thumbnail-container {
+    overflow-x:scroll;
+    width:100%;
+    padding: 0;
+    background: white;
+    border-radius: 4px;
+}
+
+.thumbnail-list{
+    white-space:nowrap;
+    list-style: none;
+}
+
+.thumbnail-list li {
+    display: inline-block;
+    float: none;
+}
+
+.thumbnail-image {
+    display: block;
+    padding:2px;
+    max-width: 100px;
+    height:auto;
+}
+
+#listing-info-chart p.public-remarks {
+    font-size: 16px;
+}

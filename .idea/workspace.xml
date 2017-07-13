@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd20e589-0004-44bb-8ea3-a9270f6b0ef7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/app.js" afterPath="$PROJECT_DIR$/assets/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/public/css/app.css" afterPath="$PROJECT_DIR$/assets/public/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/home.ejs" afterPath="$PROJECT_DIR$/assets/views/home.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/public/css/listing-area-common.css" afterPath="$PROJECT_DIR$/assets/public/css/listing-area-common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/public/css/listing-page.css" afterPath="$PROJECT_DIR$/assets/public/css/listing-page.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/listing.ejs" afterPath="$PROJECT_DIR$/assets/views/listing.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/partials/filter-suggest.ejs" afterPath="$PROJECT_DIR$/assets/views/partials/filter-suggest.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs" afterPath="$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs" afterPath="$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,11 +22,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="220" column="31" lean-forward="false" selection-start-line="220" selection-start-column="31" selection-end-line="220" selection-end-column="31" />
+            <state relative-caret-position="1034">
+              <caret line="226" column="12" lean-forward="false" selection-start-line="226" selection-start-column="12" selection-end-line="226" selection-end-column="12" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -35,24 +34,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/views/home.ejs">
+      <file leaf-file-name="searchresults.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/views/searchresults.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="53" lean-forward="false" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+            <state relative-caret-position="135">
+              <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listingGridTemplate.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs">
+      <file leaf-file-name="navbarTemplate.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="1620">
+              <caret line="108" column="54" lean-forward="true" selection-start-line="108" selection-start-column="54" selection-end-line="108" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,28 +57,28 @@
       <file leaf-file-name="filter-suggest.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/views/partials/filter-suggest.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="82" lean-forward="false" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listing.ejs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/views/listing.ejs">
+      <file leaf-file-name="listing-page.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/public/css/listing-page.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="106" lean-forward="false" selection-start-line="57" selection-start-column="106" selection-end-line="57" selection-end-column="106" />
+            <state relative-caret-position="875">
+              <caret line="64" column="17" lean-forward="false" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/public/css/app.css">
+      <file leaf-file-name="listing-area-common.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/public/css/listing-area-common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1393">
-              <caret line="260" column="28" lean-forward="false" selection-start-line="260" selection-start-column="28" selection-end-line="260" selection-end-column="28" />
+            <state relative-caret-position="367">
+              <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -170,7 +167,6 @@
         <option value="$PROJECT_DIR$/assets/css/HomeStyle.css" />
         <option value="$PROJECT_DIR$/assets/views/partials/header.ejs" />
         <option value="$PROJECT_DIR$/assets/public/css/ListingStyle.css" />
-        <option value="$PROJECT_DIR$/assets/public/css/listing-page.css" />
         <option value="$PROJECT_DIR$/assets/public/css/area-page.css" />
         <option value="$PROJECT_DIR$/Home.html" />
         <option value="$PROJECT_DIR$/ToDoList.html" />
@@ -186,16 +182,17 @@
         <option value="$PROJECT_DIR$/assets/views/partials/openheader.ejs" />
         <option value="$PROJECT_DIR$/assets/public/js/navbar.js" />
         <option value="$PROJECT_DIR$/assets/views/partials/closeheader.ejs" />
-        <option value="$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs" />
         <option value="$PROJECT_DIR$/assets/views/partials/listingGridStatus.ejs" />
         <option value="$PROJECT_DIR$/assets/views/partials/listingGridPropCheck.ejs" />
-        <option value="$PROJECT_DIR$/assets/public/css/listing-area-common.css" />
         <option value="$PROJECT_DIR$/assets/public/css/app.css" />
-        <option value="$PROJECT_DIR$/assets/app.js" />
         <option value="$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs" />
         <option value="$PROJECT_DIR$/assets/views/home.ejs" />
-        <option value="$PROJECT_DIR$/assets/views/partials/filter-suggest.ejs" />
+        <option value="$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs" />
+        <option value="$PROJECT_DIR$/assets/public/css/listing-page.css" />
         <option value="$PROJECT_DIR$/assets/views/listing.ejs" />
+        <option value="$PROJECT_DIR$/assets/public/css/listing-area-common.css" />
+        <option value="$PROJECT_DIR$/assets/views/partials/filter-suggest.ejs" />
+        <option value="$PROJECT_DIR$/assets/app.js" />
       </list>
     </option>
   </component>
@@ -215,10 +212,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="22" />
-    <option name="width" value="1676" />
-    <option name="height" value="1028" />
+    <option name="width" value="1094" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -357,8 +352,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,6 +366,7 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Linters.JSLint" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -576,6 +572,7 @@
       <workItem from="1499714666953" duration="468000" />
       <workItem from="1499716528355" duration="763000" />
       <workItem from="1499791762906" duration="4659000" />
+      <workItem from="1499875204061" duration="9186000" />
     </task>
     <task id="LOCAL-00001" summary="Added .css file for the home page. Has not yet been implemented.">
       <created>1494271904836</created>
@@ -595,12 +592,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360009000" />
+    <option name="totallyTimeSpent" value="369195000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1676" height="1028" extended-state="6" />
+    <frame x="0" y="0" width="1094" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20302115" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23485555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905984" sideWeight="0.5025381" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23660715" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -773,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/views/searchresults.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/fetchScript.js" />
     <entry file="file://$PROJECT_DIR$/assets/views/partials/footer.ejs">
       <provider selected="true" editor-type-id="text-editor">
@@ -806,13 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="111" column="131" lean-forward="false" selection-start-line="111" selection-start-column="131" selection-end-line="111" selection-end-column="131" />
         </state>
       </provider>
     </entry>
@@ -858,10 +842,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/public/css/app.css">
+    <entry file="file://$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1393">
-          <caret line="260" column="28" lean-forward="false" selection-start-line="260" selection-start-column="28" selection-end-line="260" selection-end-column="28" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -874,55 +858,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/searchresults.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/listing.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="139" column="27" lean-forward="false" selection-start-line="139" selection-start-column="27" selection-end-line="139" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/public/css/listing-page.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="1" lean-forward="false" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        <state relative-caret-position="875">
+          <caret line="64" column="17" lean-forward="false" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="104" column="4" lean-forward="false" selection-start-line="104" selection-start-column="4" selection-end-line="105" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/public/css/listing-area-common.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="981">
-          <caret line="89" column="8" lean-forward="false" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+        <state relative-caret-position="367">
+          <caret line="54" column="8" lean-forward="false" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/partials/filter-suggest.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/views/partials/navbarTemplate.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="108" column="54" lean-forward="true" selection-start-line="108" selection-start-column="54" selection-end-line="108" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="220" column="31" lean-forward="false" selection-start-line="220" selection-start-column="31" selection-end-line="220" selection-end-column="31" />
+        <state relative-caret-position="1034">
+          <caret line="226" column="12" lean-forward="false" selection-start-line="226" selection-start-column="12" selection-end-line="226" selection-end-column="12" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/views/partials/filter-suggest.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="82" lean-forward="false" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/views/partials/listingGridTemplate.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/views/listing.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="106" lean-forward="false" selection-start-line="57" selection-start-column="106" selection-end-line="57" selection-end-column="106" />
-          <folding />
         </state>
       </provider>
     </entry>

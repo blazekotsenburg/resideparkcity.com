@@ -51,6 +51,11 @@ hr {
     float: right;
 }
 
+.filter,
+.order {
+    margin-top: 5px;
+}
+
 .btn-dropdown-filter{
     color: white;
     background-color: #292929;

@@ -55,12 +55,35 @@
 
     <div class="community-image-container">
 
-        <img class="community-image img-drop-shadow" src="http://www.realcove.net/<%=listData['photos'][0]%>">
+        <% if (listData['photos'][0].substring(0, 3).match('http')) { %>
+        <!--Need to figure out what to do if the first string is http-->
+            <img class="community-image img-drop-shadow" src="<%=listData['photos'][0]%>">
+
+        <% } else { %>
+
+            <img class="community-image img-drop-shadow" src="http://www.realcove.net/<%=listData['photos'][0]%>">
+        <% } %>
 
         <div class="row">
 
             <div id="listing-info-chart">
                 <!--put variables in each div for information-->
+                <div class="thumbnail-container">
+                    <ul class="thumbnail-list">
+
+                        <% for (var i = 0; i < listData['photos'].length; i++) { %>
+                            <li>
+                                <span><img class="thumbnail-image" src="http://www.realcove.net/<%=listData['photos'][i]%>"></span>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12">
+                    <p class="public-remarks">
+                        <%=listData['publicremarks']%>
+                    </p>
+                </div>
 
                 <div class="col-xs-4">
                     <hr>

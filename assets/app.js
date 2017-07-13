@@ -163,6 +163,10 @@ app.get("/", function (req, res) {
     request.post({url: url, formData: defaultData}, function(err, httpResponse, body) {
         if (!err && httpResponse.statusCode == 200) {
             var mlsData = JSON.parse(body);
+
+            mlsData['data'].forEach(function(listing) {
+                console.log(listing['baths']);
+            });
             res.render('home', {mlsData: mlsData['data']});
         }
         else {
@@ -213,12 +217,13 @@ app.get("/listing", function (req, res) {
                         baths           : listing['baths'],
                         status          : listing['status'],
                         subdivision     : listing['subdivision'],
-                        property_type   : listing['property_type']
+                        property_type   : listing['property_type'],
+                        publicremarks   : listing['publicremarks']
                     };
                 }
             });
 
-            console.log(mlsData);
+            // console.log(mlsData);
             res.render('listing', {mlsData: mlsData['data'], listData: listData});
         }
         else {

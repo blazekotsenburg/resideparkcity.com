@@ -18,6 +18,15 @@ var minPrices = [
 var metricPattern = /^\d{1,3}[mMkK]$/; // Pattern allows for m and k multipliers (eg 40k -> 40,000)
 var intWithCommaPattern = /^\d{1,3}(,\d{3})*?$/; //Pattern allows commas (eg 700,000 matches)
 
+$(window).bind('scroll', function () {
+    console.log($(window).scrollTop());
+    if ($(window).scrollTop() > 501) {
+        $('.navbar').addClass('navbar-fixed-top');
+    } else {
+        $('.navbar').removeClass('navbar-fixed-top');
+    }
+});
+
 /**
  * This event listener makes sure that the price column is shifted to the right whenever the
  * max input has been put in focus. The prices will be adjusted depending on whether the min
@@ -105,6 +114,16 @@ $("#price-options li").on("click", function () {
         $("#max-input").addClass("input-toggle");
         updateMaxPrices($("#min-input").val());
     }
+});
+
+/**
+ * This listener should set the value of beds that a user selects in the drop-down for beds.
+ * This value will be sent to the server with a form.
+ */
+$("#bed-options li").on("click", function () {
+    var numBeds = parseInt($(this).text());
+    //maybe set the selected number of beds to different color here.
+    $([name="beds"]).val(numBeds);
 });
 
 /**

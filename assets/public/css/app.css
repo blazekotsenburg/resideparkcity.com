@@ -12,7 +12,7 @@ body {
 /*Header Image needs to bee fixed and redone*/
 #headerImage {
     width: 100%;
-    height: 50rem;
+    height: 500px;
     background-image: url(http://res.cloudinary.com/simpleview/image/upload/v1492455863/clients/parkcity/CB_Summer_Main_Street_Trolley_024e2ee4-fe7f-40ed-9a9f-98cb732ca017.jpg);
     background-size: cover;
     background-position: center;
@@ -30,6 +30,19 @@ body {
 
 .navbar-form .form-control {
     width: 40em;
+}
+
+form .form-group {
+    padding-top: 8px;
+}
+
+.navbar-form {
+    margin: 0;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
 }
 /***************** Custom dropdown start *****************/
 ul {
@@ -144,6 +157,12 @@ input {
 
 #bed-options li{
     text-align: center;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 900px;
+    overflow-x: hidden;
 }
 /***************************End Custom Drop-down*******************************/
 

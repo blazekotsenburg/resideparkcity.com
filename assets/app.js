@@ -133,28 +133,28 @@
 // ########################################################################################################################################
 
 
-var express          = require("express"),
-    //httpBuildQuery   = require('http-build-query'),
+var express          = require('express'),
     request          = require('request'),
-    //XMLHttpRequest   = require('xmlhttprequest').XMLHttpRequest,
-    //http             = new XMLHttpRequest(),
-    //FormData         = require('form-data'),
+    bodyParser       = require('body-parser'),
     app              = express();
 
 var url              = 'https://secure.realcove.com/api.php?';
 
 var defaultData = {
-    partner_key      : '7e52cad4e91ee36e308d35f93a9db02b',     //International MLS
-    action           : 'propertySearch',                      //agentSearch, officeSearch, propertySearch, pickListSearch
-    return           : 'json', 							     //xml, json
-    search_offset    : '0',
-    search_limit     : '100',						         //MAX BATCH IS 100, OVER THAT DEFAULTS TO 15
-    search_mls_id    : ['1'],                                 //Array of valid MLS id's, Park City MLS = 1 and WFRMLS = 2
-    search_price_min : '800000',
-    search_price_max : '1500000',
-    debug            : '0'
+    partner_key          : '7e52cad4e91ee36e308d35f93a9db02b',     //International MLS
+    action               : 'propertySearch',                      //agentSearch, officeSearch, propertySearch, pickListSearch
+    return               : 'json', 							     //xml, json
+    search_offset        : '0',
+    search_limit         : '100',						         //MAX BATCH IS 100, OVER THAT DEFAULTS TO 15
+    search_mls_id        : ['1'],                                 //Array of valid MLS id's, Park City MLS = 1 and WFRMLS = 2
+    search_price_min     : '800000',
+    search_price_max     : '2000000',
+    search_property_type : ['Single Family', 'Condo'],
+    search_area_name     : 'Old Town',
+    debug                : '0'
 };
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
@@ -164,9 +164,9 @@ app.get("/", function (req, res) {
         if (!err && httpResponse.statusCode == 200) {
             var mlsData = JSON.parse(body);
 
-            mlsData['data'].forEach(function(listing) {
-                console.log(listing['baths']);
-            });
+            // mlsData['data'].forEach(function(listing) {
+            //     console.log(listing['baths']);
+            // });
             res.render('home', {mlsData: mlsData['data']});
         }
         else {
@@ -194,8 +194,10 @@ app.get("/listing", function (req, res) {
 
     request.post({url: url, formData: data}, function(err, httpResponse, body) {
         if (!err && httpResponse.statusCode == 200) {
-            var mlsData  = JSON.parse(body),
-                listData = {};
+            var mlsData   = JSON.parse(body),
+                listData  = {},
+                latitude  = parseFloat(req.query.latitude),
+                longitude = parseFloat(req.query.longitude);
 
 
             mlsData['data'].forEach(function (listing){
@@ -205,8 +207,8 @@ app.get("/listing", function (req, res) {
                     listData = {
                         list_id         : req.query.id,
                         address         : req.query.address,
-                        longitude       : parseFloat(req.query.long),
-                        latitude        : parseFloat(req.query.lat),
+                        longitude       : req.query.long,
+                        latitude        : req.query.lat,
                         area            : req.query.area,
                         price           : listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ","),
                         square_feet     : listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ","),
@@ -223,9 +225,48 @@ app.get("/listing", function (req, res) {
                 }
             });
 
-            // console.log(mlsData);
+            //console.log(mlsData);
             res.render('listing', {mlsData: mlsData['data'], listData: listData});
         }
+        else {
+            return console.error('upload failed:', err);
+        }
+    });
+});
+
+app.post("/results", function(req, res) {
+    var minInputVal = req.body.price_min.replace(/\,/g,""),
+        maxInputVal = req.body.price_max.replace(/\,/g,"");
+
+    console.log(minInputVal);
+    console.log(maxInputVal);
+
+
+    var searchData = {
+        partner_key: '7e52cad4e91ee36e308d35f93a9db02b',
+        action: 'propertySearch',
+        return: 'json',
+        search_offset: '0',
+        search_limit: '100',
+        search_mls_id: ['1'],
+        search_price_min: minInputVal,
+        search_price_max: maxInputVal,
+        search_beds: req.body.beds,
+        search_property_type: req.body.property_type,
+        qry: req.body.qry,
+        debug: '0'
+    };
+
+    console.log(req.body);
+
+
+    request.post({url: url, formData: searchData}, function (err, httpResponse, body) {
+        if (!err && httpResponse.statusCode == 200) {
+            var mlsData = JSON.parse(body);
+
+            res.render('searchresults', {mlsData: mlsData['data']})
+        }
+
         else {
             return console.error('upload failed:', err);
         }

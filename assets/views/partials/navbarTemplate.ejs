@@ -15,129 +15,128 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
 
-                    <!--Begin Dropdown for price input-->
-                    <li id="price-dropdown" class="dropdown">
-                        <a id="price-dropdown-button" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Any Price<span class="caret"></span></a>
-                        <div class="dropdown-menu dropdown-content">
+                <form class="navbar-form navbar-left" action="/results" method="POST">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
 
-                            <div class="row row-margin-zero">
-                                <div class="col-xs-6">
-                                    <input id="min-input" type="text" placeholder="Min.">
+                        <!--Begin Dropdown for price input-->
+                        <li id="price-dropdown" class="dropdown">
+                            <a id="price-dropdown-button" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">Any Price<span class="caret"></span></a>
+                            <div class="dropdown-menu dropdown-content">
+
+                                <div class="row row-margin-zero">
+                                    <div class="col-xs-6">
+                                        <input id="min-input" type="text" name="price_min" placeholder="Min.">
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input id="max-input" type="text" name="price_max" placeholder="Max.">
+                                    </div>
                                 </div>
-                                <div class="col-xs-6">
-                                    <input id="max-input" type="text" placeholder="Max.">
-                                </div>
+
+                                <ul id="price-options">
+                                    <li class="price"><span>$</span>50,000<span>+</span></li>
+                                    <li class="price"><span>$</span>100,000<span>+</span></li>
+                                    <li class="price"><span>$</span>150,000<span>+</span></li>
+                                    <li class="price"><span>$</span>200,000<span>+</span></li>
+                                    <li class="price"><span>$</span>250,000<span>+</span></li>
+                                    <li class="price"><span>$</span>300,000<span>+</span></li>
+                                    <li class="price"><span>$</span>400,000<span>+</span></li>
+                                    <li class="price"><span>$</span>500,000<span>+</span></li>
+                                </ul>
                             </div>
+                        </li> <!--End Dropdown for price input-->
 
-                            <ul id="price-options">
-                                <li class="price"><span>$</span>50,000<span>+</span></li>
-                                <li class="price"><span>$</span>100,000<span>+</span></li>
-                                <li class="price"><span>$</span>150,000<span>+</span></li>
-                                <li class="price"><span>$</span>200,000<span>+</span></li>
-                                <li class="price"><span>$</span>250,000<span>+</span></li>
-                                <li class="price"><span>$</span>300,000<span>+</span></li>
-                                <li class="price"><span>$</span>400,000<span>+</span></li>
-                                <li class="price"><span>$</span>500,000<span>+</span></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">Beds<span class="caret"></span></a>
+                            <div class="dropdown-menu dropdown-content bedroom-dropdown">
+                                <input type="hidden" name="beds">
+                                <ul id="bed-options">
+                                    <li class="num-beds">1<span>+</span></li>
+                                    <li class="num-beds">2<span>+</span></li>
+                                    <li class="num-beds">3<span>+</span></li>
+                                    <li class="num-beds">4<span>+</span></li>
+                                    <li class="num-beds">5<span>+</span></li>
+                                    <li class="num-beds">6<span>+</span></li>
+                                    <li class="num-beds">7<span>+</span></li>
+                                    <li class="num-beds">8<span>+</span></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                               aria-expanded="false">Home Type<span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-content">
+
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="property_type" value="Single Family" aria-label="Houses">
+                                        Houses
+                                    </label>
+                                </li>
+
+
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="property_type" value="Condo" aria-label="Condos/Apartments">
+                                        Condos/Apartments
+                                    </label>
+                                </li>
+
+                                <!--<li role="separator" class="divider"></li>-->
+
+                                <!--&lt;!&ndash;<li class="checkbox">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<label>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<input type="checkbox" name="property-type" value="Townhomes" aria-label="Townhomes">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;Townhomes&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+                                <li class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="property_type" value="Land" aria-label="Lots/Land">
+                                        Lots/Land
+                                    </label>
+                                </li>
+
                             </ul>
-                        </div>
-                    </li> <!--End Dropdown for price input-->
+                        </li>
+                    </ul>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Beds<span class="caret"></span></a>
-                        <div class="dropdown-menu dropdown-content bedroom-dropdown">
-                            <ul id="bed-options">
-                                <li>1<span>+</span></li>
-                                <li>2<span>+</span></li>
-                                <li>3<span>+</span></li>
-                                <li>4<span>+</span></li>
-                                <li>5<span>+</span></li>
-                                <li>6<span>+</span></li>
-                                <li>7<span>+</span></li>
-                                <li>8<span>+</span></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">Home Type<span class="caret"></span></a>
-                        <ul class="dropdown-menu chackbox-format">
-
-                            <li class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="Houses" aria-label="Houses">
-                                    Houses
-                                </label>
-                            </li>
-
-                            <li role="separator" class="divider"></li>
-
-                            <li class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="Condos/Apartments" aria-label="Condos/Apartments">
-                                    Condos/Apartments
-                                </label>
-                            </li>
-
-                            <li role="separator" class="divider"></li>
-
-                            <li class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="Townhomes" aria-label="Townhomes">
-                                    Townhomes
-                                </label>
-                            </li>
-
-                            <li role="separator" class="divider"></li>
-
-                            <li class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="Lots/Land" aria-label="Lots/Land">
-                                    Lots/Land
-                                </label>
-                            </li>
-
-                        </ul>
-                    </li>
-                </ul>
-
-                <form class="navbar-form navbar-left">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search by Neighborhood, Address, Zip, etc">
+                        <input type="text" name="qry" class="form-control" placeholder="Search by Neighborhood, Address, Zip, etc">
+                        <button id="search-btn" type="submit" class="btn btn-default btn-custom">Search <i class="fa fa-search" aria-hidden="true"></i></button>
                     </div>
-                    <button type="submit" class="btn btn-default btn-custom">Search <i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
 
                     <li class="dropdown"><!--Begin Communities wrapper dropdown-->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">Communities<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <!--Park City Dropdown-->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-haspopup="true" aria-expanded="false">Park City<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li>Park Meadows</li>
-                                    <li>Old Town</li>
-                                    <li>Thaynes Canyon</li>
-
-                                </ul>
-                            </li>
-
-                            <!--Deer Valley Dropdown-->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-haspopup="true" aria-expanded="false">Deer Valley<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-
-                                </ul>
-                            </li>
+                        <ul class="dropdown-menu dropdown-content scrollable-menu">
+                            <li>Old Town</li>
+                            <li>Canyons</li>
+                            <li>Thaynes Canyon</li><!--& Aspen Springs-->
+                            <li>Lower Deer Valley</li><!--& Snow Park Area-->
+                            <li>Deer Crest</li>
+                            <li>Upper Deer Valley</li>
+                            <li>Empire Pass</li>
+                            <li>The Aerie</li>
+                            <li>Prospector</li>
+                            <li>Park Meadows</li>
+                            <li>Sun Peak | Bear Hollow</li>
+                            <li>Silver Springs</li>
+                            <li>Old Ranch Road</li>
+                            <li>Kimball Junction</li>
+                            <li>Pinebrook</li>
+                            <li>Summit Park</li>
+                            <li>Jeremy Ranch</li>
+                            <li>Glenwild | Silver Creek</li>
+                            <li>Trailside</li>
+                            <li>Promontory Ranch Club</li>
                         </ul>
                     </li>
                     <li><a href="#">About</a></li>

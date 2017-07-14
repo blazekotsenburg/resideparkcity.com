@@ -138,8 +138,11 @@
         <!--Extract script into js file-->
         <script>
             function myMap() {
+                var latitude  = parseFloat(listData['latitude']),
+                    longitude = parseFloat(listData['longitude']);
+
                 var mapProp= {
-                    center:new google.maps.LatLng(listData['latitude'], listData['longitude']),
+                    center: new google.maps.LatLng(latitude , longitude),
                     zoom:14
                 };
                 var map=new google.maps.Map(document.getElementById("google-map"),mapProp);

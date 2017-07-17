@@ -4,6 +4,7 @@
  * This file handles all of the necessary interactivity needed for the navigation bar outside of
  * the Bootstrap/Jquery library.
  */
+
 var minPrices = [
     50000,
     100000,
@@ -15,14 +16,20 @@ var minPrices = [
     500000
 ];
 
-var metricPattern = /^\d{1,3}[mMkK]$/; // Pattern allows for m and k multipliers (eg 40k -> 40,000)
+var metricPattern = /^\d{1,3}[mMkK]$/; // Pattern allows for m and k multipliers (eg 40k -> 40,000, 1M -> 1,000,000)
 var intWithCommaPattern = /^\d{1,3}(,\d{3})*?$/; //Pattern allows commas (eg 700,000 matches)
 
+/**
+ * Allows the navbar to be fixed once the top of the navbar has reached the top of the page via
+ * scrolling.
+ */
 $(window).bind('scroll', function () {
-    console.log($(window).scrollTop());
+
     if ($(window).scrollTop() > 501) {
+
         $('.navbar').addClass('navbar-fixed-top');
     } else {
+
         $('.navbar').removeClass('navbar-fixed-top');
     }
 });
@@ -37,31 +44,31 @@ $("#max-input").on("focus", function () { //need to extract this method out so t
     $("#min-input").removeClass("input-toggle");
 
 
-    if (!$("#min-input").val()) {
+    if (!$("#min-input").val()) { //Check that the navbar has a value.
         defaultMaxPriceOptions();
     }
 
-    else if ($.isNumeric($("#min-input").val())) {
+    else if ($.isNumeric($("#min-input").val())) { //Check that user has put in number (no commas)
 
-        if ($("#min-input").val().length >= 7){
+        if ($("#min-input").val().length >= 7){ // If the input has a length greater than 7, max price options increment by 250,000
 
             getMaxPriceOptions(250000, 1);
         }
 
         else {
 
-            getMaxPriceOptions(25000, 1);
+            getMaxPriceOptions(25000, 1); //Increment max price options by 25,000
         }
     }
 
     else {
 
-        updateMaxPrices($("#min-input").val());
+        updateMaxPrices($("#min-input").val()); //Determine price has been input by user.
     }
 });
 
 /**
- * When min input in Price dropdown is selected, shift all price options to the left of the
+ * When min input in Price dropdown is selected, shift all price options (<li>'s) to the left of the
  * dropdown column.
  */
 $("#min-input").on("focus", function () {
@@ -71,27 +78,21 @@ $("#min-input").on("focus", function () {
     defaultMinPriceOptions();
 });
 
-/*$("#min-input").on("keyup", function () {
-    if(!$("#min-input").val()){
-        $("#price-dropdown-button").text("Any Price");
-    }
-    else {
-        $("#price-dropdown-button").text($("#min-input").val());
-    }
-});*/
-
-
 /**
  * Listener that prevents dropdowns from closing after a sub-item in the dropdown list has been
  * clicked.
  */
 $(".dropdown-content li").on("click", function (e) {
+
     e.stopPropagation();
 });
 
-//This listener needs a lot of work. Doesn't toggle properly. It includes any mouse clicks outside of the
-//dropdown button.
+/**
+ * Every time that the "Any Price" drop down is clicked, add focus border to the min input and
+ * shift the price options column back to the left with the min price default values.
+ */
 $("#price-dropdown-button").on("click", function () {
+
     $("#min-input").addClass("input-toggle");
     $("#max-input").removeClass("input-toggle");
     defaultMinPriceOptions();
@@ -99,15 +100,19 @@ $("#price-dropdown-button").on("click", function () {
 });
 
 /**
- * Listens for a price option to be clicked on and handles the event accordingly.
+ * Listens for a price option to be clicked on and handles the event accordingly.  If the max price input
+ * is focused, just remove '$' & '+' chars. Else, if the min price input is focused, take off the '$' and
+ * '+' characters and shift the price options (<li>'s) to the right.
  */
 $("#price-options li").on("click", function () {
     var listItemVal = $(this).text();
 
     if ($("#price-options").hasClass("shift-col-right")) {
+
         $("#max-input").val(listItemVal.replace(/[$]+/, '')); //Places just the numbers and commas into the input with regexp
     }
     else {
+
         $("#min-input").val(listItemVal.replace(/[$+]+/g, ''));
         $("#min-input").removeClass("input-toggle");
         $("#price-options").addClass("shift-col-right");
@@ -119,10 +124,12 @@ $("#price-options li").on("click", function () {
 /**
  * This listener should set the value of beds that a user selects in the drop-down for beds.
  * This value will be sent to the server with a form.
+ * ***Currently not working****. Want to use this to help pass the number of beds a user wants
+ * to search for from the navbar (beds dropdown).
  */
 $("#bed-options li").on("click", function () {
+
     var numBeds = parseInt($(this).text());
-    //maybe set the selected number of beds to different color here.
     $([name="beds"]).val(numBeds);
 });
 

@@ -1,3 +1,7 @@
+/**
+This file contains all of the styling that is found in common between all pages for the site.
+ */
+
 * {
     box-sizing: border-box;
 }
@@ -166,9 +170,12 @@ input {
 }
 /***************************End Custom Drop-down*******************************/
 
+/***************************Home Type Drop-down*******************************/
 /**
 Edit check box dropdown here.
  */
+/***************************End Home Type Drop-down*******************************/
+
 
 /***************************Navbar Search Form*******************************/
 .form-control:focus {
@@ -217,32 +224,6 @@ Edit check box dropdown here.
 }
 
 /***************************Photo Card for Grid List*******************************/
-/*.photo-card {*/
-    /*position: relative;*/
-    /*width: 100%;*/
-    /*margin-bottom: 15px;*/
-    /*text-shadow: 0 0 3px rgba(0, 0, 0, 1);*/
-    /*-webkit-background-size:contain;*/
-    /*background-size: contain;*/
-    /*display: inline-block;*/
-/*}*/
-
-/*.photo-card:after {*/
-    /*content:'';*/
-    /*z-index: 1;*/
-    /*position:absolute;*/
-    /*left:0; top:0;*/
-    /*width:100%; height:100%;*/
-    /*background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%); !* FF3.6+ *!*/
-    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.15)), color-stop(100%,rgba(0,0,0,0))); !* Chrome,Safari4+ *!*/
-    /*background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); !* Chrome10+,Safari5.1+ *!*/
-    /*background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); !* Opera 11.10+ *!*/
-    /*background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); !* IE10+ *!*/
-    /*background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); !* W3C *!*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); !* IE6-9 *!*/
-/*}*/
-/*****Edit photos****/
-
 a,
 a > p,
 a > span {
@@ -292,10 +273,8 @@ a > span {
 p.no-image-header{
     position: absolute;
     top: 25%;
-    /*color: lightsteelblue;*/
     color: white;
     padding-left: 5%;
-    /*opacity: 0.65;*/
     font-weight: bold;
     font-size: 45px;
     white-space: nowrap;
@@ -317,6 +296,15 @@ p.status-label {
     filter: drop-shadow(1px 1px 4px #616161);
 }
 
+.fa.fa-star-o {
+    color: #636363;
+    float:right;
+}
+
+.fa.fa-star-o:hover {
+    color: #FFF82E;
+}
+
 .label-for-sale {
     background-color: #21E310;
 }
@@ -324,10 +312,6 @@ p.status-label {
 .label-pending {
     background-color: #FFA200;
 }
-
-/*.label-new {*/
-    /*background-color: #FF3636;*/
-/*}*/
 
 .label { /*override label*/
     display: inline;
@@ -340,48 +324,6 @@ p.status-label {
 .photo-card-dom {
     text-transform: uppercase;
 }
-/*****Edit photos****/
-
-/*Consider revising the following classes and selectors*/
-
-
-
-
-/*img.img-drop-shadow {*/
-    /*-webkit-filter: drop-shadow(1px 1px 4px #8A8A8A); !* Safari *!*/
-    /*filter: drop-shadow(1px 1px 4px #8A8A8A);*/
-/*}*/
-
-/*p.photo-card-info-spec-row1{*/
-    /*position: absolute;*/
-    /*top: 75%;*/
-    /*width: 100%;*/
-    /*left: 0;*/
-    /*padding-left: .2rem;*/
-    /*font-weight: bold;*/
-    /*font-size: larger;*/
-    /*white-space: nowrap;*/
-    /*overflow: hidden;*/
-    /*text-overflow: ellipsis;*/
-/*}*/
-
-
-
-
-
-/*p.photo-card-info-spec-row2{*/
-    /*position: absolute;*/
-    /*top: 90%;*/
-    /*width: 100%;*/
-    /*left: 0;*/
-    /*padding-left: .2rem;*/
-    /*white-space: nowrap;*/
-    /*overflow: hidden;*/
-    /*text-overflow: ellipsis;*/
-    /*font: 500 15px Poppins, Sans-Serif;*/
-    /*letter-spacing: -0.5px;*/
-    /*color: #E8E8E8;*/
-/*}*/
 /***************************End Photo Card for Grid List*******************************/
 
 /***************************Footer*******************************/
@@ -391,9 +333,8 @@ p.status-label {
     display: block;
     bottom: 0;
     width: 100%;
-    /* Set the fixed height of the footer here */
     height: auto;
-    line-height: 100px; /* Vertically center the text there */
+    line-height: 100px;
     background-color: #292929;
 }
 

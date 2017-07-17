@@ -1,4 +1,5 @@
-<div class="row grid-list" style="display:flex; flex-wrap: wrap"><!-- Begin First Row-->
+<!--This is the listing grid that is used in home page, listing page, results page, as well as area page.-->
+<div class="row grid-list" style="display:flex; flex-wrap: wrap">
     <div class="container">
 
 
@@ -8,6 +9,7 @@
                 <div id= "<%= listing['list_id']%>">
 
                     <% var listingImage = listing['photos'].split(",");%>
+                    <!--If listing does not have any images, supply an image-->
                     <% if (!listingImage[0]) { %>
 
                         <div class="thumbnail photo-card">
@@ -18,35 +20,37 @@
 
                                 <img class="img-responsive" src="https://source.unsplash.com/wtrAchtpc-w">
 
-                                    <p class="no-image-header">No Images <i class="fa fa-frown-o" aria-hidden="true"></i></p>
+                                <p class="no-image-header">No Images <i class="fa fa-frown-o" aria-hidden="true"></i></p>
+                                <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
 
-                                    <section class="photo-card-info-spec-row1">
-                                        <span class="photo-card-price">
-                                            $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
-                                        </span>
-                                        <span class="photo-card-info">
-                                            <%include listingGridPropCheck.ejs%>
-                                        </span>
-                                    </section>
 
-                                    <section class="photo-card-info-spec-row2">
+                                <section class="photo-card-info-spec-row1">
+                                    <span class="photo-card-price">
+                                        $<%= listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ",") %>
+                                    </span>
+                                    <span class="photo-card-info">
+                                        <%include listingGridPropCheck.ejs%>
+                                    </span>
+                                </section>
 
-                                        <span class="photo-card-dom">
+                                <section class="photo-card-info-spec-row2">
 
-                                            <span class="dom">dom:</span>
+                                    <span class="photo-card-dom">
 
-                                            <%= listing['days_on_market']%>
-                                        </span>
+                                        <span class="dom">dom:</span>
 
-                                        <span class="photo-card-punct">|</span>
+                                        <%= listing['days_on_market']%>
+                                    </span>
 
-                                        <span class="photo-card-address">
+                                    <span class="photo-card-punct">|</span>
 
-                                            <%= listing['address']%>,
-                                            <%= listing['city']%>,
-                                            <%= listing['state']%>
-                                        </span>
-                                    </section>
+                                    <span class="photo-card-address">
+
+                                        <%= listing['address']%>,
+                                        <%= listing['city']%>,
+                                        <%= listing['state']%>
+                                    </span>
+                                </section>
                             </a>
                         </div>
                     <% } else { %>
@@ -59,6 +63,7 @@
 
 
                             <img class="img-responsive img-drop-shadow" src="http://www.realcove.net/<%= listingImage[0]%>">
+                                <i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
 
                                 <section class="photo-card-info-spec-row1">
                                     <span class="photo-card-price">

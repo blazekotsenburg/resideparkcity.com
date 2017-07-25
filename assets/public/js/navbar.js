@@ -72,10 +72,16 @@ $("#max-input").on("focus", function () { //need to extract this method out so t
  * dropdown column.
  */
 $("#min-input").on("focus", function () {
-
     $("#price-options").removeClass("shift-col-right");
     $("#max-input").removeClass("input-toggle");
     defaultMinPriceOptions();
+});
+
+/**
+ * When min input or max input in Price dropdown is selected, convert the value to its relative number.
+ */
+$("#min-input,#max-input").on("keyup change", function() {
+    $(this).val(convertPrice($(this).val()));
 });
 
 /**
@@ -128,9 +134,8 @@ $("#price-options li").on("click", function () {
  * to search for from the navbar (beds dropdown).
  */
 $("#bed-options li").on("click", function () {
-
     var numBeds = parseInt($(this).text());
-    $([name="beds"]).val(numBeds);
+    $("[name=beds]").val(numBeds);
 });
 
 /**
@@ -246,4 +251,33 @@ function defaultMaxPriceOptions() {
         $(this).text("$" + numberWithCommas(i));
         i += 100000;
     });
+}
+
+/**
+ * Function is for converting the value in min-input or max-input to it's relative value associated with the letter specified e.g. 1K = 1000 and then adding commas for every 3 numbers.
+ */
+function convertPrice(value) {
+    var number = value.replace(/\D/g,'');
+
+    if (value.toLowerCase().indexOf('k') > -1)
+    {
+        number = value.replace(/\D/g,'') * 1000;
+    }
+
+    if (value.toLowerCase().indexOf('m') > -1)
+    {
+        number = value.replace(/\D/g,'') * 1000000;
+    }
+
+    if (value.toLowerCase().indexOf('b') > -1)
+    {
+        number = value.replace(/\D/g,'') * 1000000000;
+    }
+
+    if (value.toLowerCase().indexOf('t') > -1)
+    {
+        number = value.replace(/\D/g,'') * 1000000000000;
+    }
+
+    return numberWithCommas(number);
 }

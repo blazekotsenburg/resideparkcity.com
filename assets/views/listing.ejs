@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="col-xs-12">
-        <h1 id="community-header"><%=listData['address']%></h1>
+        <h1 id="community-header"><%=listingData['address']%></h1>
     </div>
 </div>
 
@@ -55,92 +55,92 @@
     </section>
 
     <div class="community-image-container">
+        <% if (listingData['photos']) { %>
+            <% if (listingData['photos'][0].substring(0, 3).match('http')) { %>
+            <!--Need to figure out what to do if the first string is http-->
+                <img class="community-image img-drop-shadow" src="<%=listingData['photos'][0]%>">
 
-        <% if (listData['photos'][0].substring(0, 3).match('http')) { %>
-        <!--Need to figure out what to do if the first string is http-->
-            <img class="community-image img-drop-shadow" src="<%=listData['photos'][0]%>">
+            <% } else { %>
 
-        <% } else { %>
+                <img class="community-image img-drop-shadow" src="http://www.realcove.net/<%=listingData['photos'][0]%>">
+            <% } %>
 
-            <img class="community-image img-drop-shadow" src="http://www.realcove.net/<%=listData['photos'][0]%>">
-        <% } %>
+            <div class="row">
 
-        <div class="row">
+                <div id="listing-info-chart">
+                    <!--put variables in each div for information-->
+                    <div class="thumbnail-container">
+                        <ul class="thumbnail-list">
 
-            <div id="listing-info-chart">
-                <!--put variables in each div for information-->
-                <div class="thumbnail-container">
-                    <ul class="thumbnail-list">
+                            <% for (var i = 0; i < listingData['photos'].length; i++) { %>
+                                <li>
+                                    <span><img class="thumbnail-image" src="http://www.realcove.net/<%=listingData['photos'][i]%>"></span>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </div>
 
-                        <% for (var i = 0; i < listData['photos'].length; i++) { %>
-                            <li>
-                                <span><img class="thumbnail-image" src="http://www.realcove.net/<%=listData['photos'][i]%>"></span>
-                            </li>
-                        <% } %>
-                    </ul>
-                </div>
+                    <div class="col-xs-12">
+                        <p class="public-remarks">
+                            <%=listingData['publicremarks']%>
+                        </p>
+                    </div>
 
-                <div class="col-xs-12">
-                    <p class="public-remarks">
-                        <%=listData['publicremarks']%>
-                    </p>
-                </div>
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>$<%=listingData['price']%></p>
+                    </div>
 
-                <div class="col-xs-4">
-                    <hr>
-                    <p>$<%=listData['price']%></p>
-                </div>
+                    <div class="col-xs-4">
+                        <hr>
+                        <p><%=listingData['beds']%> Beds</p>
+                    </div>
 
-                <div class="col-xs-4">
-                    <hr>
-                    <p><%=listData['beds']%> Beds</p>
-                </div>
+                    <div class="col-xs-4">
+                        <hr>
+                        <p><%=listingData['baths']%> Baths</p>
+                    </div>
 
-                <div class="col-xs-4">
-                    <hr>
-                    <p><%=listData['baths']%> Baths</p>
-                </div>
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>MLS#: <%=listingData['mls_num']%></p>
+                    </div>
 
-                <div class="col-xs-4">
-                    <hr>
-                    <p>MLS#: <%=listData['mls_num']%></p>
-                </div>
+                    <div class="col-xs-4">
+                        <hr>
+                        <p><%=listingData['square_feet']%> Sqft</p>
+                    </div>
 
-                <div class="col-xs-4">
-                    <hr>
-                    <p><%=listData['square_feet']%> Sqft</p>
-                </div>
+                    <div class="col-xs-4">
+                        <hr>
+                        <p>DOM: <%=listingData['days_on_market']%></p>
+                    </div>
 
-                <div class="col-xs-4">
-                    <hr>
-                    <p>DOM: <%=listData['days_on_market']%></p>
-                </div>
+                    <div class="col-xs-4">
+                        <hr>
+                        <p><%=listingData['property_type']%></p>
+                    </div>
 
-                <div class="col-xs-4">
-                    <hr>
-                    <p><%=listData['property_type']%></p>
-                </div>
+                    <div class="col-xs-4">
+                        <hr>
+                        <p><%=listingData['status']%></p>
+                    </div>
 
-                <div class="col-xs-4">
-                    <hr>
-                    <p><%=listData['status']%></p>
-                </div>
-
-                <div class="col-xs-4">
-                    <hr>
-                    <p><%=listData['subdivision']%></p>
+                    <div class="col-xs-4">
+                        <hr>
+                        <p><%=listingData['subdivision']%></p>
+                    </div>
                 </div>
             </div>
-        </div>
-
+        <% } %>
     </div>
 
     <div id="google-map">
         <!--Extract script into js file-->
         <script>
             function myMap() {
-                var latitude  = parseFloat(listData['latitude']),
-                    longitude = parseFloat(listData['longitude']);
+                var latitude  = parseFloat(listingData['latitude']),
+                    longitude = parseFloat(listingData['longitude']);
 
                 var mapProp= {
                     center: new google.maps.LatLng(latitude , longitude),

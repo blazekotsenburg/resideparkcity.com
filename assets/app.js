@@ -186,6 +186,55 @@ app.get("/home", function (req, res) {
 
 app.get("/listing", function (req, res) {
 
+    /**
+     * Gets the data for the selected listing.
+     */
+    var listingData = {};
+    var dataListing = {
+        partner_key        : '7e52cad4e91ee36e308d35f93a9db02b',
+        action             : 'propertySearch',
+        return             : 'json',
+        search_offset      : '0',
+        search_limit       : '1',
+        search_mls_id      : ['1'],
+        search_mls_num     : req.query.mls,
+        search_area_name   : req.query.area,
+        debug              : '0'
+    };
+
+    request.post({url: url, formData: dataListing}, function(err, httpResponse, body) {
+        if (!err && httpResponse.statusCode == 200) {
+
+            var listingmlsData = JSON.parse(body);
+
+            listingmlsData['data'].forEach(function (listing){
+
+                if (listing['list_id'].match(req.query.id)) {
+
+                    listingData = {
+                        address         : req.query.address,
+                        longitude       : req.query.long,
+                        latitude        : req.query.lat,
+                        price           : listing['price'].replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                        square_feet     : listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+                        photos          : listing['photos'].split(","),
+                        mls_num         : listing['mls_num'],
+                        days_on_market  : listing['days_on_market'],
+                        beds            : listing['beds'],
+                        baths           : listing['baths'],
+                        status          : listing['status'],
+                        subdivision     : listing['subdivision'],
+                        property_type   : listing['property_type'],
+                        publicremarks   : listing['publicremarks']
+                    };
+                }
+            });
+        }
+    });
+
+    /**
+     * Gets the data for the featured listings.
+     */
     var data = {
         partner_key        : '7e52cad4e91ee36e308d35f93a9db02b',
         action             : 'propertySearch',
@@ -218,18 +267,12 @@ app.get("/listing", function (req, res) {
                         square_feet     : listing['square_feet'].replace(/\B(?=(\d{3})+(?!\d))/g, ","),
                         photos          : listing['photos'].split(","),
                         mls_num         : listing['mls_num'],
-                        days_on_market  : listing['days_on_market'],
-                        beds            : listing['beds'],
-                        baths           : listing['baths'],
-                        status          : listing['status'],
-                        subdivision     : listing['subdivision'],
-                        property_type   : listing['property_type'],
-                        publicremarks   : listing['publicremarks']
+                        days_on_market  : listing['days_on_market']
                     };
                 }
             });
 
-            res.render('listing', {mlsData: mlsData['data'], listData: listData});
+            res.render('listing', {mlsData: mlsData['data'], listData: listData, listingData: listingData});
         }
         else {
 
@@ -239,7 +282,6 @@ app.get("/listing", function (req, res) {
 });
 
 app.post("/results", function(req, res) {
-
     var minInputVal = req.body.price_min.replace(/\,/g,""),
         maxInputVal = req.body.price_max.replace(/\,/g,"");
 
@@ -259,16 +301,13 @@ app.post("/results", function(req, res) {
     };
 
     request.post({url: url, formData: searchData}, function (err, httpResponse, body) {
-
         if (!err && httpResponse.statusCode == 200) {
 
             var mlsData = JSON.parse(body);
-
             res.render('searchresults', {mlsData: mlsData['data']})
         }
 
         else {
-
             return console.error('upload failed:', err);
         }
     });

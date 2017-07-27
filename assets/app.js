@@ -164,17 +164,17 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {
-
     request.post({url: url, formData: defaultData}, function(err, httpResponse, body) {
-
         if (!err && httpResponse.statusCode == 200) {
-
             var mlsData = JSON.parse(body);
+
+            for(var i=0; i < mlsData['data'].length; i++) {
+                mlsData['data'][i]['photos'] = removeHttpFromPhotos(mlsData['data'][i]['photos'].split(","));
+            }
 
             res.render('home', {mlsData: mlsData['data']});
         }
         else {
-
             return console.error('upload failed:', err);
         }
     });
@@ -185,7 +185,6 @@ app.get("/home", function (req, res) {
 });
 
 app.get("/listing", function (req, res) {
-
     /**
      * Gets the data for the selected listing.
      */
@@ -230,6 +229,8 @@ app.get("/listing", function (req, res) {
                 }
             });
         }
+
+        listingData['photos'] = removeHttpFromPhotos(listingData['photos']);
     });
 
     /**
@@ -247,7 +248,6 @@ app.get("/listing", function (req, res) {
     };
 
     request.post({url: url, formData: data}, function(err, httpResponse, body) {
-
         if (!err && httpResponse.statusCode == 200) {
 
             var mlsData   = JSON.parse(body),
@@ -272,10 +272,15 @@ app.get("/listing", function (req, res) {
                 }
             });
 
+            listData['photos'] = removeHttpFromPhotos(listData['photos']);
+
+            for(var i=0; i < mlsData['data'].length; i++) {
+                mlsData['data'][i]['photos'] = removeHttpFromPhotos(mlsData['data'][i]['photos'].split(","));
+            }
+
             res.render('listing', {mlsData: mlsData['data'], listData: listData, listingData: listingData});
         }
         else {
-
             return console.error('upload failed:', err);
         }
     });
@@ -289,24 +294,27 @@ app.post("/results", function(req, res) {
         partner_key: '7e52cad4e91ee36e308d35f93a9db02b',
         action: 'propertySearch',
         return: 'json',
-        search_offset: '0',
-        search_limit: '100',
-        search_mls_id: ['1'],
-        search_price_min: minInputVal,
-        search_price_max: maxInputVal,
-        search_beds: req.body.beds,
-        search_property_type: req.body.property_type,
-        qry: req.body.qry,
-        debug: '0'
+        search_offset           : '0',
+        search_limit            : '100',
+        search_mls_id           : ['1'],
+        search_price_min        : minInputVal,
+        search_price_max        : maxInputVal,
+        search_beds             : req.body.beds,
+        search_property_type    : req.body.property_type,
+        qry                     : req.body.qry,
+        debug                   : '0'
     };
 
     request.post({url: url, formData: searchData}, function (err, httpResponse, body) {
         if (!err && httpResponse.statusCode == 200) {
-
             var mlsData = JSON.parse(body);
-            res.render('searchresults', {mlsData: mlsData['data']})
-        }
 
+            for(var i=0; i < mlsData['data'].length; i++) {
+                mlsData['data'][i]['photos'] = removeHttpFromPhotos(mlsData['data'][i]['photos'].split(","));
+            }
+
+            res.render('searchresults', {mlsData: mlsData['data']});
+        }
         else {
             return console.error('upload failed:', err);
         }
@@ -316,3 +324,18 @@ app.post("/results", function(req, res) {
 app.listen(8000, "localhost", function () {
     console.log("Server is running...");
 });
+
+/**
+ * Remove http from image URLs.
+ */
+function removeHttpFromPhotos(array) {
+    if(array) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i].indexOf('http') >= 0) {
+                array[i] = array[i].replace('http://54.245.115.2/rets.realcove.com/', '/');
+            }
+        }
+    }
+
+    return array;
+}

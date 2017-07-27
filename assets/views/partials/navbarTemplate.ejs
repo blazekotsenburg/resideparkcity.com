@@ -35,17 +35,30 @@
                                         <input id="max-input" type="text" name="price_max" placeholder="Max.">
                                     </div>
                                 </div>
-
-                                <ul id="price-options">
-                                    <li class="price"><span>$</span>50,000<span>+</span></li>
-                                    <li class="price"><span>$</span>100,000<span>+</span></li>
-                                    <li class="price"><span>$</span>150,000<span>+</span></li>
-                                    <li class="price"><span>$</span>200,000<span>+</span></li>
-                                    <li class="price"><span>$</span>250,000<span>+</span></li>
-                                    <li class="price"><span>$</span>300,000<span>+</span></li>
-                                    <li class="price"><span>$</span>400,000<span>+</span></li>
-                                    <li class="price"><span>$</span>500,000<span>+</span></li>
-                                </ul>
+                                <div class="price-min-options">
+                                    <ul id="price-options">
+                                        <li class="priceMin"><span>$</span>50,000<span>+</span></li>
+                                        <li class="priceMin"><span>$</span>100,000<span>+</span></li>
+                                        <li class="priceMin"><span>$</span>150,000<span>+</span></li>
+                                        <li class="priceMin"><span>$</span>200,000<span>+</span></li>
+                                        <li class="priceMin"><span>$</span>250,000<span>+</span></li>
+                                        <li class="priceMin"><span>$</span>300,000<span>+</span></li>
+                                        <li class="priceMin"><span>$</span>400,000<span>+</span></li>
+                                        <li class="priceMin"><span>$</span>500,000<span>+</span></li>
+                                    </ul>
+                                </div>
+                                <div class="price-max-options hide">
+                                    <ul id="price-options-max">
+                                        <li class="price"><span>$</span>75,000<span>+</span></li>
+                                        <li class="price"><span>$</span>100,000<span>+</span></li>
+                                        <li class="price"><span>$</span>125,000<span>+</span></li>
+                                        <li class="price"><span>$</span>150,000<span>+</span></li>
+                                        <li class="price"><span>$</span>175,000<span>+</span></li>
+                                        <li class="price"><span>$</span>200,000<span>+</span></li>
+                                        <li class="price"><span>$</span>225,000<span>+</span></li>
+                                        <li class="price"><span>$</span>250,000<span>+</span></li>
+                                    </ul>
+                                </div>
                             </div>
                         </li> <!--End Dropdown for price input-->
 
@@ -53,19 +66,17 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                aria-expanded="false">Beds<span class="caret"></span></a>
-                            <div class="dropdown-menu dropdown-content bedroom-dropdown">
-                                <input type="hidden" name="beds">
-                                <ul id="bed-options">
-                                    <li class="num-beds">1<span>+</span></li>
-                                    <li class="num-beds">2<span>+</span></li>
-                                    <li class="num-beds">3<span>+</span></li>
-                                    <li class="num-beds">4<span>+</span></li>
-                                    <li class="num-beds">5<span>+</span></li>
-                                    <li class="num-beds">6<span>+</span></li>
-                                    <li class="num-beds">7<span>+</span></li>
-                                    <li class="num-beds">8<span>+</span></li>
-                                </ul>
-                            </div>
+                            <input type="hidden" name="beds">
+                            <ul id="bed-options" class="dropdown-menu dropdown-content bedroom-dropdown">
+                                <li class="num-beds">1<span>+</span></li>
+                                <li class="num-beds">2<span>+</span></li>
+                                <li class="num-beds">3<span>+</span></li>
+                                <li class="num-beds">4<span>+</span></li>
+                                <li class="num-beds">5<span>+</span></li>
+                                <li class="num-beds">6<span>+</span></li>
+                                <li class="num-beds">7<span>+</span></li>
+                                <li class="num-beds">8<span>+</span></li>
+                            </ul>
                         </li> <!--End Bed dropdown-->
 
                         <li class="dropdown">

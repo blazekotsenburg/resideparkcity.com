@@ -43,24 +43,19 @@ $("#max-input").on("focus", function () { //need to extract this method out so t
     $("#price-options").addClass("shift-col-right");
     $("#min-input").removeClass("input-toggle");
 
-
     if (!$("#min-input").val()) { //Check that the navbar has a value.
         defaultMaxPriceOptions();
     }
 
     else if ($.isNumeric($("#min-input").val())) { //Check that user has put in number (no commas)
-
         if ($("#min-input").val().length >= 7){ // If the input has a length greater than 7, max price options increment by 250,000
-
             getMaxPriceOptions(250000, 1);
         }
 
         else {
-
             getMaxPriceOptions(25000, 1); //Increment max price options by 25,000
         }
     }
-
     else {
 
         updateMaxPrices($("#min-input").val()); //Determine price has been input by user.
@@ -74,6 +69,7 @@ $("#max-input").on("focus", function () { //need to extract this method out so t
 $("#min-input").on("focus", function () {
     $("#price-options").removeClass("shift-col-right");
     $("#max-input").removeClass("input-toggle");
+
     defaultMinPriceOptions();
 });
 
@@ -89,7 +85,6 @@ $("#min-input,#max-input").on("keyup change", function() {
  * clicked.
  */
 $(".dropdown-content li").on("click", function (e) {
-
     e.stopPropagation();
 });
 
@@ -98,9 +93,9 @@ $(".dropdown-content li").on("click", function (e) {
  * shift the price options column back to the left with the min price default values.
  */
 $("#price-dropdown-button").on("click", function () {
-
     $("#min-input").addClass("input-toggle");
     $("#max-input").removeClass("input-toggle");
+
     defaultMinPriceOptions();
     $("#price-options").removeClass("shift-col-right");
 });
@@ -114,15 +109,14 @@ $("#price-options li").on("click", function () {
     var listItemVal = $(this).text();
 
     if ($("#price-options").hasClass("shift-col-right")) {
-
         $("#max-input").val(listItemVal.replace(/[$]+/, '')); //Places just the numbers and commas into the input with regexp
     }
     else {
-
         $("#min-input").val(listItemVal.replace(/[$+]+/g, ''));
         $("#min-input").removeClass("input-toggle");
         $("#price-options").addClass("shift-col-right");
         $("#max-input").addClass("input-toggle");
+
         updateMaxPrices($("#min-input").val());
     }
 });
@@ -133,8 +127,15 @@ $("#price-options li").on("click", function () {
  * ***Currently not working****. Want to use this to help pass the number of beds a user wants
  * to search for from the navbar (beds dropdown).
  */
-$("#bed-options li").on("click", function () {
+$("#bed-options li").on("click", function (e) {
     var numBeds = parseInt($(this).text());
+
+    $(".highlight").removeClass("highlight");
+    $(this).addClass("highlight");
+    $(this).closest(".dropdown").find("a[aria-expanded]").attr("aria-expanded", "false");
+    $(this).closest(".dropdown").removeClass("open");
+    $(this).closest(".dropdown").find("a").html($(this).html() + " Beds" + "<span class='caret'></span>");
+
     $("[name=beds]").val(numBeds);
 });
 
@@ -146,13 +147,11 @@ $("#bed-options li").on("click", function () {
  * @param minPriceInput - The value that is held in min-input
  */
 function updateMaxPrices(minPriceInput) {
-
     var quarterK = 25000;
     var quarterM = 250000;
 
     // If a user inputs a metric multiplier, eg 40k, handle price options accordingly
     if (metricPattern.test(minPriceInput)) {
-
         var valAtMin = $("#min-input").val();
 
         if (valAtMin.charAt(valAtMin.length - 1) === "k" ||
@@ -160,21 +159,18 @@ function updateMaxPrices(minPriceInput) {
 
             getMaxPriceOptions(quarterK, 1000);
         }
-
         else {
-
             getMaxPriceOptions(quarterM, 1000000);
         }
     }
 
     // If a user inputs integer with comma, eg 1,000,000 , handle price options accordingly
     else if (intWithCommaPattern.test(minPriceInput)) {
-
         if ($("#min-input").val().replace(/,/g, '').length >= 7) {
 
             var tempM = quarterM;
 
-            $(".price").each(function () {
+            $(".priceMin").each(function () {
                 var valToInt = parseInt($("#min-input").val().replace(/,/g, ''), 10);
                 $(this).text("$" + (numberWithCommas(valToInt + tempM)));
                 tempM += quarterM;
@@ -185,7 +181,7 @@ function updateMaxPrices(minPriceInput) {
 
             var tempK = quarterK;
 
-            $(".price").each(function () {
+            $(".priceMin").each(function () {
                 var valToInt = parseInt($("#min-input").val().replace(/,/g, ''), 10);
                 $(this).text("$" + (numberWithCommas(valToInt + tempK)));
 
@@ -196,7 +192,6 @@ function updateMaxPrices(minPriceInput) {
 
      // Check here for invalid inputs, such as words and special characters.
     else {
-
         $("#min-input").val("");
         defaultMaxPriceOptions();
     }
@@ -210,10 +205,9 @@ function updateMaxPrices(minPriceInput) {
  * @param multiplier - Multiply min-input val by some power of 10.
  */
 function getMaxPriceOptions(incrementBy ,multiplier) {
-
     var increasedBy = incrementBy;
 
-    $(".price").each(function () {
+    $(".priceMin").each(function () {
         var valToInt = parseInt($("#min-input").val(), 10) * multiplier;
         $(this).text("$" + (numberWithCommas(valToInt + increasedBy)));
         increasedBy += incrementBy;
@@ -225,7 +219,7 @@ function getMaxPriceOptions(incrementBy ,multiplier) {
  */
 function defaultMinPriceOptions() {
     var i = 0;
-    $(".price").each(function () {
+    $(".priceMin").each(function () {
         $(this).text("$" + numberWithCommas(minPrices[i]) + "+");
         i++;
     });
@@ -238,7 +232,6 @@ function defaultMinPriceOptions() {
  * @returns {string}
  */
 function numberWithCommas(numberToConvert) {
-
     return numberToConvert.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
@@ -247,7 +240,7 @@ function numberWithCommas(numberToConvert) {
  */
 function defaultMaxPriceOptions() {
     var i = 100000;
-    $(".price").each(function () {
+    $(".priceMin").each(function () {
         $(this).text("$" + numberWithCommas(i));
         i += 100000;
     });

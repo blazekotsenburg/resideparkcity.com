@@ -159,8 +159,17 @@ input {
     min-width: 73.88px;
 }
 
-#bed-options li{
+#bed-options li {
     text-align: center;
+}
+
+#bed-options, #price-options, #price-options-max li {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.highlight {
+    background-color: #F1F1F1;
 }
 
 .scrollable-menu {

@@ -55,84 +55,79 @@
     </section>
 
     <div class="community-image-container">
-        <% if (listingData['photos']) { %>
-            <% if (listingData['photos'][0].substring(0, 3).match('http')) { %>
-            <!--Need to figure out what to do if the first string is http-->
-                <img class="community-image img-drop-shadow" src="<%=listingData['photos'][0]%>">
+        <% if (listingData['photos'][0]) { %>
+            <img class="community-image img-drop-shadow" src="http://www.realcove.net/<%=listingData['photos'][0]%>">
+        <% } else { %>
+            <img class="img-responsive" src="https://source.unsplash.com/wtrAchtpc-w">
+            <p class="no-image-header">No Images <i class="fa fa-frown-o" aria-hidden="true"></i></p>
+        <% } %>
+        <div class="row">
+            <div id="listing-info-chart">
+                <!--put variables in each div for information-->
+                <div class="thumbnail-container">
+                    <ul class="thumbnail-list">
+                        <% for (var i = 0; i < listingData['photos'].length; i++) { %>
+                            <li>
+                                <% if (listingData['photos'][i]) { %>
+                                     <span><img class="thumbnail-image" src="http://www.realcove.net/<%=listingData['photos'][i]%>"></span>
+                                <% } %>
+                            </li>
+                        <% } %>
+                    </ul>
+                </div>
 
-            <% } else { %>
+                <div class="col-xs-12">
+                    <p class="public-remarks">
+                        <%=listingData['publicremarks']%>
+                    </p>
+                </div>
 
-                <img class="community-image img-drop-shadow" src="http://www.realcove.net/<%=listingData['photos'][0]%>">
-            <% } %>
+                <div class="col-xs-4">
+                    <hr>
+                    <p>$<%=listingData['price']%></p>
+                </div>
 
-            <div class="row">
+                <div class="col-xs-4">
+                    <hr>
+                    <p><%=listingData['beds']%> Beds</p>
+                </div>
 
-                <div id="listing-info-chart">
-                    <!--put variables in each div for information-->
-                    <div class="thumbnail-container">
-                        <ul class="thumbnail-list">
+                <div class="col-xs-4">
+                    <hr>
+                    <p><%=listingData['baths']%> Baths</p>
+                </div>
 
-                            <% for (var i = 0; i < listingData['photos'].length; i++) { %>
-                                <li>
-                                    <span><img class="thumbnail-image" src="http://www.realcove.net/<%=listingData['photos'][i]%>"></span>
-                                </li>
-                            <% } %>
-                        </ul>
-                    </div>
+                <div class="col-xs-4">
+                    <hr>
+                    <p>MLS#: <%=listingData['mls_num']%></p>
+                </div>
 
-                    <div class="col-xs-12">
-                        <p class="public-remarks">
-                            <%=listingData['publicremarks']%>
-                        </p>
-                    </div>
+                <div class="col-xs-4">
+                    <hr>
+                    <p><%=listingData['square_feet']%> Sqft</p>
+                </div>
 
-                    <div class="col-xs-4">
-                        <hr>
-                        <p>$<%=listingData['price']%></p>
-                    </div>
+                <div class="col-xs-4">
+                    <hr>
+                    <p>DOM: <%=listingData['days_on_market']%></p>
+                </div>
 
-                    <div class="col-xs-4">
-                        <hr>
-                        <p><%=listingData['beds']%> Beds</p>
-                    </div>
+                <div class="col-xs-4">
+                    <hr>
+                    <p><%=listingData['property_type']%></p>
+                </div>
 
-                    <div class="col-xs-4">
-                        <hr>
-                        <p><%=listingData['baths']%> Baths</p>
-                    </div>
+                <div class="col-xs-4">
+                    <hr>
+                    <p><%=listingData['status']%></p>
+                </div>
 
-                    <div class="col-xs-4">
-                        <hr>
-                        <p>MLS#: <%=listingData['mls_num']%></p>
-                    </div>
-
-                    <div class="col-xs-4">
-                        <hr>
-                        <p><%=listingData['square_feet']%> Sqft</p>
-                    </div>
-
-                    <div class="col-xs-4">
-                        <hr>
-                        <p>DOM: <%=listingData['days_on_market']%></p>
-                    </div>
-
-                    <div class="col-xs-4">
-                        <hr>
-                        <p><%=listingData['property_type']%></p>
-                    </div>
-
-                    <div class="col-xs-4">
-                        <hr>
-                        <p><%=listingData['status']%></p>
-                    </div>
-
-                    <div class="col-xs-4">
-                        <hr>
-                        <p><%=listingData['subdivision']%></p>
-                    </div>
+                <div class="col-xs-4">
+                    <hr>
+                    <p><%=listingData['subdivision']%></p>
                 </div>
             </div>
-        <% } %>
+        </div>
     </div>
 
     <div id="google-map">
